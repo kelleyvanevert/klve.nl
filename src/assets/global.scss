@@ -1,0 +1,168 @@
+@import "~/assets/variables.scss";
+
+/**
+ * Misc
+ */
+
+.noselect {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@include sm {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+/**
+ * Layout
+ */
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html * {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapr {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include lg {
+  .wrapr {
+    max-width: 950px;
+  }
+}
+
+@include xl {
+  .wrapr {
+    max-width: 1100px;
+  }
+}
+
+.wrap600 {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article {
+  margin-top: 100px;
+  position: relative;
+}
+
+/**
+ * Typography
+ */
+
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Adobe Caslon Pro"),
+    url("./adobe-caslon-pro/Adobe-Caslon-Pro_2006.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Adobe Caslon Pro"),
+    url("./adobe-caslon-pro/Adobe-Caslon-Pro-Italic_2003.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Adobe Caslon Pro"),
+    url("./adobe-caslon-pro/Adobe-Caslon-Pro-Bold_2002.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Adobe Caslon Pro"),
+    url("./adobe-caslon-pro/Adobe-Caslon-Pro-Bold-Italic_2001.ttf")
+      format("truetype");
+}
+
+html,
+body {
+  -webkit-text-size-adjust: none;
+  font-size: 15px;
+}
+
+body {
+  font-family: "Adobe Caslon Pro", serif;
+  color: #333;
+
+  line-height: 160%;
+
+  text-transform: none;
+}
+
+h1 {
+  position: relative;
+
+  margin: 80px 0 40px 0;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 22px;
+  color: #000;
+  line-height: 30px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 strong {
+  display: inline-block;
+  position: relative;
+}
+
+.header-anchor {
+  display: none;
+}
+
+p.sub {
+  position: relative;
+  top: -30px;
+  text-align: center;
+}
+
+p {
+  margin: 20px 0;
+}
+
+a {
+  color: #555;
+}

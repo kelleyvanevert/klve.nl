@@ -1,0 +1,61 @@
+.header {
+  max-width: 800px;
+  margin-top: 50px;
+
+  .email {
+    letter-spacing: 1px;
+    font-family: monospace;
+    font-size: 11px;
+  }
+  .email a {
+    text-decoration: none;
+    color: #999;
+  }
+  .email a em {
+    font-style: normal;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      list-style: none;
+      margin-right: 5px;
+
+      a {
+        display: inline-block;
+        position: relative;
+        text-transform: lowercase;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+        font-size: 25px;
+        line-height: 30px;
+
+        span:after {
+          content: ".";
+        }
+        span.it {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          display: none;
+          font-style: italic;
+        }
+
+        &.active span.up {
+          visibility: hidden;
+        }
+        &.active span.it {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
