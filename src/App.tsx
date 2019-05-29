@@ -1,6 +1,11 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
 import Layout from "~/components/Layout";
 import Home from "~/pages/Home";
@@ -17,6 +22,7 @@ function App() {
           <Route path="/photography/:category" component={PhotoCategory} />
           <Route path="/photography" component={Photography} />
           <Route path="/projects" component={Sandbox} />
+          <Redirect to="/" />
         </Switch>
       </Layout>
     </Router>
