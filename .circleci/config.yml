@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 jobs:
   build:
@@ -7,10 +7,12 @@ jobs:
     steps:
       - checkout
       - restore_cache
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          keys:
+            - dependency-cache-{{ checksum "yarn.lock" }}
       - run: yarn
       - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          keys:
+            - dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
       - run: yarn run build
