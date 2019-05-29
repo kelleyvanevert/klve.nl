@@ -1,20 +1,26 @@
-version: 2.1
+version: 2
+
 jobs:
-  build:
+  build_deploy:
     docker:
       - image: circleci/node
     working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
-          name: "Restore Yarn Package Cache"
+          name: Restore Yarn Package Cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
       - save_cache:
-          name: "Save Yarn Package Cache"
+          name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - run: yarn run build
+      - run:
+          name: Build
+          command: yarn run build
+      - run:
+          name: Send files to klve.nl
+          command: scp -rp build/* klve.nl:prime/klve.nl/public/
