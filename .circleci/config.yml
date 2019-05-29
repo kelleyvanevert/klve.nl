@@ -21,6 +21,9 @@ jobs:
       - run:
           name: Build
           command: yarn run build
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:+A6wSkxsFxS8Fcv4uRpyBfEq8oSWf6purIlpDXhvH/w"
       - run:
           name: Send files to klve.nl
           command: scp -rp build/* klve.nl:prime/klve.nl/public/
