@@ -7,6 +7,9 @@ export default function Sandbox() {
 
       <ul>
         <li>
+          <a href="https://literal-jsx.org/">Literal JSX</a> [work in progress]
+        </li>
+        <li>
           A visual explorer tool for querying Babel-produced ASTs with JSPath (
           <a href="https://kelleyvanevert.github.io/jspath-for-ast-querying/">
             js sketch
