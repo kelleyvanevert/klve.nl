@@ -7,7 +7,12 @@ export default function Sandbox() {
 
       <ul>
         <li>
-          <a href="https://literal-jsx.org/">Literal JSX</a> [work in progress]
+          Literal JSX: an idea (<a href="https://literal-jsx.org/">website</a>)
+          and an example parser implementation (
+          <a href="https://www.npmjs.com/package/@literal-jsx/parser">
+            npm package
+          </a>
+          )
         </li>
         <li>
           A visual explorer tool for querying Babel-produced ASTs with JSPath (
