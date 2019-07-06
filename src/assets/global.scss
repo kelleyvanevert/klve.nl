@@ -166,3 +166,17 @@ p {
 a {
   color: #555;
 }
+
+main {
+  a {
+    margin: 0 1px;
+    outline: 0px solid #eee;
+    outline-offset: 2px;
+    background: transparent;
+  }
+  a:focus {
+    outline-offset: 0;
+    outline-width: 2px;
+    background: #eee;
+  }
+}

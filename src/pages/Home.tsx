@@ -1,6 +1,7 @@
 import "styled-components/macro";
 import React from "react";
 import cx from "classnames";
+import { Link } from "react-router-dom";
 import styles from "./Home.module.scss";
 
 function Nobr({ children }: { children: React.ReactNode }) {
@@ -12,7 +13,7 @@ function Num({ children }: { children: React.ReactNode }) {
 }
 
 function Item({ children }: { children: React.ReactNode }) {
-  return <em className={styles.item}>{children}</em>;
+  return <em>{children}</em>;
 }
 
 export default function Home() {
@@ -21,11 +22,20 @@ export default function Home() {
       <div className={styles.content}>
         <h1 css="display: none;">Kelley van Evert</h1>
         <p className={styles.lead}>
-          Hi there!&emsp;I'm Kelley, recently graduated<sup>☀</sup> theoretical
+          Hi there!&emsp;I'm Kelley. I{" "}
+          <a href="https://codaisseur.com/">teach</a>,{" "}
+          <a href="https://mywheels.nl">code</a>, and{" "}
+          <Link to="/projects">experiment with</Link> web technologies.
+          Sometimes I produce <Link to="/photography">pictures</Link>, and in
+          the past I produced{" "}
+          <a href="https://cargocollective.com/kvhku">some art</a>, but mostly I
+          ponder. Also I studied theoretical computer science and learned many
+          interesting things.
+          {/* Hi there!&emsp;I'm Kelley, recently graduated<sup>☀</sup> theoretical
           computer science{" "}
           <span css="font-variant-caps: all-small-caps;">MS</span>c by day …
           dreamer by heart, budding visual artist by volition, and freelance
-          photographer / web designer by accidental profession.
+          photographer / web designer by accidental profession. */}
         </p>
         <div className={styles.photo}>
           <div className={styles.placeholder}>

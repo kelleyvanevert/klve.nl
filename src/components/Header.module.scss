@@ -55,6 +55,11 @@
           display: block;
           text-align: center;
         }
+
+        &:focus,
+        &:focus span {
+          text-decoration: underline;
+        }
       }
     }
   }

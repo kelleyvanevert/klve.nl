@@ -10,7 +10,7 @@ export default function Layout({ children = null }: Props) {
   return (
     <div className={styles.layout}>
       <Header />
-      {children}
+      <main>{children}</main>
     </div>
   );
 }
