@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 const menuItems = [
-  { title: "about", exact: true, path: "/" },
-  { title: "photography", path: "/photography" },
-  { title: "sandbox", path: "/projects" }
+  { title: "About", exact: true, path: "/" },
+  { title: "Photography", path: "/photography" },
+  { title: "Sandbox", path: "/projects" }
 ];
 
 export default function Header() {
@@ -25,8 +25,7 @@ export default function Header() {
               activeClassName={styles.active}
               to={item.path}
             >
-              <span className={styles.up}>{item.title}</span>
-              <span className={styles.it}>{item.title}</span>
+              <span>{item.title}</span>
             </NavLink>
           </li>
         ))}

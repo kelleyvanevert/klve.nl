@@ -24,7 +24,7 @@
     li {
       display: inline;
       list-style: none;
-      margin-right: 5px;
+      margin-right: 10px;
 
       a {
         display: inline-block;
@@ -39,21 +39,9 @@
         span:after {
           content: ".";
         }
-        span.it {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          display: none;
-          font-style: italic;
-        }
 
-        &.active span.up {
-          visibility: hidden;
-        }
-        &.active span.it {
-          display: block;
-          text-align: center;
+        &.active span {
+          font-style: italic;
         }
 
         &:focus,
