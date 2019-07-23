@@ -7,6 +7,13 @@ export default function Sandbox() {
 
       <ul>
         <li>
+          JavaScript execution stepper / runtime visualizer (
+          <a href="https://codaisseur.github.io/js_execution_visualizer/">
+            js sketch
+          </a>
+          ) -- <em>WORK IN PROGRESS</em>
+        </li>
+        <li>
           Literal JSX: an idea (<a href="https://literal-jsx.org/">website</a>)
           and an example parser implementation (
           <a href="https://www.npmjs.com/package/@literal-jsx/parser">
