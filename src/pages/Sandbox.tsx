@@ -8,10 +8,13 @@ export default function Sandbox() {
       <ul>
         <li>
           JavaScript execution stepper / runtime visualizer (
-          <a href="https://codaisseur.github.io/js_execution_visualizer/">
-            js sketch
-          </a>
-          ) -- <em>WORK IN PROGRESS</em>
+          <a href="https://visualized-execution.js.org/">js sketch</a>) --{" "}
+          <em>WORK IN PROGRESS</em>
+        </li>
+        <li>
+          The <em>Scopes</em> programming language (
+          <a href="https://scopes.js.org/">tentative idea</a>) --{" "}
+          <em>WORK IN PROGRESS</em>
         </li>
         <li>
           Literal JSX: an idea (<a href="https://literal-jsx.org/">website</a>)
