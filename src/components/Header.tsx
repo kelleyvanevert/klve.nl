@@ -6,7 +6,8 @@ import styles from "./Header.module.scss";
 const menuItems = [
   { title: "About", exact: true, path: "/" },
   { title: "Photography", path: "/photography" },
-  { title: "Sandbox", path: "/projects" }
+  { title: "Sandbox", path: "/projects" },
+  { title: "Drawings", path: "/drawings" }
 ];
 
 export default function Header() {

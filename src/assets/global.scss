@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/pak0fwg.css");
 @import "~/assets/variables.scss";
 
 /**
@@ -76,44 +77,6 @@ article {
   position: relative;
 }
 
-/**
- * Typography
- */
-
-@font-face {
-  font-family: "Adobe Caslon Pro";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Adobe Caslon Pro"),
-    url("./adobe-caslon-pro/Adobe-Caslon-Pro_2006.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Adobe Caslon Pro";
-  font-style: italic;
-  font-weight: normal;
-  src: local("Adobe Caslon Pro"),
-    url("./adobe-caslon-pro/Adobe-Caslon-Pro-Italic_2003.ttf")
-      format("truetype");
-}
-
-@font-face {
-  font-family: "Adobe Caslon Pro";
-  font-style: normal;
-  font-weight: bold;
-  src: local("Adobe Caslon Pro"),
-    url("./adobe-caslon-pro/Adobe-Caslon-Pro-Bold_2002.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Adobe Caslon Pro";
-  font-style: italic;
-  font-weight: bold;
-  src: local("Adobe Caslon Pro"),
-    url("./adobe-caslon-pro/Adobe-Caslon-Pro-Bold-Italic_2001.ttf")
-      format("truetype");
-}
-
 html,
 body {
   -webkit-text-size-adjust: none;
@@ -121,7 +84,7 @@ body {
 }
 
 body {
-  font-family: "Adobe Caslon Pro", serif;
+  font-family: adobe-caslon-pro, serif;
   color: #333;
 
   line-height: 160%;

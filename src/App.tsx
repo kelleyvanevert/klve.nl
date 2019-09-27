@@ -10,8 +10,9 @@ import {
 import Layout from "~/components/Layout";
 import Home from "~/pages/Home";
 import Photography from "~/pages/photography/Photography";
-import PhotoCategory from "./pages/photography/PhotoCategory";
+import PhotoCategory from "~/pages/photography/PhotoCategory";
 import Sandbox from "~/pages/Sandbox";
+import Drawings from "~/pages/Drawings";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/photography/:category" component={PhotoCategory} />
           <Route path="/photography" component={Photography} />
           <Route path="/projects" component={Sandbox} />
+          <Route path="/drawings" component={Drawings} />
           <Redirect to="/" />
         </Switch>
       </Layout>

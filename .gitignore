@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# for tmp content that lives @ https://content.klve.nl/
+_content
+
 # dependencies
 /node_modules
 /.pnp

@@ -1,16 +1,10 @@
 import mapValues from "lodash.mapvalues";
+import { PhotoGridItem } from "~/components/PhotoGrid";
 
 export interface PhotoCat {
   title: string;
   photo: string;
-  images: Image[];
-}
-
-export interface Image {
-  photo: string;
-  src: string;
-  w: number;
-  h: number;
+  images: PhotoGridItem[];
 }
 
 export const photoCats: {

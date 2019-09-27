@@ -5,7 +5,6 @@ import "react-photoswipe/lib/photoswipe.css";
 import { PhotoSwipeGallery } from "react-photoswipe";
 import { NavLink } from "react-router-dom";
 import styles from "./PhotoGrid.module.scss";
-import { Image } from "~/pages/photography/data";
 
 interface PhotoGridProps {
   borders?: boolean;
@@ -56,17 +55,20 @@ PhotoGrid.Nav = function PhotoNavGrid({ items }: PhotoNavGrid) {
 const PHOTOSWIPE_OPTS = {
   mainClass: "pswp--minimal--dark",
   barsSize: { top: 0, bottom: 0 },
-  captionEl: false,
+  // captionEl: false,
   shareEl: false
 };
 
+export interface PhotoGridItem {
+  photo: string;
+  src: string;
+  w: number;
+  h: number;
+  title?: string;
+}
+
 interface PhotoswipeGridProps {
-  items: Array<{
-    photo: string;
-    src: string;
-    w: number;
-    h: number;
-  }>;
+  items: PhotoGridItem[];
 }
 
 PhotoGrid.Swipe = function PhotoswipeGrid({ items }: PhotoswipeGridProps) {
@@ -79,7 +81,7 @@ PhotoGrid.Swipe = function PhotoswipeGrid({ items }: PhotoswipeGridProps) {
   );
 
   const renderThumb = useCallback(
-    (item: Image) => (
+    (item: PhotoGridItem) => (
       <div key={item.photo} className={styles.image}>
         <div className={styles.ratio} />
         <div className={styles.a} onClick={() => setIsOpen(true)}>
