@@ -1,5 +1,4 @@
 import React from "react";
-import useReactRouter from "use-react-router";
 import PhotoGrid, { PhotoGridItem } from "~/components/PhotoGrid";
 
 const DRAWINGS: PhotoGridItem[] = [
@@ -58,12 +57,6 @@ const DRAWINGS: PhotoGridItem[] = [
 ];
 
 export default function Drawings() {
-  const {
-    match: {
-      params: { category: key }
-    }
-  } = useReactRouter<{ category: string }>();
-
   return (
     <article>
       <div className="wrap">
