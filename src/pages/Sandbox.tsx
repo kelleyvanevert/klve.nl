@@ -7,6 +7,13 @@ export default function Sandbox() {
 
       <ul>
         <li>
+          A visual guide to formulating an SQL query (
+          <a href="https://codaisseur.github.io/visualized-sql/">
+            js sketch + cheat sheet
+          </a>
+          )
+        </li>
+        <li>
           JavaScript execution stepper / runtime visualizer (
           <a href="https://visualized-execution.js.org/">js sketch</a>) --{" "}
           <em>WORK IN PROGRESS</em>
@@ -44,9 +51,7 @@ export default function Sandbox() {
         <li>
           Kabouter Wesley speech balloons (
           <a
-            href={`${
-              process.env.REACT_APP_CONTENT_BASE
-            }/scratch/kabouter_wesley/`}
+            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/kabouter_wesley/`}
           >
             js sketch
           </a>
@@ -115,9 +120,7 @@ export default function Sandbox() {
           </a>{" "}
           /{" "}
           <a
-            href={`${
-              process.env.REACT_APP_CONTENT_BASE
-            }/scratch/fastmail-0.1-an+fx.xpi`}
+            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/fastmail-0.1-an+fx.xpi`}
             rel="noopener noreferrer"
           >
             firefox extension file
@@ -128,9 +131,7 @@ export default function Sandbox() {
           UBN redirecter, a quick &amp; dirty web extension to nagivate to the
           Radboud University's access page of a journal article (
           <a
-            href={`${
-              process.env.REACT_APP_CONTENT_BASE
-            }/scratch/ubn_bookmarklet-0.1-an+fx.xpi`}
+            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/ubn_bookmarklet-0.1-an+fx.xpi`}
             rel="noopener noreferrer"
           >
             firefox extension file
@@ -170,9 +171,7 @@ export default function Sandbox() {
         <li>
           Debating tournament tabulation app (
           <a
-            href={`${
-              process.env.REACT_APP_CONTENT_BASE
-            }/scratch/debating/public/`}
+            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/debating/public/`}
             rel="noopener noreferrer"
           >
             js app
@@ -199,9 +198,7 @@ export default function Sandbox() {
         <li>
           Origami Pixels (
           <a
-            href={`${
-              process.env.REACT_APP_CONTENT_BASE
-            }/scratch/cyril_origami_pixels/`}
+            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/cyril_origami_pixels/`}
             rel="noopener noreferrer"
           >
             js sketch
