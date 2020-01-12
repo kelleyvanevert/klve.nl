@@ -7,6 +7,16 @@ export default function Sandbox() {
 
       <ul>
         <li>
+          Visualizing JS execution through a meta-syntactic transform (
+          <a
+            href="https://github.com/kelleyvanevert/js_execution_stepping_through_meta_syntactic_transform"
+            rel="noopener noreferrer"
+          >
+            gh repo + info
+          </a>
+          )
+        </li>
+        <li>
           A visual guide to formulating an SQL query (
           <a href="https://codaisseur.github.io/visualized-sql/">
             js sketch + cheat sheet
@@ -15,35 +25,57 @@ export default function Sandbox() {
         </li>
         <li>
           JavaScript execution stepper / runtime visualizer (
-          <a href="https://visualized-execution.js.org/">js sketch</a>) --{" "}
-          <em>WORK IN PROGRESS</em>
+          <a
+            href="https://visualized-execution.js.org/"
+            rel="noopener noreferrer"
+          >
+            js sketch
+          </a>
+          ) -- <em>WORK IN PROGRESS</em>
         </li>
         <li>
           The <em>Scopes</em> programming language (
-          <a href="https://scopes.js.org/">tentative idea</a>) --{" "}
-          <em>WORK IN PROGRESS</em>
+          <a href="https://scopes.js.org/" rel="noopener noreferrer">
+            tentative idea
+          </a>
+          ) -- <em>WORK IN PROGRESS</em>
         </li>
         <li>
-          Literal JSX: an idea (<a href="https://literal-jsx.org/">website</a>)
-          and an example parser implementation (
-          <a href="https://www.npmjs.com/package/@literal-jsx/parser">
+          Literal JSX: an idea (
+          <a href="https://literal-jsx.org/" rel="noopener noreferrer">
+            website
+          </a>
+          ) and an example parser implementation (
+          <a
+            href="https://www.npmjs.com/package/@literal-jsx/parser"
+            rel="noopener noreferrer"
+          >
             npm package
           </a>
           )
         </li>
         <li>
           A visual explorer tool for querying Babel-produced ASTs with JSPath (
-          <a href="https://kelleyvanevert.github.io/jspath-for-ast-querying/">
+          <a
+            href="https://kelleyvanevert.github.io/jspath-for-ast-querying/"
+            rel="noopener noreferrer"
+          >
             js sketch
           </a>
           )
         </li>
         <li>
-          brug <a href="https://brugfilm.nl/">(short film)</a>
+          brug{" "}
+          <a href="https://brugfilm.nl/" rel="noopener noreferrer">
+            (short film)
+          </a>
         </li>
         <li>
           SVG arcs (
-          <a href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/svg-arcs/`}>
+          <a
+            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/svg-arcs/`}
+            rel="noopener noreferrer"
+          >
             js sketch
           </a>
           )
@@ -52,6 +84,7 @@ export default function Sandbox() {
           Kabouter Wesley speech balloons (
           <a
             href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/kabouter_wesley/`}
+            rel="noopener noreferrer"
           >
             js sketch
           </a>
