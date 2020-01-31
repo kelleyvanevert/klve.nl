@@ -1,4 +1,3 @@
-import "styled-components/macro";
 import React from "react";
 import cx from "classnames";
 import { Link } from "react-router-dom";
@@ -8,7 +7,7 @@ import { CONTENT_BASE } from "~/config";
 import styles from "./Home.scss";
 
 function Nobr({ children }: { children: React.ReactNode }) {
-  return <span css="white-space: nowrap;">{children}</span>;
+  return <span style={{ whiteSpace: "nowrap" }}>{children}</span>;
 }
 
 function Num({ children }: { children: React.ReactNode }) {
@@ -23,7 +22,7 @@ export default function Home() {
   return (
     <article className={cx("wrapr", styles.home)}>
       <div className={styles.content}>
-        <h1 css="display: none;">Kelley van Evert</h1>
+        <h1 style={{ display: "none" }}>Kelley van Evert</h1>
         <p className={styles.lead}>
           Hi there!&emsp;I'm Kelley. I{" "}
           <a href="https://codaisseur.com/">teach</a>,{" "}
@@ -34,11 +33,6 @@ export default function Home() {
           <a href="https://cargocollective.com/kvhku">some art</a>, but mostly I
           ponder. Also I studied theoretical computer science and learned many
           interesting things.
-          {/* Hi there!&emsp;I'm Kelley, recently graduated<sup>☀</sup> theoretical
-          computer science{" "}
-          <span css="font-variant-caps: all-small-caps;">MS</span>c by day …
-          dreamer by heart, budding visual artist by volition, and freelance
-          photographer / web designer by accidental profession. */}
         </p>
         <div className={styles.photo}>
           <div className={styles.placeholder}>
