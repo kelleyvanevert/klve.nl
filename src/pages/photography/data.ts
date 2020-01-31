@@ -1,4 +1,7 @@
 import mapValues from "lodash.mapvalues";
+
+import { CONTENT_BASE } from "~/config";
+
 import { PhotoGridItem } from "~/components/PhotoGrid";
 
 export interface PhotoCat {
@@ -542,11 +545,11 @@ export const photoCats: {
   },
   cat => ({
     ...cat,
-    photo: process.env.REACT_APP_CONTENT_BASE + cat.photo,
+    photo: CONTENT_BASE + cat.photo,
     images: cat.images.map(im => ({
       ...im,
-      photo: process.env.REACT_APP_CONTENT_BASE + im.photo,
-      src: process.env.REACT_APP_CONTENT_BASE + im.src
+      photo: CONTENT_BASE + im.photo,
+      src: CONTENT_BASE + im.src
     }))
   })
 );

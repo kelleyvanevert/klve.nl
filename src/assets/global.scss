@@ -5,21 +5,21 @@
  * Misc
  */
 
-.noselect {
+:global(.noselect) {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
 
-.mobile-only {
+:global(.mobile-only) {
   display: none;
 }
 
 @include sm {
-  .mobile-only {
+  :global(.mobile-only) {
     display: block;
   }
-  .desktop-only {
+  :global(.desktop-only) {
     display: none;
   }
 }
@@ -42,31 +42,31 @@ body {
   padding: 0;
 }
 
-.wrap {
+:global(.wrap) {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.wrapr {
+:global(.wrapr) {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
 @include lg {
-  .wrapr {
+  :global(.wrapr) {
     max-width: 950px;
   }
 }
 
 @include xl {
-  .wrapr {
+  :global(.wrapr) {
     max-width: 1100px;
   }
 }
 
-.wrap600 {
+:global(.wrap600) {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -112,11 +112,11 @@ h1 strong {
   position: relative;
 }
 
-.header-anchor {
+:global(.header-anchor) {
   display: none;
 }
 
-p.sub {
+p:global(.sub) {
   position: relative;
   top: -30px;
   text-align: center;

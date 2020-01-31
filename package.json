@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "lodash.find": "^4.6.0",
     "lodash.mapvalues": "^4.6.0",
@@ -20,6 +21,8 @@
     "use-react-router": "^1.0.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
     "@craco/craco": "^5.0.2",
     "@types/classnames": "^2.2.7",
     "@types/jest": "^24.0.13",
@@ -32,25 +35,24 @@
     "@types/react-loadable": "^5.5.1",
     "@types/react-router-dom": "^4.3.3",
     "@types/styled-components": "^4.1.14",
-    "babel-plugin-macros": "^2.5.1",
+    "babel-plugin-macros": "^2.8.0",
+    "babel-polyfill": "^6.26.0",
     "craco-plugin-react-hot-reload": "^0.0.3",
     "http-proxy-middleware": "^0.19.1",
     "jest": "^24.8.0",
     "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.5.0",
     "react-hot-loader": "^4.8.4",
-    "react-scripts": "3.0.1",
+    "sass": "^1.25.0",
     "source-map-explorer": "^1.8.0",
     "ts-jest": "^24.0.2",
     "typescript": "3.5.1"
   },
   "scripts": {
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf .cache dist"
   },
   "browserslist": {
     "production": [

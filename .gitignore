@@ -3,6 +3,9 @@
 # for tmp content that lives @ https://content.klve.nl/
 _content
 
+.cache
+dist
+
 # dependencies
 /node_modules
 /.pnp

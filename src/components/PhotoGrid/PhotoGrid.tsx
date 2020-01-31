@@ -4,7 +4,8 @@ import cx from "classnames";
 import "react-photoswipe/lib/photoswipe.css";
 import { PhotoSwipeGallery } from "react-photoswipe";
 import { NavLink } from "react-router-dom";
-import styles from "./PhotoGrid.module.scss";
+
+import styles from "./PhotoGrid.scss";
 
 interface PhotoGridProps {
   borders?: boolean;

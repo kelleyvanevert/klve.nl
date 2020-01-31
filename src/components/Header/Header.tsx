@@ -1,7 +1,8 @@
 import React from "react";
 import cx from "classnames";
 import { NavLink } from "react-router-dom";
-import styles from "./Header.module.scss";
+
+import styles from "./Header.scss";
 
 const menuItems = [
   { title: "About", exact: true, path: "/" },

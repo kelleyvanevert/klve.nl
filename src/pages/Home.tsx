@@ -2,7 +2,10 @@ import "styled-components/macro";
 import React from "react";
 import cx from "classnames";
 import { Link } from "react-router-dom";
-import styles from "./Home.module.scss";
+
+import { CONTENT_BASE } from "~/config";
+
+import styles from "./Home.scss";
 
 function Nobr({ children }: { children: React.ReactNode }) {
   return <span css="white-space: nowrap;">{children}</span>;
@@ -43,7 +46,7 @@ export default function Home() {
             <div className={styles.me}>
               <img
                 alt="Kelley van Evert"
-                src={`${process.env.REACT_APP_CONTENT_BASE}/s/_MG_2393.jpg`}
+                src={`${CONTENT_BASE}/s/_MG_2393.jpg`}
               />
             </div>
           </div>

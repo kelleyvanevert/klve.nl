@@ -1,6 +1,8 @@
 import "styled-components/macro";
 import React from "react";
+
 import PhotoGrid from "~/components/PhotoGrid";
+
 import { photoCats } from "./data";
 
 export default function Photography() {

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { CONTENT_BASE } from "~/config";
+
 export default function Sandbox() {
   return (
     <article className="wrap">
@@ -73,7 +75,7 @@ export default function Sandbox() {
         <li>
           SVG arcs (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/svg-arcs/`}
+            href={`${CONTENT_BASE}/scratch/svg-arcs/`}
             rel="noopener noreferrer"
           >
             js sketch
@@ -83,7 +85,7 @@ export default function Sandbox() {
         <li>
           Kabouter Wesley speech balloons (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/kabouter_wesley/`}
+            href={`${CONTENT_BASE}/scratch/kabouter_wesley/`}
             rel="noopener noreferrer"
           >
             js sketch
@@ -93,7 +95,7 @@ export default function Sandbox() {
         <li>
           Tiling butterflies to get a Dragon's Egg origami model (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/butterflies/`}
+            href={`${CONTENT_BASE}/scratch/butterflies/`}
             rel="noopener noreferrer"
           >
             js sketch
@@ -117,10 +119,7 @@ export default function Sandbox() {
         </li>
         <li>
           Learn some Arabic words (
-          <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/arabic/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/arabic/`} rel="noopener noreferrer">
             js sketch
           </a>{" "}
           resp.{" "}
@@ -135,7 +134,7 @@ export default function Sandbox() {
         <li>
           Go on a Torus (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/go_torus/`}
+            href={`${CONTENT_BASE}/scratch/go_torus/`}
             rel="noopener noreferrer"
           >
             js sketch
@@ -153,7 +152,7 @@ export default function Sandbox() {
           </a>{" "}
           /{" "}
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/fastmail-0.1-an+fx.xpi`}
+            href={`${CONTENT_BASE}/scratch/fastmail-0.1-an+fx.xpi`}
             rel="noopener noreferrer"
           >
             firefox extension file
@@ -164,7 +163,7 @@ export default function Sandbox() {
           UBN redirecter, a quick &amp; dirty web extension to nagivate to the
           Radboud University's access page of a journal article (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/ubn_bookmarklet-0.1-an+fx.xpi`}
+            href={`${CONTENT_BASE}/scratch/ubn_bookmarklet-0.1-an+fx.xpi`}
             rel="noopener noreferrer"
           >
             firefox extension file
@@ -173,30 +172,21 @@ export default function Sandbox() {
         </li>
         <li>
           Minimalist Go made with Vue.js (
-          <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/vue-go/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/vue-go/`} rel="noopener noreferrer">
             js sketch
           </a>
           )
         </li>
         <li>
           Ridiculous CSS 3D transforms (
-          <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/css3d/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/css3d/`} rel="noopener noreferrer">
             js sketch
           </a>
           )
         </li>
         <li>
           Loesje poster design studio (
-          <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/loesje/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/loesje/`} rel="noopener noreferrer">
             js app
           </a>
           )
@@ -204,7 +194,7 @@ export default function Sandbox() {
         <li>
           Debating tournament tabulation app (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/debating/public/`}
+            href={`${CONTENT_BASE}/scratch/debating/public/`}
             rel="noopener noreferrer"
           >
             js app
@@ -214,7 +204,7 @@ export default function Sandbox() {
         <li>
           Extendable table (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/cyril_tafel/`}
+            href={`${CONTENT_BASE}/scratch/cyril_tafel/`}
             rel="noopener noreferrer"
           >
             js plan sketch
@@ -231,7 +221,7 @@ export default function Sandbox() {
         <li>
           Origami Pixels (
           <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/cyril_origami_pixels/`}
+            href={`${CONTENT_BASE}/scratch/cyril_origami_pixels/`}
             rel="noopener noreferrer"
           >
             js sketch
@@ -257,10 +247,7 @@ export default function Sandbox() {
         </li>
         <li>
           Boids (
-          <a
-            href={`${process.env.REACT_APP_CONTENT_BASE}/scratch/boids/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/boids/`} rel="noopener noreferrer">
             js sketch
           </a>
           )
