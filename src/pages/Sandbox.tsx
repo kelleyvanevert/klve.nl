@@ -5,7 +5,7 @@ import { CONTENT_BASE } from "~/config";
 export default function Sandbox() {
   return (
     <article className="wrap">
-      <h1>[Mostly digital] projects & experiments</h1>
+      <h1>[Mostly digital] projects &amp; experiments</h1>
 
       <ul>
         <li>
@@ -253,6 +253,75 @@ export default function Sandbox() {
           )
         </li>
       </ul>
+
+      <h2 style={{ margin: "4rem auto 2rem", textAlign: "center" }}>
+        Just a list of JavaScript stuff
+      </h2>
+      {/* <p>JavaScript related</p> */}
+      <ul>
+        <li>
+          Creative: <a href="https://zzz.dog/">Zdog</a> |{" "}
+          <a href="https://tonejs.github.io/">Tone.js</a> |{" "}
+          <a href="https://github.com/veltman/flubber">flubber</a> |{" "}
+          <a href="https://github.com/enkimute/ganja.js">ganja.js</a> |{" "}
+          <a href="https://d3js.org/">D3</a> |{" "}
+          <a href="https://observablehq.com/">Observable</a>
+        </li>
+        <li>
+          Useful:{" "}
+          <a href="https://www.npmjs.com/package/react-inspector">
+            react-inspector
+          </a>{" "}
+          |{" "}
+          <a href="https://github.com/berzniz/react-overdrive">
+            react-overdrive
+          </a>{" "}
+          | <a href="https://github.com/OpenKieler/elkjs">ELK.js</a> |{" "}
+          <a href="https://github.com/brillout/awesome-react-components">
+            Awesome React
+          </a>
+        </li>
+        <li>
+          Resources: <a href="https://undraw.co/illustrations">unDraw</a>
+        </li>
+        <li>
+          Rendering:{" "}
+          <a href="https://github.com/react-spring/react-three-fiber">
+            react-three-fiber
+          </a>{" "}
+          | <a href="https://github.com/vadimdemedes/ink">ink</a> |{" "}
+          <a href="https://github.com/developit/htm">htm</a> |{" "}
+          <a href="https://gl-react-cookbook.surge.sh/sdf1?menu=true">
+            gl-react
+          </a>{" "}
+          |{" "}
+          <a href="https://deck.gl/#/examples/core-layers/point-cloud-layer">
+            deck.gl
+          </a>{" "}
+          (etc)
+        </li>
+        <li>
+          Compiling: <a href="https://parceljs.org/">Parcel</a> |{" "}
+          <a href="https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md">
+            plugin handbook
+          </a>{" "}
+          |{" "}
+          <a href="https://astexplorer.net/#/gist/3842e950f157f1c548f3db761447ee9c/latest">
+            AST explorer
+          </a>
+        </li>
+      </ul>
+      {/* <p>Other</p>
+      <ul>
+        <li>
+          <a href="http://www.vincentmeertens.com/project/timemaps/">
+            TimeMaps
+          </a>
+        </li>
+        <li>
+          <a href="https://www.keene.edu/campus/maps/tool/">Polyline tool</a>
+        </li>
+      </ul> */}
     </article>
   );
 }
