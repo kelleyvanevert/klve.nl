@@ -31,4 +31,4 @@ jobs:
           name: Send files to klve.nl
           command: |
             echo 'klve.nl ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmHJt/wfrkM4vItZ4BJLUNTVIUiUKCEUv5zlWCRmTebe7fgGHeWCioecD6qXXCA98WBeArs8/cgGZ5kb1HRrnF9UjX90CkgFgCTs6mKFtjk9D2GMFyczESVh4puhJFI8y5+apIrHqdaQfoVzqEt+lB/XGlSowIdOuH+0yxZ1yMeRB1KYpUDDTQyrShFAHfajQv6jOprGRkq+oQuUwfLcuz4Jp/43OfMgCTmXSIZSLhubEgtKMX6pVmrPmnpNvwlQ3beZwgCz6S/C06LRZvjvTTQiHEMzxrFBk34GRy+yLAAT5id7s2yY0OyNrnxcdgf+GnDve5NqWpggOaW5zQXRYT' >> ~/.ssh/known_hosts
-            scp -rp build/* kelley@klve.nl:prime/klve.nl/public/
+            scp -rp dist/* kelley@klve.nl:prime/klve.nl/public/
