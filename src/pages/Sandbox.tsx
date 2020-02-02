@@ -10,10 +10,7 @@ export default function Sandbox() {
       <ul>
         <li>
           Visualizing JS execution through a meta-syntactic transform (
-          <a
-            href="https://js-visualized-v2.netlify.com/"
-            rel="noopener noreferrer"
-          >
+          <a href="https://jsviz.klve.nl/" rel="noopener noreferrer">
             js sketch
           </a>
           )
