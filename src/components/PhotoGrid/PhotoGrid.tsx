@@ -1,9 +1,11 @@
-import React, { useState, useCallback } from "react";
-import useReactRouter from "use-react-router";
+import React, { useCallback } from "react";
 import cx from "classnames";
+// import { useLocation } from "react-router";
+import { NavLink } from "react-router-dom";
 import "react-photoswipe/lib/photoswipe.css";
 import { PhotoSwipeGallery } from "react-photoswipe";
-import { NavLink } from "react-router-dom";
+
+// import useNavEffect from "~/util/useNavEffect";
 
 import styles from "./PhotoGrid.scss";
 
@@ -73,19 +75,24 @@ interface PhotoswipeGridProps {
 }
 
 PhotoGrid.Swipe = function PhotoswipeGrid({ items }: PhotoswipeGridProps) {
-  const {
-    location: { hash }
-  } = useReactRouter();
+  // const { hash } = useLocation();
 
-  const [isOpen, setIsOpen] = useState<boolean>(
-    Boolean(hash.match(/gid/) && hash.match(/pid/))
-  );
+  // const [isOpen, setIsOpen] = useState<boolean>(
+  //   Boolean(hash.match(/gid/) && hash.match(/pid/))
+  // );
+
+  // useNavEffect(({ hash }) => {
+  //   // setIsOpen(Boolean(hash.match(/gid/) && hash.match(/pid/)));
+  // });
 
   const renderThumb = useCallback(
     (item: PhotoGridItem) => (
       <div key={item.photo} className={styles.image}>
         <div className={styles.ratio} />
-        <div className={styles.a} onClick={() => setIsOpen(true)}>
+        <div
+          className={styles.a}
+          // onClick={() => setIsOpen(true)}
+        >
           <img alt="" src={item.photo} />
         </div>
       </div>
@@ -96,10 +103,10 @@ PhotoGrid.Swipe = function PhotoswipeGrid({ items }: PhotoswipeGridProps) {
   return (
     <PhotoGrid wide borders>
       <PhotoSwipeGallery
-        isOpen={isOpen}
+        // isOpen={isOpen}
         items={items}
         options={PHOTOSWIPE_OPTS}
-        onClose={() => setIsOpen(false)}
+        // onClose={() => setIsOpen(false)}
         thumbnailContent={renderThumb}
       />
     </PhotoGrid>

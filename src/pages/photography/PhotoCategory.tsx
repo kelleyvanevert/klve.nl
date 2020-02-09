@@ -1,5 +1,5 @@
 import React from "react";
-import useReactRouter from "use-react-router";
+import { useParams } from "react-router";
 import { Redirect, Link } from "react-router-dom";
 import PhotoGrid from "~/components/PhotoGrid";
 
@@ -8,11 +8,7 @@ import styles from "./PhotoCategory.scss";
 import { photoCats } from "./data";
 
 export default function PhotoCategory() {
-  const {
-    match: {
-      params: { category: key }
-    }
-  } = useReactRouter<{ category: string }>();
+  const { category: key = "" } = useParams();
 
   if (!photoCats[key]) {
     return <Redirect to="/photography" />;
