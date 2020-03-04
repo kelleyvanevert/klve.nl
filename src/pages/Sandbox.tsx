@@ -276,7 +276,8 @@ export default function Sandbox() {
           | <a href="https://github.com/OpenKieler/elkjs">ELK.js</a> |{" "}
           <a href="https://github.com/brillout/awesome-react-components">
             Awesome React
-          </a>
+          </a>{" "}
+          | <a href="https://github.com/alpinejs/alpine">Alpine</a>
         </li>
         <li>
           Resources: <a href="https://undraw.co/illustrations">unDraw</a>
