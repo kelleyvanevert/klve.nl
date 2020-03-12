@@ -37,6 +37,12 @@ export const photoCats: {
           h: 1500
         },
         {
+          photo: "/s/photography/portraiture/s320/aaricia.jpg",
+          src: "/s/photography/portraiture/s1500/aaricia.jpg",
+          w: 1500,
+          h: 999
+        },
+        {
           photo: "/s/photography/portraiture/s320/_MG_0765.jpg",
           src: "/s/photography/portraiture/s1500/_MG_0765.jpg",
           w: 999,
