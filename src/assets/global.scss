@@ -40,6 +40,13 @@ html * {
 body {
   margin: 0;
   padding: 0;
+  cursor: crosshair;
+}
+
+::selection,
+::-moz-selection {
+  background-color: #222;
+  color: white;
 }
 
 :global(.wrap) {
