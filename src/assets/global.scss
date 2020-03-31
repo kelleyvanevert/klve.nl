@@ -43,7 +43,11 @@ body {
   cursor: crosshair;
 }
 
-::selection,
+::selection {
+  background-color: #222;
+  color: white;
+}
+
 ::-moz-selection {
   background-color: #222;
   color: white;
