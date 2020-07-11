@@ -1,29 +1,19 @@
+import styled from "styled-components/macro";
 import React from "react";
-import cx from "classnames";
 import { Link } from "react-router-dom";
 
-import { CONTENT_BASE } from "~/config";
-
-import styles from "./Home.scss";
+import { CONTENT_BASE } from "web/config";
 
 function Nobr({ children }: { children: React.ReactNode }) {
   return <span style={{ whiteSpace: "nowrap" }}>{children}</span>;
 }
 
-function Num({ children }: { children: React.ReactNode }) {
-  return <span className={styles.no}>{children}</span>;
-}
-
-function Item({ children }: { children: React.ReactNode }) {
-  return <em>{children}</em>;
-}
-
 export default function Home() {
   return (
-    <article className={cx("wrapr", styles.home)}>
-      <div className={styles.content}>
+    <Container className="wrapr">
+      <div className="content">
         <h1 style={{ display: "none" }}>Kelley van Evert</h1>
-        <p className={styles.lead}>
+        <Lead>
           Hi there!&emsp;I'm Kelley. I{" "}
           <a href="https://codaisseur.com/">teach</a>,{" "}
           <a href="https://mywheels.nl">code</a>, and{" "}
@@ -33,21 +23,21 @@ export default function Home() {
           <a href="https://cargocollective.com/kvhku">some art</a>, but mostly I
           ponder. Also I studied theoretical computer science and learned many
           interesting things.
-        </p>
-        <div className={styles.photo}>
-          <div className={styles.placeholder}>
-            <div className={styles.ratio} />
-            <div className={styles.me}>
+        </Lead>
+        <Photo>
+          <PhotoPlaceholder>
+            <PhotoRatio />
+            <PhotoContainer>
               <img
                 alt="Kelley van Evert"
                 src={`${CONTENT_BASE}/s/_MG_2393.jpg`}
               />
-            </div>
-          </div>
-          <div className={styles.portrait_credits}>
+            </PhotoContainer>
+          </PhotoPlaceholder>
+          <PhotoCredits>
             photo by <a href="http://cyrcle.nl/">Cyril Cleven</a>
-          </div>
-        </div>
+          </PhotoCredits>
+        </Photo>
         <p>
           I am <strong>fascinated</strong>, among others, by{" "}
           <Nobr>
@@ -98,6 +88,96 @@ export default function Home() {
           Habermas and others.
         </p>
       </div>
-    </article>
+    </Container>
   );
 }
+
+const Photo = styled.div`
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding-top: 4px; /* aesthetics of cmp text height */
+`;
+
+const PhotoPlaceholder = styled.div`
+  position: relative;
+  overflow: hidden;
+`;
+
+const PhotoRatio = styled.div`
+  padding-top: 66.5%;
+  box-sizing: border-box;
+`;
+
+const PhotoContainer = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+`;
+
+const PhotoCredits = styled.div`
+  text-align: right;
+  margin: 5px;
+  font-size: 13px;
+  font-style: italic;
+`;
+
+const Container = styled.section`
+  p {
+    text-indent: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (min-width: 758px) {
+    ${Photo} {
+      margin: 0;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 300px;
+    }
+    .content {
+      margin-left: 330px;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    ${Photo} {
+      width: 400px;
+    }
+    .content {
+      margin-left: 440px;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    ${Photo} {
+      width: 450px;
+    }
+    .content {
+      margin-left: 500px;
+    }
+  }
+`;
+
+const Lead = styled.p`
+  font-size: 140%;
+  line-height: 140%;
+  text-indent: 0 !important;
+  margin-bottom: 20px;
+`;
+
+const Num = styled.span`
+  display: inline-block;
+  font-size: 120%;
+  margin: 0 3px 0 4px;
+  position: relative;
+  top: 2px;
+`;
+
+const Item = styled.em``;

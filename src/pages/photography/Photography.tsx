@@ -1,20 +1,27 @@
+import styled from "styled-components/macro";
 import React from "react";
 
-import PhotoGrid from "~/components/PhotoGrid";
+import PhotoGrid from "web/components/PhotoGrid";
 
 import { photoCats } from "./data";
 
 export default function Photography() {
   return (
-    <article className="wrap">
+    <section className="wrap">
       <h1 style={{ display: "none" }}>Photography</h1>
-      <p className="sub">(Select category to see more photos.)</p>
+      <Sub>(Select category to see more photos.)</Sub>
       <PhotoGrid.Nav
         items={Object.entries(photoCats).map(([key, cat]) => ({
           ...cat,
-          to: `/photography/${key}`
+          to: `/photography/${key}`,
         }))}
       />
-    </article>
+    </section>
   );
 }
+
+const Sub = styled.p`
+  position: relative;
+  top: -30px;
+  text-align: center;
+`;

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { CONTENT_BASE } from "~/config";
+import { CONTENT_BASE } from "web/config";
 
 export default function Sandbox() {
   return (
-    <article className="wrap">
+    <section className="wrap">
       <h1>[Mostly digital] projects &amp; experiments</h1>
 
       <ul>
@@ -323,6 +323,6 @@ export default function Sandbox() {
           <a href="https://www.keene.edu/campus/maps/tool/">Polyline tool</a>
         </li>
       </ul> */}
-    </article>
+    </section>
   );
 }

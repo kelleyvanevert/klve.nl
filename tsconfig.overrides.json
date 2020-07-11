@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "web/*": ["src/*"]
+    }
+  },
+  "include": ["src", "*.d.ts"],
+  "exclude": ["docs", "tasks"]
+}

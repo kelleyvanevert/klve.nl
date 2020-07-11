@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import History from "history";
-import { useHistory } from "react-router";
+import { Listener } from "history";
+import { useHistory } from "react-router-dom";
 
-export default function useNavEffect(f: History.LocationListener) {
+export default function useNavEffect(f: Listener) {
   const history = useHistory();
 
   useEffect(() => {

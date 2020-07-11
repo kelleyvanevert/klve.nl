@@ -1,9 +1,8 @@
+import styled from "styled-components/macro";
 import React from "react";
-import { useParams } from "react-router";
-import { Redirect, Link } from "react-router-dom";
-import PhotoGrid from "~/components/PhotoGrid";
+import { useParams, Redirect, Link } from "react-router-dom";
 
-import styles from "./PhotoCategory.scss";
+import PhotoGrid from "web/components/PhotoGrid";
 
 import { photoCats } from "./data";
 
@@ -17,20 +16,52 @@ export default function PhotoCategory() {
   const cat = photoCats[key];
 
   return (
-    <article>
+    <section>
       <div className="wrap">
         <h1>
           <strong>
-            <span className={styles.back}>
+            <GoBack>
               <Link to="/photography">
                 <i />
               </Link>
-            </span>
+            </GoBack>
             {cat.title}
           </strong>
         </h1>
       </div>
       <PhotoGrid.Swipe items={cat.images} />
-    </article>
+    </section>
   );
 }
+
+const GoBack = styled.span`
+  position: absolute;
+  display: block;
+  left: -40px;
+  top: 1px;
+  color: #000;
+
+  a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    font-size: 28px;
+    color: #000;
+
+    width: 30px;
+    text-align: center;
+  }
+
+  a i {
+    display: block;
+    font-style: normal;
+    position: relative;
+    top: -1px;
+  }
+
+  a i:after {
+    content: "⟨";
+  }
+`;
