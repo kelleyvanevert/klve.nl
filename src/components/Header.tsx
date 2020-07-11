@@ -45,11 +45,19 @@ const Email = styled.div`
   a {
     text-decoration: none;
     color: #999;
+
+    .dark-mode & {
+      color: #888;
+    }
   }
   a em {
     font-style: normal;
     font-weight: bold;
     color: #000;
+
+    .dark-mode & {
+      color: #fff;
+    }
   }
 `;
 
@@ -83,6 +91,10 @@ const Menu = styled.ul`
       &:focus,
       &:focus span {
         text-decoration: underline;
+      }
+
+      .dark-mode & {
+        color: #eee;
       }
     }
   }

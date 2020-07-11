@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import useDarkMode from "use-dark-mode";
 
 import { GlobalStyle } from "web/config";
 import Layout from "web/components/Layout";
@@ -16,6 +17,8 @@ import Sandbox from "web/pages/Sandbox";
 import Drawings from "web/pages/Drawings";
 
 export default function App() {
+  useDarkMode();
+
   return (
     <>
       <GlobalStyle />

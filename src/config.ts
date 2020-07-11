@@ -22,16 +22,6 @@ export const GlobalStyle = createGlobalStyle`
     cursor: crosshair;
   }
 
-  ::selection {
-    background-color: #222;
-    color: white;
-  }
-
-  ::-moz-selection {
-    background-color: #222;
-    color: white;
-  }
-
   .wrap {
     max-width: 800px;
     margin-left: auto;
@@ -74,6 +64,11 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 160%;
 
     text-transform: none;
+
+    &.dark-mode {
+      background: #222;
+      color: #ddd;
+    }
   }
 
   h1 {
@@ -89,6 +84,10 @@ export const GlobalStyle = createGlobalStyle`
 
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    .dark-mode & {
+      color: #fff;
+    }
   }
 
   h1 strong {
@@ -102,6 +101,10 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     color: #555;
+
+    .dark-mode & {
+      color: #888;
+    }
   }
 
   main {
@@ -110,11 +113,19 @@ export const GlobalStyle = createGlobalStyle`
       outline: 0px solid #eee;
       outline-offset: 2px;
       background: transparent;
+
+      .dark-mode & {
+        outline-color: #444;
+      }
     }
     a:focus {
       outline-offset: 0;
       outline-width: 2px;
       background: #eee;
+
+      .dark-mode & {
+        background: #444;
+      }
     }
   }
 `;
