@@ -17,7 +17,10 @@ import Sandbox from "web/pages/Sandbox";
 import Drawings from "web/pages/Drawings";
 
 export default function App() {
-  useDarkMode();
+  useDarkMode(undefined, {
+    // @ts-ignore
+    storageKey: null,
+  });
 
   return (
     <>
