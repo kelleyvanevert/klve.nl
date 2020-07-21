@@ -6,5 +6,5 @@
     }
   },
   "include": ["src", "*.d.ts"],
-  "exclude": ["docs", "tasks"]
+  "exclude": ["docs", "tasks", "workers-site"]
 }

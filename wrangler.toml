@@ -1,0 +1,10 @@
+name = "klve_nl"
+type = "webpack"
+account_id = "3fdecd8a62b0d0e0df92fa997505d462"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./build"
+entry-point = "workers-site"
