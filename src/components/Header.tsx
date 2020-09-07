@@ -15,8 +15,8 @@ export default function Header() {
   return (
     <Container className="wrap">
       <Email>
-        <a href="mailto:hello@kelleyvanevert.nl">
-          hello@<em>kelleyvanevert</em>.nl
+        <a href="mailto:hello@klve.nl">
+          hello@<em>klve</em>.nl
         </a>
       </Email>
       <Menu>
