@@ -122,10 +122,18 @@ const Container = styled.div`
 
   &.borders {
     border-top: 1px dashed #ccc;
+
+    .dark-mode & {
+      border-color: #555;
+    }
   }
   &.borders .image {
     border-right: 1px dashed #ccc;
     border-bottom: 1px dashed #ccc;
+
+    .dark-mode & {
+      border-color: #555;
+    }
   }
 
   .image {
