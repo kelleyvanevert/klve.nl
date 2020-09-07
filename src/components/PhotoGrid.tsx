@@ -1,9 +1,10 @@
 import styled from "styled-components/macro";
-import React, { useCallback } from "react";
+import React, { useCallback, useRef, useMemo } from "react";
 import cx from "classnames";
 import { NavLink } from "react-router-dom";
 import "react-photoswipe/lib/photoswipe.css";
-import { PhotoSwipeGallery } from "react-photoswipe";
+// @ts-ignore
+import { PhotoSwipeGallery } from "react-photoswipe-2";
 
 interface PhotoGridProps {
   borders?: boolean;
@@ -11,17 +12,15 @@ interface PhotoGridProps {
   children?: React.ReactNode;
 }
 
-export default function PhotoGrid({
-  borders,
-  wide,
-  children = null,
-}: PhotoGridProps) {
-  return (
-    <Container className={cx(borders && "borders", wide && "wide")}>
-      <div className="contents">{children}</div>
-    </Container>
-  );
-}
+export const PhotoGrid = React.forwardRef<HTMLDivElement, PhotoGridProps>(
+  ({ borders, wide, children = null }, ref) => {
+    return (
+      <Container ref={ref} className={cx(borders && "borders", wide && "wide")}>
+        <div className="contents">{children}</div>
+      </Container>
+    );
+  }
+);
 
 interface PhotoNavGrid {
   items: Array<{
@@ -30,7 +29,7 @@ interface PhotoNavGrid {
   }>;
 }
 
-PhotoGrid.Nav = function PhotoNavGrid({ items }: PhotoNavGrid) {
+export function PhotoGridNav({ items }: PhotoNavGrid) {
   return (
     <PhotoGrid>
       {items.map((item) => (
@@ -43,14 +42,7 @@ PhotoGrid.Nav = function PhotoNavGrid({ items }: PhotoNavGrid) {
       ))}
     </PhotoGrid>
   );
-};
-
-const PHOTOSWIPE_OPTS = {
-  mainClass: "pswp--minimal--dark",
-  barsSize: { top: 0, bottom: 0 },
-  // captionEl: false,
-  shareEl: false,
-};
+}
 
 export interface PhotoGridItem {
   photo: string;
@@ -64,25 +56,14 @@ interface PhotoswipeGridProps {
   items: PhotoGridItem[];
 }
 
-PhotoGrid.Swipe = function PhotoswipeGrid({ items }: PhotoswipeGridProps) {
-  // const { hash } = useLocation();
-
-  // const [isOpen, setIsOpen] = useState<boolean>(
-  //   Boolean(hash.match(/gid/) && hash.match(/pid/))
-  // );
-
-  // useNavEffect(({ hash }) => {
-  //   // setIsOpen(Boolean(hash.match(/gid/) && hash.match(/pid/)));
-  // });
+export function PhotoGridSwipe({ items }: PhotoswipeGridProps) {
+  const ref = useRef<HTMLDivElement>(null);
 
   const renderThumb = useCallback(
     (item: PhotoGridItem) => (
       <div key={item.photo} className="image">
         <div className="ratio" />
-        <div
-          className="a"
-          // onClick={() => setIsOpen(true)}
-        >
+        <div className="a">
           <img alt="" src={item.photo} />
         </div>
       </div>
@@ -90,18 +71,36 @@ PhotoGrid.Swipe = function PhotoswipeGrid({ items }: PhotoswipeGridProps) {
     []
   );
 
+  const options = {
+    mainClass: "pswp--minimal--dark",
+    barsSize: { top: 0, bottom: 0 },
+    // captionEl: false,
+    shareEl: false,
+    getThumbBoundsFn(index: number) {
+      const thumbnailImage = ref.current
+        ?.getElementsByClassName("pswp-thumbnail")
+        [index]?.getElementsByTagName("img")[0];
+      if (!thumbnailImage) {
+        return;
+      }
+
+      const pageYScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const rect = thumbnailImage.getBoundingClientRect();
+      return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+    },
+  };
+
   return (
-    <PhotoGrid wide borders>
+    <PhotoGrid wide borders ref={ref}>
       <PhotoSwipeGallery
-        // isOpen={isOpen}
         items={items}
-        options={PHOTOSWIPE_OPTS}
-        // onClose={() => setIsOpen(false)}
+        options={options}
         thumbnailContent={renderThumb}
       />
     </PhotoGrid>
   );
-};
+}
 
 const Container = styled.div`
   margin: 0 -50px;
@@ -185,6 +184,10 @@ const Container = styled.div`
       left: 1.5em;
       right: 1.5em;
       bottom: 1.5em;
+
+      &:after {
+        display: none;
+      }
     }
     a img,
     .a img {
@@ -198,6 +201,8 @@ const Container = styled.div`
       height: auto;
       max-width: 100%;
       max-height: 100%;
+
+      cursor: pointer;
     }
   }
 `;

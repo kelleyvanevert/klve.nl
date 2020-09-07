@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 import React from "react";
 import { useParams, Redirect, Link } from "react-router-dom";
 
-import PhotoGrid from "web/components/PhotoGrid";
+import { PhotoGridSwipe } from "web/components/PhotoGrid";
 
 import { photoCats } from "./data";
 
@@ -29,7 +29,7 @@ export default function PhotoCategory() {
           </strong>
         </h1>
       </div>
-      <PhotoGrid.Swipe items={cat.images} />
+      <PhotoGridSwipe items={cat.images} />
     </section>
   );
 }
@@ -52,6 +52,10 @@ const GoBack = styled.span`
 
     width: 30px;
     text-align: center;
+
+    &:after {
+      display: none;
+    }
   }
 
   a i {

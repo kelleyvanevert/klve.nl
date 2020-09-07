@@ -1,6 +1,6 @@
 import React from "react";
 
-import PhotoGrid, { PhotoGridItem } from "web/components/PhotoGrid";
+import { PhotoGridSwipe, PhotoGridItem } from "web/components/PhotoGrid";
 
 const DRAWINGS: PhotoGridItem[] = [
   {
@@ -63,7 +63,7 @@ export default function Drawings() {
       <div className="wrap">
         <h1>Drawings</h1>
       </div>
-      <PhotoGrid.Swipe items={DRAWINGS} />
+      <PhotoGridSwipe items={DRAWINGS} />
     </section>
   );
 }

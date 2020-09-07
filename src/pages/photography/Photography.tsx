@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import React from "react";
 
-import PhotoGrid from "web/components/PhotoGrid";
+import { PhotoGridNav } from "web/components/PhotoGrid";
 
 import { photoCats } from "./data";
 
@@ -10,7 +10,7 @@ export default function Photography() {
     <section className="wrap">
       <h1 style={{ display: "none" }}>Photography</h1>
       <Sub>(Select category to see more photos.)</Sub>
-      <PhotoGrid.Nav
+      <PhotoGridNav
         items={Object.entries(photoCats).map(([key, cat]) => ({
           ...cat,
           to: `/photography/${key}`,
