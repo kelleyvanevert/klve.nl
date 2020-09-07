@@ -19,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    cursor: crosshair;
   }
 
   .wrap {
@@ -58,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: adobe-caslon-pro, serif;
+    font-family: kings-caslon, serif;
     color: #333;
 
     line-height: 160%;
@@ -100,31 +99,59 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #555;
+    color: black;
+    font-weight: bold;
 
     .dark-mode & {
-      color: #888;
+      color: white;
     }
   }
 
   main {
     a {
+      display: inline-block;
+      position: relative;
       margin: 0 1px;
-      outline: 0px solid #eee;
-      outline-offset: 2px;
+      outline: none;
       background: transparent;
 
-      .dark-mode & {
-        outline-color: #444;
+      text-decoration: none;
+
+      &:after {
+        content: " ";
+        pointer-events: none;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        top: 3px;
+        border-bottom: 2px solid rgba(0, 0, 0, .1);
+
+        .dark-mode & {
+          border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
       }
     }
-    a:focus {
-      outline-offset: 0;
-      outline-width: 2px;
-      background: #eee;
 
-      .dark-mode & {
-        background: #444;
+    a:hover {
+      &:after {
+        border-bottom-color: black;
+
+        .dark-mode & {
+          border-bottom-color: white;
+        }
+      }
+    }
+
+    a:focus {
+      &:after {
+        left: -2px;
+        right: -2px;
+        border: 2px solid black;
+
+        .dark-mode & {
+          border-color: white;
+        }
       }
     }
   }

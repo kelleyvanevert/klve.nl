@@ -74,7 +74,7 @@ const Menu = styled.ul`
       display: inline-block;
       position: relative;
       text-transform: lowercase;
-      font-weight: 600;
+      font-weight: 800;
       color: #000;
       text-decoration: none;
       font-size: 25px;

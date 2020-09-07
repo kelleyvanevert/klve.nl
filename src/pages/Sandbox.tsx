@@ -323,6 +323,16 @@ export default function Sandbox() {
           <a href="https://www.keene.edu/campus/maps/tool/">Polyline tool</a>
         </li>
       </ul> */}
+
+      <h2 style={{ margin: "4rem auto 2rem", textAlign: "center" }}>
+        And some random other stuff
+      </h2>
+      <ul>
+        <li>
+          <a href="https://materialize.io/">Materialize</a> /{" "}
+          <a href="https://hasura.io/">Hasura</a>
+        </li>
+      </ul>
     </section>
   );
 }
