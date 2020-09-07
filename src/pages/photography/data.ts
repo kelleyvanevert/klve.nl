@@ -16,7 +16,7 @@ export const photoCats: {
   {
     portraiture: {
       title: "Portraiture",
-      photo: "/s/photography/portraiture/s320/_MG_0156.jpg",
+      photo: "/s/photography/portraiture/s320/_MG_7811.jpg",
       images: [
         {
           photo: "/s/photography/portraiture/s320/_MG_5079.jpg",
@@ -101,6 +101,12 @@ export const photoCats: {
           src: "/s/photography/portraiture/s1500/_MG_6110.jpg",
           w: 1500,
           h: 999,
+        },
+        {
+          photo: "/s/photography/portraiture/s320/DSCF09848.jpg",
+          src: "/s/photography/portraiture/s1500/DSCF09848.jpg",
+          w: 1000,
+          h: 1500,
         },
       ],
     },

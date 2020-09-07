@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import React, { useCallback, useRef, useMemo } from "react";
+import React, { useCallback, useRef } from "react";
 import cx from "classnames";
 import { NavLink } from "react-router-dom";
 import "react-photoswipe/lib/photoswipe.css";
