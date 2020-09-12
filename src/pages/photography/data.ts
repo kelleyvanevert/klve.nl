@@ -222,6 +222,18 @@ export const photoCats: {
           w: 1500,
           h: 999,
         },
+        {
+          photo: "/s/photography/fine/s320/tumblr_mzxdlrnbXG1qahbj8o2_1280.jpg",
+          src: "/s/photography/fine/tumblr_mzxdlrnbXG1qahbj8o2_1280.jpg",
+          w: 1280,
+          h: 850,
+        },
+        {
+          photo: "/s/photography/fine/s320/tumblr_n1yjqu50aw1qahbj8o8_1280.jpg",
+          src: "/s/photography/fine/tumblr_n1yjqu50aw1qahbj8o8_1280.jpg",
+          w: 1280,
+          h: 850,
+        },
       ],
     },
     events: {

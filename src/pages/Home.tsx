@@ -30,12 +30,15 @@ export default function Home() {
             <PhotoContainer>
               <img
                 alt="Kelley van Evert"
-                src={`${CONTENT_BASE}/s/_MG_2393.jpg`}
+                // s/me/_DSF7540.jpg -- w/ cyril op een toren in wenen
+                // s/_MG_2393.jpg -- w/ cyril op pytegga
+                // 19832674_1556692387714443_1437134954_n.jpg -- vintagey, don't really remember where
+                src={`${CONTENT_BASE}/s/me/_DSF7540.jpg`}
               />
             </PhotoContainer>
           </PhotoPlaceholder>
           <PhotoCredits>
-            photo by <a href="http://cyrcle.nl/">Cyril Cleven</a>
+            photo taken by <a href="http://cyrcle.nl/">Cyril</a>
           </PhotoCredits>
         </Photo>
         <p>
