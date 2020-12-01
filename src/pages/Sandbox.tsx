@@ -330,10 +330,11 @@ export default function Sandbox() {
       </h2>
       <ul>
         <li>
-          <a href="https://materialize.io/">Materialize</a> /{" "}
+          <a href="https://materialize.io/">Materialize</a> |{" "}
           <a href="https://hasura.io/">Hasura</a> |{" "}
           <a href="https://github.com/regl-project/regl">Functional WebGL</a>
-        </li>
+        </li>{" "}
+        | <a href="https://www.projectfluent.org/">Fluent</a>
       </ul>
     </section>
   );
