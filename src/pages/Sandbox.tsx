@@ -9,6 +9,13 @@ export default function Sandbox() {
 
       <ul>
         <li>
+          Some of my favorite recipes, with a fun ascii morphing effect (
+          <a href="https://asciirecip.es/" rel="noopener noreferrer">
+            asciirecip.es
+          </a>
+          )
+        </li>
+        <li>
           Visualizing JS execution through a meta-syntactic transform (
           <a href="https://jsviz.klve.nl/" rel="noopener noreferrer">
             js sketch
