@@ -31,7 +31,14 @@ export default function App<P>({ Component, pageProps }: Props<P>) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        <link rel="shortcut icon" href="./favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
+        <title>Kelley van Evert</title>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://use.typekit.net/pak0fwg.css?123"
+        />
       </Head>
       <Component {...pageProps} />
     </Layout>
