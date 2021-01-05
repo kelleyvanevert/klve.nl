@@ -1,18 +1,18 @@
-import styled from "styled-components/macro";
-import React, { useCallback, useRef } from "react";
-import cx from "classnames";
-import { NavLink } from "react-router-dom";
-import "react-photoswipe/lib/photoswipe.css";
+import React, { useCallback, useRef, forwardRef, ReactNode } from "react";
+import { styled } from "linaria/react";
+import { cx } from "linaria";
+import Link from "next/link";
+import "react-photoswipe-2/lib/photoswipe.css";
 // @ts-ignore
 import { PhotoSwipeGallery } from "react-photoswipe-2";
 
-interface PhotoGridProps {
+type PhotoGridProps = {
   borders?: boolean;
   wide?: boolean;
-  children?: React.ReactNode;
-}
+  children?: ReactNode;
+};
 
-export const PhotoGrid = React.forwardRef<HTMLDivElement, PhotoGridProps>(
+export const PhotoGrid = forwardRef<HTMLDivElement, PhotoGridProps>(
   ({ borders, wide, children = null }, ref) => {
     return (
       <Container ref={ref} className={cx(borders && "borders", wide && "wide")}>
@@ -22,12 +22,12 @@ export const PhotoGrid = React.forwardRef<HTMLDivElement, PhotoGridProps>(
   }
 );
 
-interface PhotoNavGrid {
+type PhotoNavGrid = {
   items: Array<{
     to: string;
     photo: string;
   }>;
-}
+};
 
 export function PhotoGridNav({ items }: PhotoNavGrid) {
   return (
@@ -35,9 +35,11 @@ export function PhotoGridNav({ items }: PhotoNavGrid) {
       {items.map((item) => (
         <div key={item.photo} className="image">
           <div className="ratio" />
-          <NavLink to={item.to}>
-            <img alt="" src={item.photo} />
-          </NavLink>
+          <Link href={item.to}>
+            <a>
+              <img alt="" src={item.photo} />
+            </a>
+          </Link>
         </div>
       ))}
     </PhotoGrid>
@@ -77,16 +79,18 @@ export function PhotoGridSwipe({ items }: PhotoswipeGridProps) {
     // captionEl: false,
     shareEl: false,
     getThumbBoundsFn(index: number) {
-      const thumbnailImage = ref.current
-        ?.getElementsByClassName("pswp-thumbnail")
-        [index]?.getElementsByTagName("img")[0];
-      if (!thumbnailImage) {
+      const thmb =
+        ref.current &&
+        ref.current.getElementsByClassName("pswp-thumbnail")[index];
+      const im = thmb && thmb.getElementsByTagName("img")[0];
+
+      if (!im) {
         return;
       }
 
       const pageYScroll =
         window.pageYOffset || document.documentElement.scrollTop;
-      const rect = thumbnailImage.getBoundingClientRect();
+      const rect = im.getBoundingClientRect();
       return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
     },
   };
@@ -124,7 +128,7 @@ const Container = styled.div`
     border-top: 1px dashed #ccc;
 
     .dark-mode & {
-      border-color: #555;
+      border-color: #555 !important;
     }
   }
   &.borders .image {
@@ -132,7 +136,7 @@ const Container = styled.div`
     border-bottom: 1px dashed #ccc;
 
     .dark-mode & {
-      border-color: #555;
+      border-color: #555 !important;
     }
   }
 

@@ -1,12 +1,8 @@
-import styled from "styled-components/macro";
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { styled } from "linaria/react";
 
-import { CONTENT_BASE } from "web/config";
-
-function Nobr({ children }: { children: React.ReactNode }) {
-  return <span style={{ whiteSpace: "nowrap" }}>{children}</span>;
-}
+import { CONTENT_BASE } from "../lib/config";
 
 export default function Home() {
   return (
@@ -17,9 +13,14 @@ export default function Home() {
           Hi there!&emsp;I'm Kelley. I{" "}
           <a href="https://codaisseur.com/">teach</a>,{" "}
           <a href="https://mywheels.nl">code</a>, and{" "}
-          <Link to="/projects">experiment with</Link> web technologies.
-          Sometimes I produce <Link to="/photography">pictures</Link>, and in
-          the past I produced{" "}
+          <Link href="/projects">
+            <a>experiment with</a>
+          </Link>{" "}
+          web technologies. Sometimes I produce{" "}
+          <Link href="/photography">
+            <a>pictures</a>
+          </Link>
+          , and in the past I produced{" "}
           <a href="https://cargocollective.com/kvhku">some art</a>, but mostly I
           ponder. Also I studied theoretical computer science and learned many
           interesting things.
@@ -94,6 +95,10 @@ export default function Home() {
     </Container>
   );
 }
+
+const Nobr = styled.span`
+  white-space: nowrap;
+`;
 
 const Photo = styled.div`
   width: 100%;

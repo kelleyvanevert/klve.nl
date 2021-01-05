@@ -1,9 +1,9 @@
-import styled from "styled-components/macro";
 import React from "react";
+import { styled } from "linaria/react";
 
-import { PhotoGridNav } from "web/components/PhotoGrid";
+import { PhotoGridNav } from "../../lib/PhotoGrid";
 
-import { photoCats } from "./data";
+import { photoCats } from "../../lib/photos";
 
 export default function Photography() {
   return (

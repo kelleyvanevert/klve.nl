@@ -3,8 +3,11 @@
 # for tmp content that lives @ https://content.klve.nl/
 _content
 
+.linaria-cache
 .cache
 dist
+out
+.next
 
 # dependencies
 /node_modules

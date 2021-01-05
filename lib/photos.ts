@@ -1,14 +1,13 @@
 import mapValues from "lodash.mapvalues";
 
-import { CONTENT_BASE } from "web/config";
+import { CONTENT_BASE } from "./config";
+import { PhotoGridItem } from "./PhotoGrid";
 
-import { PhotoGridItem } from "web/components/PhotoGrid";
-
-export interface PhotoCat {
+export type PhotoCat = {
   title: string;
   photo: string;
   images: PhotoGridItem[];
-}
+};
 
 export const photoCats: {
   [key: string]: PhotoCat;

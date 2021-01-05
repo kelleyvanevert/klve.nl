@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PhotoGridSwipe, PhotoGridItem } from "web/components/PhotoGrid";
+import { PhotoGridSwipe, PhotoGridItem } from "../lib/PhotoGrid";
 
 const DRAWINGS: PhotoGridItem[] = [
   {

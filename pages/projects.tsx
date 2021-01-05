@@ -1,6 +1,5 @@
 import React from "react";
-
-import { CONTENT_BASE } from "web/config";
+import { CONTENT_BASE } from "../lib/config";
 
 export default function Sandbox() {
   return (
