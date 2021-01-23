@@ -12,7 +12,7 @@ export default function Sandbox() {
           <a href="https://kelleyvanevert.github.io/el-trombonista/">
             mini animation
           </a>
-          )
+          ) -- collab Carlota
         </li>
         <li>
           Some of my favorite recipes, with a fun ascii morphing effect (
