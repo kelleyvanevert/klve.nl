@@ -8,6 +8,13 @@ export default function Sandbox() {
 
       <ul>
         <li>
+          El Trombonista (
+          <a href="https://kelleyvanevert.github.io/el-trombonista/">
+            mini animation
+          </a>
+          )
+        </li>
+        <li>
           Some of my favorite recipes, with a fun ascii morphing effect (
           <a href="https://asciirecip.es/" rel="noopener noreferrer">
             asciirecip.es
