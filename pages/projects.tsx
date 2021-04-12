@@ -347,7 +347,8 @@ export default function Sandbox() {
           <a href="https://hasura.io/">Hasura</a> |{" "}
           <a href="https://github.com/regl-project/regl">Functional WebGL</a> |{" "}
           <a href="https://www.projectfluent.org/">Fluent</a> |{" "}
-          <a href="https://github.com/morgan3d/quadplay">Quadplay✜</a>
+          <a href="https://github.com/morgan3d/quadplay">Quadplay✜</a> |{" "}
+          <a href="https://github.com/WebReflection/augmentor">augmentor</a>
         </li>
       </ul>
     </section>
