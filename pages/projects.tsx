@@ -348,7 +348,8 @@ export default function Sandbox() {
           <a href="https://github.com/regl-project/regl">Functional WebGL</a> |{" "}
           <a href="https://www.projectfluent.org/">Fluent</a> |{" "}
           <a href="https://github.com/morgan3d/quadplay">Quadplay✜</a> |{" "}
-          <a href="https://github.com/WebReflection/augmentor">augmentor</a>
+          <a href="https://github.com/WebReflection/augmentor">augmentor</a> |{" "}
+          <a href="https://github.com/jawj/zapatos">zapatos</a>
         </li>
       </ul>
     </section>
