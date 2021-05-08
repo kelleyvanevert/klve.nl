@@ -23,14 +23,14 @@ export default function Sandbox() {
         </li>
         <li>
           Visualizing JS execution through a meta-syntactic transform (
-          <a href="https://jsviz.klve.nl/" rel="noopener noreferrer">
+          <a href="https://jsviz2.klve.nl/" rel="noopener noreferrer">
             js sketch
           </a>
           )
         </li>
         <li>
           A visual guide to formulating an SQL query (
-          <a href="https://codaisseur.github.io/visualized-sql/">
+          <a href="https://sqlviz.klve.nl/" rel="noopener noreferrer">
             js sketch + cheat sheet
           </a>
           )
