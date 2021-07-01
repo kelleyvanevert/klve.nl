@@ -1,10 +1,143 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { CONTENT_BASE } from "../lib/config";
+
+const bookmarkSections = [
+  {
+    title: "JavaScript / web dev bookmarks",
+    lists: [
+      {
+        title: "Creative/awesome",
+        bookmarks: [
+          { title: "Zdog", url: "https://zzz.dog/" },
+          { title: "Tone.js", url: "https://tonejs.github.io/" },
+          { title: "flubber", url: "https://github.com/veltman/flubber" },
+          { title: "ganja.js", url: "https://github.com/enkimute/ganja.js" },
+          { title: "D3", url: "https://d3js.org/" },
+          { title: "Observable", url: "https://observablehq.com/" },
+          { title: "Quadplay✜", url: "https://github.com/morgan3d/quadplay" },
+          {
+            title: "Functional WebGL",
+            url: "https://github.com/regl-project/regl",
+          },
+        ],
+      },
+      {
+        title: "UI tech",
+        bookmarks: [
+          { title: "Alpine", url: "https://github.com/alpinejs/alpine" },
+          { title: "Hyperapp", url: "https://hyperapp.dev/tutorial" },
+          {
+            title: "react-three-fiber",
+            url: "https://github.com/react-spring/react-three-fiber",
+          },
+          { title: "ink", url: "https://github.com/vadimdemedes/ink" },
+          { title: "htm", url: "https://github.com/developit/htm" },
+          {
+            title: "gl-react",
+            url: "https://gl-react-cookbook.surge.sh/sdf1?menu=true",
+          },
+          {
+            title: "deck.gl",
+            url: "https://deck.gl/#/examples/core-layers/point-cloud-layer",
+          },
+          { title: "Parcel", url: "https://parceljs.org/" },
+          {
+            title: "AST explorer",
+            url: "https://astexplorer.net/#/gist/3842e950f157f1c548f3db761447ee9c/latest",
+          },
+          { title: "createapp.dev", url: "https://createapp.dev/" },
+          {
+            title: "augmentor",
+            url: "https://github.com/WebReflection/augmentor",
+          },
+        ],
+      },
+      {
+        title: "Resources",
+        bookmarks: [
+          {
+            title: "unDraw",
+            url: "https://undraw.co/illustrations",
+          },
+          {
+            title: "Awesome React",
+            url: "https://github.com/brillout/awesome-react-components",
+          },
+          {
+            title: "Babel plugin handbook",
+            url: "https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md",
+          },
+        ],
+      },
+      {
+        title: "Libraries",
+        bookmarks: [
+          {
+            title: "react-inspector",
+            url: "https://www.npmjs.com/package/react-inspector",
+          },
+          {
+            title: "react-overdrive",
+            url: "https://github.com/berzniz/react-overdrive",
+          },
+          { title: "ELK.js", url: "https://github.com/OpenKieler/elkjs" },
+          { title: "Fluent", url: "https://www.projectfluent.org/" },
+          {
+            title: "React Color",
+            url: "http://casesandberg.github.io/react-color/",
+          },
+        ],
+      },
+      {
+        title: "Infrastructure",
+        bookmarks: [
+          { title: "Materialize", url: "https://materialize.io/" },
+          { title: "Hasura", url: "https://hasura.io/" },
+          { title: "Zapatos", url: "https://github.com/jawj/zapatos" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Other",
+    lists: [
+      {
+        title: "",
+        bookmarks: [
+          {
+            title: "Exercism",
+            url: "https://exercism.io/",
+          },
+          {
+            title: "TimeMaps",
+            url: "http://www.vincentmeertens.com/project/timemaps/",
+          },
+          {
+            title: "Polyline tool",
+            url: "https://www.keene.edu/campus/maps/tool/",
+          },
+        ],
+      },
+      {
+        title: "Friends",
+        bookmarks: [
+          { title: "Markus", url: "http://lambdanaut.net/" },
+          { title: "Cyril", url: "https://cyrcle.nl/" },
+        ],
+      },
+      {
+        title: "People",
+        bookmarks: [{ title: "Evan Wallace", url: "http://madebyevan.com/" }],
+      },
+    ],
+  },
+];
 
 export default function Sandbox() {
   return (
     <section className="wrap">
-      <h1>[Mostly digital] projects &amp; experiments</h1>
+      <h1>Projects, experiments, doodles &amp; bookmarks</h1>
+      <p></p>
 
       <ul>
         <li>
@@ -264,94 +397,32 @@ export default function Sandbox() {
         </li>
       </ul>
 
-      <h2 style={{ margin: "4rem auto 2rem", textAlign: "center" }}>
-        Just a list of JavaScript stuff
-      </h2>
-      {/* <p>JavaScript related</p> */}
-      <ul>
-        <li>
-          Creative: <a href="https://zzz.dog/">Zdog</a> |{" "}
-          <a href="https://tonejs.github.io/">Tone.js</a> |{" "}
-          <a href="https://github.com/veltman/flubber">flubber</a> |{" "}
-          <a href="https://github.com/enkimute/ganja.js">ganja.js</a> |{" "}
-          <a href="https://d3js.org/">D3</a> |{" "}
-          <a href="https://observablehq.com/">Observable</a>
-        </li>
-        <li>
-          Useful:{" "}
-          <a href="https://www.npmjs.com/package/react-inspector">
-            react-inspector
-          </a>{" "}
-          |{" "}
-          <a href="https://github.com/berzniz/react-overdrive">
-            react-overdrive
-          </a>{" "}
-          | <a href="https://github.com/OpenKieler/elkjs">ELK.js</a> |{" "}
-          <a href="https://github.com/brillout/awesome-react-components">
-            Awesome React
-          </a>{" "}
-          | <a href="https://github.com/OpenKieler/elkjs">ELK.js</a> |{" "}
-          <a href="http://casesandberg.github.io/react-color/">React Color</a> |{" "}
-          <a href="https://github.com/alpinejs/alpine">Alpine</a> |{" "}
-          <a href="https://hyperapp.dev/tutorial">Hyperapp</a>
-        </li>
-        <li>
-          Resources: <a href="https://undraw.co/illustrations">unDraw</a>
-        </li>
-        <li>
-          Rendering:{" "}
-          <a href="https://github.com/react-spring/react-three-fiber">
-            react-three-fiber
-          </a>{" "}
-          | <a href="https://github.com/vadimdemedes/ink">ink</a> |{" "}
-          <a href="https://github.com/developit/htm">htm</a> |{" "}
-          <a href="https://gl-react-cookbook.surge.sh/sdf1?menu=true">
-            gl-react
-          </a>{" "}
-          |{" "}
-          <a href="https://deck.gl/#/examples/core-layers/point-cloud-layer">
-            deck.gl
-          </a>{" "}
-          (etc)
-        </li>
-        <li>
-          Compiling: <a href="https://parceljs.org/">Parcel</a> |{" "}
-          <a href="https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md">
-            plugin handbook
-          </a>{" "}
-          |{" "}
-          <a href="https://astexplorer.net/#/gist/3842e950f157f1c548f3db761447ee9c/latest">
-            AST explorer
-          </a>{" "}
-          | <a href="https://createapp.dev/">createapp.dev</a>
-        </li>
-      </ul>
-      {/* <p>Other</p>
-      <ul>
-        <li>
-          <a href="http://www.vincentmeertens.com/project/timemaps/">
-            TimeMaps
-          </a>
-        </li>
-        <li>
-          <a href="https://www.keene.edu/campus/maps/tool/">Polyline tool</a>
-        </li>
-      </ul> */}
-
-      <h2 style={{ margin: "4rem auto 2rem", textAlign: "center" }}>
-        And some random other stuff
-      </h2>
-      <ul>
-        <li>
-          <a href="https://materialize.io/">Materialize</a> |{" "}
-          <a href="https://hasura.io/">Hasura</a> |{" "}
-          <a href="https://github.com/regl-project/regl">Functional WebGL</a> |{" "}
-          <a href="https://www.projectfluent.org/">Fluent</a> |{" "}
-          <a href="https://github.com/morgan3d/quadplay">Quadplay✜</a> |{" "}
-          <a href="https://github.com/WebReflection/augmentor">augmentor</a> |{" "}
-          <a href="https://github.com/jawj/zapatos">zapatos</a>
-        </li>
-      </ul>
+      {bookmarkSections.map((section, k) => {
+        return (
+          <Fragment key={k}>
+            <h2 style={{ margin: "4rem auto 2rem", textAlign: "center" }}>
+              {section.title}
+            </h2>
+            <ul>
+              {section.lists.map((list, j) => {
+                return (
+                  <li key={j}>
+                    {list.title && `${list.title}: `}
+                    {list.bookmarks.map((bookmark, i) => {
+                      return (
+                        <Fragment key={i}>
+                          {i > 0 && " | "}
+                          <a href={bookmark.url}>{bookmark.title}</a>
+                        </Fragment>
+                      );
+                    })}
+                  </li>
+                );
+              })}
+            </ul>
+          </Fragment>
+        );
+      })}
     </section>
   );
 }
