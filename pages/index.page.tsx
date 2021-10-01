@@ -15,15 +15,19 @@ export default function Home() {
               <img
                 className="block w-full h-auto"
                 alt="Kelley van Evert"
-                // s/me/_DSF7540.jpg -- w/ cyril op een toren in wenen
-                // s/_MG_2393.jpg -- w/ cyril op pytegga
-                // 19832674_1556692387714443_1437134954_n.jpg -- vintagey, don't really remember where
-                src={`${CONTENT_BASE}/s/me/_DSF7540.jpg`}
+                // met cyril op een toren in wenen
+                // src={`${CONTENT_BASE}/s/me/_DSF7540.jpg`}
+
+                // met cyril op pytegga
+                // src={`${CONTENT_BASE}/s/_MG_2393.jpg`}
+
+                // vintagey, don't really remember where
+                src={`${CONTENT_BASE}/s/me/19832674_1556692387714443_1437134954_n.jpg`}
               />
             </div>
           </div>
           <div className="text-right m-[5px] text-[13px] italic">
-            photo taken by <a href="http://cyrcle.nl/">Cyril</a>
+            photo taken by Julia (I think)
           </div>
         </div>
         <Content />
