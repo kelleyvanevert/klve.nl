@@ -1,0 +1,13 @@
+.goback {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 28px;
+  width: 30px;
+  text-align: center;
+}
+
+.goback::after {
+  all: unset;
+}

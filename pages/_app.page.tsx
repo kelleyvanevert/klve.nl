@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import "./styles.scss";
+
+import "./styles.css";
 
 import { Layout } from "../layouts/Layout";
 

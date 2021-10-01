@@ -139,7 +139,7 @@ export default function Sandbox() {
       <h1>Projects, experiments, doodles &amp; bookmarks</h1>
       <p></p>
 
-      <ul>
+      <ul className="list-disc ml-[24px]">
         <li>
           El Trombonista (
           <a href="https://kelleyvanevert.github.io/el-trombonista/">
@@ -390,10 +390,10 @@ export default function Sandbox() {
       {bookmarkSections.map((section, k) => {
         return (
           <Fragment key={k}>
-            <h2 style={{ margin: "4rem auto 2rem", textAlign: "center" }}>
+            <h2 className="text-center mt-[4rem] mb-[2rem] font-bold text-2xl">
               {section.title}
             </h2>
-            <ul>
+            <ul className="list-disc ml-[24px]">
               {section.lists.map((list, j) => {
                 return (
                   <li key={j}>
