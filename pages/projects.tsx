@@ -119,7 +119,7 @@ const bookmarkSections = [
         ],
       },
       {
-        title: "Friends",
+        title: "Friends online",
         bookmarks: [
           { title: "Markus", url: "http://lambdanaut.net/" },
           { title: "Cyril", url: "https://cyrcle.nl/" },
@@ -335,16 +335,6 @@ export default function Sandbox() {
           )
         </li>
         <li>
-          Debating tournament tabulation app (
-          <a
-            href={`${CONTENT_BASE}/scratch/debating/public/`}
-            rel="noopener noreferrer"
-          >
-            js app
-          </a>
-          )
-        </li>
-        <li>
           Extendable table (
           <a
             href={`${CONTENT_BASE}/scratch/cyril_tafel/`}
@@ -389,7 +379,7 @@ export default function Sandbox() {
           )
         </li>
         <li>
-          Boids (
+          Processing.js Boids (
           <a href={`${CONTENT_BASE}/scratch/boids/`} rel="noopener noreferrer">
             js sketch
           </a>
