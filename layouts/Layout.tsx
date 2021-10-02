@@ -28,7 +28,7 @@ export function Layout({ children }: Props) {
     <div className="mt-[40px] mb-[100px] px-[50px]">
       <header className="max-w-[800px] mt-[50px] mx-auto">
         <div className="tracking-[1px] font-mono text-[11px]">
-          <a href="mailto:hello@klve.nl" className="no-underline !text-[#999]">
+          <a href="mailto:hello@klve.nl" className="!text-[#999]">
             hello@<strong className="text-black dark:text-white">klve</strong>
             .nl
           </a>
@@ -39,7 +39,7 @@ export function Layout({ children }: Props) {
               <Link href={item.path}>
                 <a
                   className={cx(
-                    "inline-block relative lowercase font-bold no-underline focus:underline text-2xl",
+                    "inline-block relative lowercase font-bold focus:underline text-2xl",
                     item.path === router.pathname && "italic"
                   )}
                 >

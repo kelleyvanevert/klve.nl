@@ -136,64 +136,63 @@ const bookmarkSections = [
 export default function Sandbox() {
   return (
     <section className="wrap">
-      <h1>Projects, experiments, doodles &amp; bookmarks</h1>
-      <p></p>
+      <h1>Doodles</h1>
 
       <ul className="list-disc ml-[24px]">
         <li>
           El Trombonista (
-          <a href="https://kelleyvanevert.github.io/el-trombonista/">
+          <a
+            className="link"
+            href="https://kelleyvanevert.github.io/el-trombonista/"
+          >
             mini animation
           </a>
           ) -- collab Carlota
         </li>
         <li>
           Some of my favorite recipes, with a fun ascii morphing effect (
-          <a href="https://asciirecip.es/" rel="noopener noreferrer">
+          <a className="link" href="https://asciirecip.es/">
             asciirecip.es
           </a>
           )
         </li>
         <li>
           Visualizing JS execution through a meta-syntactic transform (
-          <a href="https://jsviz2.klve.nl/" rel="noopener noreferrer">
+          <a className="link" href="https://jsviz2.klve.nl/">
             js sketch
           </a>
           )
         </li>
         <li>
           A visual guide to formulating an SQL query (
-          <a href="https://sqlviz.klve.nl/" rel="noopener noreferrer">
+          <a className="link" href="https://sqlviz.klve.nl/">
             js sketch + cheat sheet
           </a>
           )
         </li>
         <li>
           JavaScript execution stepper / runtime visualizer (
-          <a
-            href="https://visualized-execution.js.org/"
-            rel="noopener noreferrer"
-          >
+          <a className="link" href="https://visualized-execution.js.org/">
             js sketch
           </a>
           ) -- <em>WORK IN PROGRESS</em>
         </li>
         <li>
           The <em>Scopes</em> programming language (
-          <a href="https://scopes.js.org/" rel="noopener noreferrer">
+          <a className="link" href="https://scopes.js.org/">
             tentative idea
           </a>
           ) -- <em>WORK IN PROGRESS</em>
         </li>
         <li>
           Literal JSX: an idea (
-          <a href="https://literal-jsx.org/" rel="noopener noreferrer">
+          <a className="link" href="https://literal-jsx.org/">
             website
           </a>
           ) and an example parser implementation (
           <a
             href="https://www.npmjs.com/package/@literal-jsx/parser"
-            rel="noopener noreferrer"
+            className="link"
           >
             npm package
           </a>
@@ -203,7 +202,7 @@ export default function Sandbox() {
           A visual explorer tool for querying Babel-produced ASTs with JSPath (
           <a
             href="https://kelleyvanevert.github.io/jspath-for-ast-querying/"
-            rel="noopener noreferrer"
+            className="link"
           >
             js sketch
           </a>
@@ -211,64 +210,52 @@ export default function Sandbox() {
         </li>
         <li>
           brug{" "}
-          <a href="https://brugfilm.nl/" rel="noopener noreferrer">
+          <a className="link" href="https://brugfilm.nl/">
             (short film)
           </a>
         </li>
         <li>
           SVG arcs (
-          <a
-            href={`${CONTENT_BASE}/scratch/svg-arcs/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/svg-arcs/`} className="link">
             js sketch
           </a>
           )
         </li>
         <li>
           Kabouter Wesley speech balloons (
-          <a
-            href={`${CONTENT_BASE}/scratch/kabouter_wesley/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/kabouter_wesley/`} className="link">
             js sketch
           </a>
           )
         </li>
         <li>
           Tiling butterflies to get a Dragon's Egg origami model (
-          <a
-            href={`${CONTENT_BASE}/scratch/butterflies/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/butterflies/`} className="link">
             js sketch
           </a>
           )
         </li>
         <li>
-          <a
-            href="https://bl.ocks.org/kelleyvanevert"
-            rel="noopener noreferrer"
-          >
+          <a href="https://bl.ocks.org/kelleyvanevert" className="link">
             D3 blocks
           </a>{" "}
           and{" "}
           <a
             href="https://beta.observablehq.com/@kelleyvanevert"
-            rel="noopener noreferrer"
+            className="link"
           >
             Observable notebooks
           </a>
         </li>
         <li>
           Learn some Arabic words (
-          <a href={`${CONTENT_BASE}/scratch/arabic/`} rel="noopener noreferrer">
+          <a className="link" href={`${CONTENT_BASE}/scratch/arabic/`}>
             js sketch
           </a>{" "}
           resp.{" "}
           <a
             href="https://play.google.com/store/apps/details?id=nl.kelleyvanevert.arabic"
-            rel="noopener noreferrer"
+            className="link"
           >
             android app
           </a>
@@ -276,10 +263,7 @@ export default function Sandbox() {
         </li>
         <li>
           Go on a Torus (
-          <a
-            href={`${CONTENT_BASE}/scratch/go_torus/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/go_torus/`} className="link">
             js sketch
           </a>
           )
@@ -289,14 +273,14 @@ export default function Sandbox() {
           conversations (
           <a
             href="https://github.com/kelleyvanevert/fastmail-plus"
-            rel="noopener noreferrer"
+            className="link"
           >
             github repo
           </a>{" "}
           /{" "}
           <a
             href={`${CONTENT_BASE}/scratch/fastmail-0.1-an+fx.xpi`}
-            rel="noopener noreferrer"
+            className="link"
           >
             firefox extension file
           </a>
@@ -307,7 +291,7 @@ export default function Sandbox() {
           Radboud University's access page of a journal article (
           <a
             href={`${CONTENT_BASE}/scratch/ubn_bookmarklet-0.1-an+fx.xpi`}
-            rel="noopener noreferrer"
+            className="link"
           >
             firefox extension file
           </a>
@@ -315,37 +299,34 @@ export default function Sandbox() {
         </li>
         <li>
           Minimalist Go made with Vue.js (
-          <a href={`${CONTENT_BASE}/scratch/vue-go/`} rel="noopener noreferrer">
+          <a className="link" href={`${CONTENT_BASE}/scratch/vue-go/`}>
             js sketch
           </a>
           )
         </li>
         <li>
           Ridiculous CSS 3D transforms (
-          <a href={`${CONTENT_BASE}/scratch/css3d/`} rel="noopener noreferrer">
+          <a className="link" href={`${CONTENT_BASE}/scratch/css3d/`}>
             js sketch
           </a>
           )
         </li>
         <li>
           Loesje poster design studio (
-          <a href={`${CONTENT_BASE}/scratch/loesje/`} rel="noopener noreferrer">
+          <a className="link" href={`${CONTENT_BASE}/scratch/loesje/`}>
             js app
           </a>
           )
         </li>
         <li>
           Extendable table (
-          <a
-            href={`${CONTENT_BASE}/scratch/cyril_tafel/`}
-            rel="noopener noreferrer"
-          >
+          <a href={`${CONTENT_BASE}/scratch/cyril_tafel/`} className="link">
             js plan sketch
           </a>{" "}
           /{" "}
           <a
             href="http://cyrcle.nl/portfolio/uitbreidbare-tafel/"
-            rel="noopener noreferrer"
+            className="link"
           >
             docu
           </a>
@@ -355,14 +336,14 @@ export default function Sandbox() {
           Origami Pixels (
           <a
             href={`${CONTENT_BASE}/scratch/cyril_origami_pixels/`}
-            rel="noopener noreferrer"
+            className="link"
           >
             js sketch
           </a>{" "}
           /{" "}
           <a
             href="https://play.google.com/store/apps/details?id=nl.kelleyvanevert.origamipixels"
-            rel="noopener noreferrer"
+            className="link"
           >
             android app
           </a>
@@ -372,7 +353,7 @@ export default function Sandbox() {
           Perry's 16 -- an old card game like solitaire (
           <a
             href="https://play.google.com/store/apps/details?id=nl.kelleyvanevert.perry16"
-            rel="noopener noreferrer"
+            className="link"
           >
             android app
           </a>
@@ -380,7 +361,7 @@ export default function Sandbox() {
         </li>
         <li>
           Processing.js Boids (
-          <a href={`${CONTENT_BASE}/scratch/boids/`} rel="noopener noreferrer">
+          <a className="link" href={`${CONTENT_BASE}/scratch/boids/`}>
             js sketch
           </a>
           )
@@ -390,9 +371,7 @@ export default function Sandbox() {
       {bookmarkSections.map((section, k) => {
         return (
           <Fragment key={k}>
-            <h2 className="text-center mt-[4rem] mb-[2rem] font-bold text-2xl">
-              {section.title}
-            </h2>
+            <h2>{section.title}</h2>
             <ul className="list-disc ml-[24px]">
               {section.lists.map((list, j) => {
                 return (
@@ -402,7 +381,9 @@ export default function Sandbox() {
                       return (
                         <Fragment key={i}>
                           {i > 0 && " | "}
-                          <a href={bookmark.url}>{bookmark.title}</a>
+                          <a className="link" href={bookmark.url}>
+                            {bookmark.title}
+                          </a>
                         </Fragment>
                       );
                     })}

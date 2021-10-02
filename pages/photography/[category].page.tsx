@@ -4,8 +4,6 @@ import Link from "next/link";
 import { PhotoGridSwipe } from "../../lib/PhotoGrid";
 import { photoCats, PhotoCat } from "../../lib/photos";
 
-import styles from "./GoBack.module.css";
-
 type Props = {
   cat: PhotoCat;
 };
@@ -42,14 +40,12 @@ export default function PhotoCategory({ cat }: Props) {
     <section>
       <div className="wrap">
         <h1>
-          <strong>
-            <span className="absolute block left-[-40px] top-[1px] text-black">
-              <Link href="/photography">
-                <a className={styles.goback}>⟨</a>
-              </Link>
-            </span>
-            {cat.title}
-          </strong>
+          <Link href="/photography">
+            <a className="align-text-bottom inline-flex justify-center items-center mr-[16px] rotate-180 h-[24px] w-[24px] transition-transform hover:scale-110 active:scale-90">
+              ➮
+            </a>
+          </Link>
+          {cat.title}
         </h1>
       </div>
       <PhotoGridSwipe items={cat.images} />

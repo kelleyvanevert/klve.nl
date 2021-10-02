@@ -9,7 +9,7 @@ const DRAWINGS: PhotoGridItem[] = [
     src: "https://content.klve.nl/drawings/flickr-kaisers0ze-5707934827.jpg",
     w: 1000,
     h: 1420,
-    title: `From <a href="https://www.flickr.com/photos/kaisers0ze/5707934827/">this photo</a>`,
+    title: `From <a className="link" href="https://www.flickr.com/photos/kaisers0ze/5707934827/">this photo</a>`,
   },
   {
     photo:
@@ -17,7 +17,7 @@ const DRAWINGS: PhotoGridItem[] = [
     src: "https://content.klve.nl/drawings/flickr-wesdobbs-4011457449.jpg",
     w: 1317,
     h: 1000,
-    title: `From <a href="https://www.flickr.com/photos/wesdobbs/4011457449/">this photo</a>`,
+    title: `From <a className="link" href="https://www.flickr.com/photos/wesdobbs/4011457449/">this photo</a>`,
   },
   {
     photo: "https://content.klve.nl/drawings/dana_scott.s350.jpg",
