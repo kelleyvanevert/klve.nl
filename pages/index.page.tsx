@@ -93,16 +93,12 @@ function Content() {
       </p>
       <p style={{ textIndent: 10 }}>
         You will typically find me: writing{" "}
-        <TagLink href="https://jsviz2.klve.nl/">JS code</TagLink>, folding or
-        modelling some{" "}
-        <TagLink href="https://observablehq.com/@kelleyvanevert/tiling-butterflies-to-get-a-dragons-egg-origami-model">
-          origami tesselation
-        </TagLink>
-        , listening to{" "}
+        <TagLink href="https://jsviz2.klve.nl/">JS code</TagLink>, listening to{" "}
         <TagLink href="https://www.youtube.com/watch?v=hqsSYvnUyR0">
           Avishai Cohen
-        </TagLink>
-        , reading{" "}
+        </TagLink>{" "}
+        + learning to play{" "}
+        <TagLink href="http://www.olafmeijer.nl/">jazz bass</TagLink>, reading{" "}
         <TagLink href="https://www.goodreads.com/book/show/20697435-the-book-of-strange-new-things">
           Michel Faber
         </TagLink>{" "}
@@ -113,8 +109,11 @@ function Content() {
         <TagLink href="http://www.markmanders.org/works-a/">
           Mark Manders'
         </TagLink>{" "}
-        spatial work, or trying to make sense of the political world through
-        e.g.{" "}
+        spatial work, folding or modelling some{" "}
+        <TagLink href="https://observablehq.com/@kelleyvanevert/tiling-butterflies-to-get-a-dragons-egg-origami-model">
+          origami tesselation
+        </TagLink>
+        , or trying to make sense of the political world through e.g.{" "}
         <TagLink href="https://plato.stanford.edu/entries/habermas/">
           Habermas
         </TagLink>{" "}
