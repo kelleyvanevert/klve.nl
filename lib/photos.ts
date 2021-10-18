@@ -24,6 +24,7 @@ export const photoCats: {
           h: 928,
         },
         {
+          // varusa
           photo: "/s/photography/portraiture/s320/_MG_0156.jpg",
           src: "/s/photography/portraiture/s1500/_MG_0156.jpg",
           w: 997,
@@ -72,14 +73,16 @@ export const photoCats: {
           h: 1500,
         },
         {
+          // pieter
           photo: "/s/photography/portraiture/s320/_MG_6247.jpg",
           src: "/s/photography/portraiture/s1500/_MG_6247.jpg",
           w: 999,
           h: 1500,
         },
         {
-          photo: "/s/photography/portraiture/s320/_MG_6369.jpg",
-          src: "/s/photography/portraiture/s1500/_MG_6369.jpg",
+          // julia
+          photo: "/s/photography/portraiture/s320/_MG_0627.jpg",
+          src: "/s/photography/portraiture/s1500/_MG_0627.jpg",
           w: 999,
           h: 1500,
         },
