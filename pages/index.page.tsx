@@ -141,7 +141,7 @@ function TagLink({ href, children }: { href: string; children?: ReactNode }) {
   return (
     <a
       href={href}
-      className="whitespace-nowrap font-mono font-bold text-xs rounded-full border border-gray-400 py-[1px] px-[5px] hover:bg-gray-100 dark:hover:bg-gray-700 focus:border-black dark:focus:border-white focus:text-black dark:focus:text-white focus:bg-gray-100 dark:focus:bg-gray-700"
+      className="whitespace-nowrap font-mono font-bold text-xs rounded-full border border-gray-400 py-[1px] px-[5px] hover:bg-gray-100 dark:hover:bg-gray-700 focus:border-black dark:focus:border-white focus:text-black dark:focus:text-white focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-1 ring-black"
     >
       {children}
     </a>
