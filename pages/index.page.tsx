@@ -64,8 +64,14 @@ function Intro() {
       <a className="link" href="https://cargocollective.com/kvhku">
         some art
       </a>
-      . Also I studied theoretical computer science and learned many interesting
-      things.
+      . Also I studied theoretical computer science and learned many{" "}
+      <a className="link" href="https://content.klve.nl/s/thb.pdf">
+        interesting
+      </a>{" "}
+      <a className="link" href="https://content.klve.nl/s/thm.pdf">
+        things
+      </a>
+      .
     </p>
   );
 }
