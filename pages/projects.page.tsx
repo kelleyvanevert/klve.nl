@@ -19,6 +19,14 @@ const bookmarkSections = [
             title: "Functional WebGL",
             url: "https://github.com/regl-project/regl",
           },
+          {
+            title: "Two.js",
+            url: "https://two.js.org/",
+          },
+          {
+            title: "JSXGraph",
+            url: "https://jsxgraph.uni-bayreuth.de/wp/",
+          },
         ],
       },
       {
