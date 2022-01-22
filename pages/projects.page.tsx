@@ -107,6 +107,28 @@ const bookmarkSections = [
     ],
   },
   {
+    title: "Learning Rust",
+    lists: [
+      {
+        title: "",
+        bookmarks: [
+          {
+            title: "nannou",
+            url: "https://nannou.cc/",
+          },
+          {
+            title: "Zero To Production In Rust",
+            url: "https://www.zero2prod.com/index.html?country=Netherlands&discount_code=VAT20s",
+          },
+          {
+            title: "Jon's videos",
+            url: "https://www.youtube.com/c/JonGjengset",
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: "Other",
     lists: [
       {
