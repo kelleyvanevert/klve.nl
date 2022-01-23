@@ -48,6 +48,17 @@ export function Layout({ children }: Props) {
               </Link>
             </li>
           ))}
+          {/* <li className="inline">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block relative font-bold focus:underline text-2xl"
+              style={{ fontVariant: "small-caps" }}
+              href="https://content.klve.nl/s/cv.pdf"
+            >
+              <span>CV</span>.
+            </a>
+          </li> */}
         </ul>
       </header>
       <main>{children}</main>

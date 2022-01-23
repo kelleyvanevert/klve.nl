@@ -79,7 +79,7 @@ function Intro() {
 function Content() {
   return (
     <>
-      <p style={{ textIndent: 10 }}>
+      <p className="indent-3">
         Some things that <strong>fascinate</strong> me are, among others:{" "}
         <Item num={1}>
           <em>Typography</em>
@@ -97,7 +97,7 @@ function Content() {
         (a topic that I previously formally studied for its semantic character,
         but now practice pragmatically).
       </p>
-      <p style={{ textIndent: 10 }}>
+      <p className="indent-3">
         You will typically find me: writing{" "}
         <TagLink href="https://jsviz2.klve.nl/">JS code</TagLink>, listening to{" "}
         <TagLink href="https://www.youtube.com/watch?v=hqsSYvnUyR0">
@@ -126,6 +126,18 @@ function Content() {
         <TagLink href="https://plato.stanford.edu/entries/foucault/#OrdeThin">
           Foucault
         </TagLink>
+        .
+      </p>
+      <p className="indent-3">
+        Here's my{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link indent-0"
+          href="https://content.klve.nl/s/cv.pdf"
+        >
+          CV
+        </a>
         .
       </p>
     </>
