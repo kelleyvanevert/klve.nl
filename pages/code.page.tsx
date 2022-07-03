@@ -166,7 +166,9 @@ const bookmarkSections = [
 export default function Sandbox() {
   return (
     <section className="wrap">
-      <h1>Doodles</h1>
+      <h1 className="hidden">Code</h1>
+
+      <h2>Doodles</h2>
 
       <ul className="list-disc ml-[24px]">
         <li>

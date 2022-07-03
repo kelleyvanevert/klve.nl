@@ -5,4 +5,18 @@ module.exports = {
   // experimental: {
   //   externalDir: true,
   // },
+  async redirects() {
+    return [
+      {
+        source: "/projects",
+        destination: "/code",
+        permanent: true,
+      },
+      {
+        source: "/photography/weddings",
+        destination: "/photography/wedding",
+        permanent: true,
+      },
+    ];
+  },
 };

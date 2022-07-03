@@ -7,8 +7,9 @@ import cx from "classnames";
 const menuItems = [
   { title: "About", path: "/" },
   { title: "Photography", path: "/photography" },
-  { title: "Sandbox", path: "/projects" },
+  { title: "Code", path: "/code" },
   { title: "Drawings", path: "/drawings" },
+  { title: "Music", path: "/music" },
 ];
 
 type Props = {
