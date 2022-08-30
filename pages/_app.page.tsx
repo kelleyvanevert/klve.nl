@@ -1,16 +1,11 @@
-import React from "react";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 
 import "./styles.css";
 
 import { Layout } from "../layouts/Layout";
 
-type Props<P> = {
-  Component: React.ComponentType<P>;
-  pageProps: P;
-};
-
-export default function App<P>({ Component, pageProps }: Props<P>) {
+export default function App<P>({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
