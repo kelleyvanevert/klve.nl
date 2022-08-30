@@ -23,12 +23,15 @@ export default function Home() {
                 // src={`${CONTENT_BASE}/s/_MG_2393.jpg`}
 
                 // vintagey, don't really remember where
-                src={`${CONTENT_BASE}/s/me/19832674_1556692387714443_1437134954_n.jpg`}
+                // src={`${CONTENT_BASE}/https://content.klve.nl/s/me/DSCF2929.jpg`}
+
+                // met isabel in het rembrandtpark
+                src={`${CONTENT_BASE}/s/me/DSCF2929.jpg`}
               />
             </div>
           </div>
           <div className="text-right m-[5px] text-[13px] italic">
-            photo taken by Julia (I think)
+            photo taken by Isabel
           </div>
         </div>
         <Content />
