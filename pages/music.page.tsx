@@ -9,12 +9,31 @@ export default function Page() {
         <div className="flex flex-col items-center p-8">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
+              Heart Surgery
+            </span>{" "}
+            (
+            <a
+              className="link"
+              href="https://music.klve.nl/9-v11-heart-surgery.m4a"
+            >
+              m4a
+            </a>
+            )
+            <br />
+            Exploring wavetables with Isabel.
+          </div>
+          <audio controls src="https://music.klve.nl/9-v11-heart-surgery.m4a" />
+        </div>
+
+        <div className="flex flex-col items-center p-8">
+          <div className="mb-3 text-center">
+            <span className="font-bold text-black dark:text-white">
               Journey around the Sun
             </span>{" "}
             (
             <a
               className="link"
-              href="https://music.klve.nl/journey-around-the-sun.m4a"
+              href="https://music.klve.nl/emp2-4-v5-journey-around-the-sun.m4a"
             >
               m4a
             </a>
@@ -31,7 +50,7 @@ export default function Page() {
           </div>
           <audio
             controls
-            src="https://music.klve.nl/journey-around-the-sun.m4a"
+            src="https://music.klve.nl/emp2-4-v5-journey-around-the-sun.m4a"
           />
         </div>
 
@@ -41,7 +60,10 @@ export default function Page() {
               Dying Android
             </span>{" "}
             (
-            <a className="link" href="https://music.klve.nl/dying-android.m4a">
+            <a
+              className="link"
+              href="https://music.klve.nl/7-v3-dying-android.m4a"
+            >
               m4a
             </a>
             )
@@ -55,7 +77,7 @@ export default function Page() {
             </a>{" "}
             course at CREA.
           </div>
-          <audio controls src="https://music.klve.nl/dying-android.m4a" />
+          <audio controls src="https://music.klve.nl/7-v3-dying-android.m4a" />
         </div>
       </div>
     </section>
