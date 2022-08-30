@@ -6,8 +6,8 @@ import cx from "classnames";
 
 const menuItems = [
   { title: "About", path: "/" },
-  { title: "Photography", path: "/photography" },
-  { title: "Code", path: "/code" },
+  { title: "Photos", path: "/photography" },
+  { title: "Doodles", path: "/code" },
   { title: "Drawings", path: "/drawings" },
   { title: "Music", path: "/music" },
 ];
