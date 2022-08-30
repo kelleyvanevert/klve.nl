@@ -9,7 +9,7 @@ export default function Page() {
         <div className="flex flex-col items-center p-8">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
-              Heart Surgery
+              Heart Surgery (WIP)
             </span>{" "}
             (
             <a
