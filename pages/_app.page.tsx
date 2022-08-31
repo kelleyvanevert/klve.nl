@@ -5,7 +5,7 @@ import "./styles.css";
 
 import { Layout } from "../layouts/Layout";
 
-export default function App<P>({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
