@@ -3,6 +3,12 @@ import Link from "next/link";
 
 import { CONTENT_BASE } from "../lib/config";
 
+// const images: Array<{ url: string; caption?: string }> = [
+//   {
+//     url: CONTENT_BASE + "/s/me/_DSF7828.jpg",
+//   },
+// ];
+
 export default function Home() {
   return (
     <section className="wrapr relative">
@@ -15,24 +21,30 @@ export default function Home() {
             <div className="absolute top-0 w-full">
               <img
                 className="block w-full h-auto"
-                alt="Kelley van Evert"
+                alt=""
                 // met cyril op een toren in wenen
                 // src={`${CONTENT_BASE}/s/me/_DSF7540.jpg`}
 
                 // met cyril op pytegga
-                // src={`${CONTENT_BASE}/s/_MG_2393.jpg`}
+                // src={`${CONTENT_BASE}/s/me/_MG_2393.jpg`}
 
                 // vintagey, don't really remember where
-                // src={`${CONTENT_BASE}/https://content.klve.nl/s/me/DSCF2929.jpg`}
+                // src={`${CONTENT_BASE}/s/me/19832674_1556692387714443_1437134954_n.jpg`}
+
+                // met Markus in de Weurtse uiterwaarden
+                // src={`${CONTENT_BASE}/s/me/IMG_1442.jpg`}
 
                 // met isabel in het rembrandtpark
-                src={`${CONTENT_BASE}/s/me/DSCF2929.jpg`}
+                // src={`${CONTENT_BASE}/s/me/DSCF2929.jpg`}
+
+                // paragliden
+                src={`${CONTENT_BASE}/s/me/_DSF7828.jpg`}
               />
             </div>
           </div>
-          <div className="text-right m-[5px] text-[13px] italic">
+          {/* <div className="text-right m-[5px] text-[13px] italic">
             photo taken by Isabel
-          </div>
+          </div> */}
         </div>
         <Content />
       </div>
@@ -44,37 +56,53 @@ function Intro() {
   return (
     <p className="text-2xl mb-[20px] md:mb-[28px]">
       Hi there!&emsp;I'm Kelley. I{" "}
-      <a className="link" href="https://mywheels.nl">
-        code
-      </a>
-      ,{" "}
-      <a className="link" href="https://hackyourfuture.net/">
-        teach
-      </a>
-      , and{" "}
-      <Link href="/projects">
-        <a className="link">doodle</a>
-      </Link>
-      . Sometimes I make{" "}
+      <span className="whitespace-nowrap">
+        <a className="link" href="https://mywheels.nl">
+          code
+        </a>
+        ,
+      </span>{" "}
+      <span className="whitespace-nowrap">
+        <a className="link" href="https://hackyourfuture.net/">
+          teach
+        </a>
+        ,
+      </span>{" "}
+      and{" "}
+      <span className="whitespace-nowrap">
+        <Link href="/projects">
+          <a className="link">doodle</a>
+        </Link>
+        .
+      </span>{" "}
+      Sometimes I make{" "}
       <Link href="/photography">
         <a className="link">pictures</a>
       </Link>{" "}
       or{" "}
-      <Link href="/drawings">
-        <a className="link">drawings</a>
-      </Link>
-      , and in the past I've produced{" "}
-      <a className="link" href="https://cargocollective.com/kvhku">
-        some art
-      </a>
-      . Also I studied theoretical computer science and learned many{" "}
+      <span className="whitespace-nowrap">
+        <Link href="/drawings">
+          <a className="link">drawings</a>
+        </Link>
+        ,
+      </span>{" "}
+      and in the past I've produced{" "}
+      <span className="whitespace-nowrap">
+        <a className="link" href="https://cargocollective.com/kvhku">
+          some art
+        </a>
+        .
+      </span>{" "}
+      Also I studied theoretical computer science and learned many{" "}
       <a className="link" href="https://content.klve.nl/s/thb.pdf">
         interesting
       </a>{" "}
-      <a className="link" href="https://content.klve.nl/s/thm.pdf">
-        things
-      </a>
-      .
+      <span className="whitespace-nowrap">
+        <a className="link" href="https://content.klve.nl/s/thm.pdf">
+          things
+        </a>
+        .
+      </span>
     </p>
   );
 }
@@ -126,10 +154,12 @@ function Content() {
         <TagLink href="https://plato.stanford.edu/entries/habermas/">
           Habermas
         </TagLink>{" "}
-        <TagLink href="https://plato.stanford.edu/entries/foucault/#OrdeThin">
-          Foucault
-        </TagLink>
-        .
+        <span className="whitespace-nowrap">
+          <TagLink href="https://plato.stanford.edu/entries/foucault/#OrdeThin">
+            Foucault
+          </TagLink>
+          .
+        </span>
       </p>
       <p className="indent-3">
         Here's my{" "}
