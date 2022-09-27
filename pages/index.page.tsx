@@ -38,13 +38,16 @@ export default function Home() {
                 // src={`${CONTENT_BASE}/s/me/DSCF2929.jpg`}
 
                 // paragliden
-                src={`${CONTENT_BASE}/s/me/_DSF7828.jpg`}
+                // src={`${CONTENT_BASE}/s/me/_DSF7828.jpg`}
+
+                // sound design 2022
+                src={`${CONTENT_BASE}/s/me/DSCF2881.jpg`}
               />
             </div>
           </div>
-          {/* <div className="text-right m-[5px] text-[13px] italic">
+          <div className="text-right m-[5px] text-[13px] italic">
             photo taken by Isabel
-          </div> */}
+          </div>
         </div>
         <Content />
       </div>
