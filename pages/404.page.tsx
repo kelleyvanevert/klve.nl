@@ -1,12 +1,12 @@
-import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { useOnce } from "lib/useOnce";
 
 export default function NotFound() {
   const router = useRouter();
 
-  useEffect(() => {
+  useOnce(() => {
     router.push("/");
-  }, []);
+  });
 
   return null;
 }

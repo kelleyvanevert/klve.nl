@@ -26,7 +26,7 @@ export function Layout({ children }: Props) {
   const router = useRouter();
 
   return (
-    <div className="mt-[40px] mb-[100px] px-[50px]">
+    <div className="mt-[40px] mb-[100px] px-[24px]">
       <header className="max-w-[800px] mt-[50px] mx-auto">
         <div className="tracking-[1px] font-mono text-[11px]">
           <a href="mailto:hello@klve.nl" className="!text-[#999]">
