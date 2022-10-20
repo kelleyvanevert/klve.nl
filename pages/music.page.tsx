@@ -9,6 +9,25 @@ export default function Page() {
         <div className="flex flex-col items-center p-8">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
+              First Steps / Warm Embrace (WIP)
+            </span>{" "}
+            (
+            <a
+              className="link"
+              href="https://music.klve.nl/halle-saale-v8-first-steps-warm-embrace.m4a"
+            >
+              m4a
+            </a>
+            )
+            <br />
+            Experimenting with glitches while visiting Nikko in Halle.
+          </div>
+          <audio controls src="https://music.klve.nl/halle-saale-v8-first-steps-warm-embrace.m4a" />
+        </div>
+
+        <div className="flex flex-col items-center p-8">
+          <div className="mb-3 text-center">
+            <span className="font-bold text-black dark:text-white">
               Heart Surgery (WIP)
             </span>{" "}
             (
