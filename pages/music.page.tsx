@@ -33,7 +33,7 @@ export default function Page() {
             (
             <a
               className="link"
-              href="https://music.klve.nl/emp2-4-v5-journey-around-the-sun.m4a"
+              href="https://music.klve.nl/emp2-4-v6-journey-around-the-sun.m4a"
             >
               m4a
             </a>
@@ -50,7 +50,7 @@ export default function Page() {
           </div>
           <audio
             controls
-            src="https://music.klve.nl/emp2-4-v5-journey-around-the-sun.m4a"
+            src="https://music.klve.nl/emp2-4-v6-journey-around-the-sun.m4a"
           />
         </div>
 
