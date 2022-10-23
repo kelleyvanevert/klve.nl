@@ -10,7 +10,7 @@ export default function Page() {
       </p>
 
       <div className="-m-8 flex flex-wrap items-center justify-evenly">
-        <div className="flex flex-col items-center p-8 max-w-[50%]">
+        <div className="flex flex-col items-center p-8 max-w-[400px] md:w-[50%]">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
               First Steps / Warm Embrace
@@ -33,7 +33,7 @@ export default function Page() {
           />
         </div>
 
-        <div className="flex flex-col items-center p-8 max-w-[50%]">
+        <div className="flex flex-col items-center p-8 max-w-[400px] md:w-[50%]">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
               Heart Surgery
@@ -52,7 +52,7 @@ export default function Page() {
           <audio controls src="https://music.klve.nl/9-v11-heart-surgery.m4a" />
         </div>
 
-        <div className="flex flex-col items-center p-8 max-w-[50%]">
+        <div className="flex flex-col items-center p-8 max-w-[400px] md:w-[50%]">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
               Journey around the Sun
@@ -81,7 +81,7 @@ export default function Page() {
           />
         </div>
 
-        <div className="flex flex-col items-center p-8 max-w-[50%]">
+        <div className="flex flex-col items-center p-8 max-w-[400px] md:w-[50%]">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
               Dying Android
