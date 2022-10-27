@@ -37,15 +37,14 @@ export function Layout({ children }: Props) {
         <ul>
           {menuItems.map((item) => (
             <li className="inline mr-[10px]" key={item.title}>
-              <Link href={item.path}>
-                <a
-                  className={cx(
-                    "inline-block relative lowercase font-bold focus:underline text-2xl",
-                    item.path === router.pathname && "italic"
-                  )}
-                >
-                  <span>{item.title}</span>.
-                </a>
+              <Link
+                href={item.path}
+                className={cx(
+                  "inline-block relative lowercase font-bold focus:underline text-2xl",
+                  item.path === router.pathname && "italic"
+                )}
+              >
+                <span>{item.title}</span>.
               </Link>
             </li>
           ))}

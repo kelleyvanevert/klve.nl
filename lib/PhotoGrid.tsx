@@ -43,10 +43,8 @@ export function PhotoGridNav({ items }: PhotoNavGrid) {
       {items.map((item) => (
         <div key={item.photo} className={styles.image}>
           <div className={styles.ratio} />
-          <Link href={item.to}>
-            <a className={styles.a}>
-              <img alt="" src={item.photo} />
-            </a>
+          <Link href={item.to} className={styles.a}>
+            <img alt="" src={item.photo} />
           </Link>
         </div>
       ))}

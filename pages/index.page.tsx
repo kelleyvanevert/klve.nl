@@ -73,19 +73,19 @@ function Intro() {
       </span>{" "}
       and{" "}
       <span className="whitespace-nowrap">
-        <Link href="/projects">
-          <a className="link">doodle</a>
+        <Link href="/projects" className="link">
+          doodle
         </Link>
         .
       </span>{" "}
       Sometimes I make{" "}
-      <Link href="/photography">
-        <a className="link">pictures</a>
+      <Link href="/photography" className="link">
+        pictures
       </Link>{" "}
       or{" "}
       <span className="whitespace-nowrap">
-        <Link href="/drawings">
-          <a className="link">drawings</a>
+        <Link href="/drawings" className="link">
+          drawings
         </Link>
         ,
       </span>{" "}
