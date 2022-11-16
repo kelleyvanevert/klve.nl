@@ -15,8 +15,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["pages", "layouts", "lib", "*.d.ts"],
+  "include": ["pages", "layouts", "lib", "*.d.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

@@ -60,7 +60,7 @@ function Intro() {
     <p className="text-2xl mb-[20px] md:mb-[28px]">
       Hi there!&emsp;I'm Kelley. I{" "}
       <span className="whitespace-nowrap">
-        <a className="link" href="https://mywheels.nl">
+        <a className="link" href="https://ijsfontein.nl">
           code
         </a>
         ,

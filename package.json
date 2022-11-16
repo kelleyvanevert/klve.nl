@@ -13,7 +13,7 @@
     "glob-parent": "^6.0.2",
     "lodash.find": "^4.6.0",
     "lodash.mapvalues": "^4.6.0",
-    "next": "^13.0.0",
+    "next": "^13.0.3",
     "postcss": "^8.4.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
