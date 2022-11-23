@@ -13,6 +13,28 @@ export default function Page() {
         <div className="flex flex-col items-center p-8 max-w-[400px] md:w-[50%]">
           <div className="mb-3 text-center">
             <span className="font-bold text-black dark:text-white">
+              Lost in Space
+            </span>{" "}
+            (
+            <a
+              className="link"
+              href="https://music.klve.nl/2022-11-new-colleagues.m4a"
+            >
+              m4a
+            </a>
+            )
+            <br />
+            Winter cold, new colleagues, recalibrating.
+          </div>
+          <audio
+            controls
+            src="https://music.klve.nl/2022-11-new-colleagues.m4a"
+          />
+        </div>
+
+        <div className="flex flex-col items-center p-8 max-w-[400px] md:w-[50%]">
+          <div className="mb-3 text-center">
+            <span className="font-bold text-black dark:text-white">
               First Steps / Warm Embrace
             </span>{" "}
             (
