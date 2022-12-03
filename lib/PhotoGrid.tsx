@@ -91,7 +91,7 @@ export function PhotoGridSwipe({ items }: PhotoswipeGridProps) {
       const im = thmb && thmb.getElementsByTagName("img")[0];
 
       if (!im) {
-        return;
+        return {};
       }
 
       const pageYScroll =
