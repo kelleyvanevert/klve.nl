@@ -84,21 +84,6 @@ export function PhotoGridSwipe({ items }: PhotoswipeGridProps) {
     barsSize: { top: 0, bottom: 0 },
     // captionEl: false,
     shareEl: false,
-    getThumbBoundsFn(index: number) {
-      const thmb =
-        ref.current &&
-        ref.current.getElementsByClassName("pswp-thumbnail")[index];
-      const im = thmb && thmb.getElementsByTagName("img")[0];
-
-      if (!im) {
-        return {};
-      }
-
-      const pageYScroll =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const rect = im.getBoundingClientRect();
-      return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
-    },
   };
 
   return (
