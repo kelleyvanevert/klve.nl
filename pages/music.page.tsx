@@ -18,7 +18,7 @@ export default function Page() {
             (
             <a
               className="link"
-              href="https://music.klve.nl/2022-11-v3-lost-in-space.m4a"
+              href="https://music.klve.nl/2022-11-v4-lost-in-space.m4a"
             >
               m4a
             </a>
@@ -28,7 +28,7 @@ export default function Page() {
           </div>
           <audio
             controls
-            src="https://music.klve.nl/2022-11-v3-lost-in-space.m4a"
+            src="https://music.klve.nl/2022-11-v4-lost-in-space.m4a"
           />
         </div>
 
