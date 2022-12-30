@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { createContext, ReactNode, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useDarkMode from "use-dark-mode";
@@ -16,8 +16,14 @@ type Props = {
   children?: ReactNode;
 };
 
+const DarkModeContext = createContext(false);
+
+export function useIsDarkMode() {
+  return useContext(DarkModeContext);
+}
+
 export function Layout({ children }: Props) {
-  useDarkMode(undefined, {
+  const darkMode = useDarkMode(undefined, {
     // @ts-ignore
     storageKey: null,
     classNameDark: "dark",
@@ -26,29 +32,30 @@ export function Layout({ children }: Props) {
   const router = useRouter();
 
   return (
-    <div className="mt-[40px] mb-[100px] px-[24px]">
-      <header className="max-w-[800px] mt-[50px] mx-auto">
-        <div className="tracking-[1px] font-mono text-[11px]">
-          <a href="mailto:hello@klve.nl" className="!text-[#999]">
-            hello@<strong className="text-black dark:text-white">klve</strong>
-            .nl
-          </a>
-        </div>
-        <ul>
-          {menuItems.map((item) => (
-            <li className="inline mr-[10px]" key={item.title}>
-              <Link
-                href={item.path}
-                className={cx(
-                  "inline-block relative lowercase font-bold focus:underline text-2xl",
-                  item.path === router.pathname && "italic"
-                )}
-              >
-                <span>{item.title}</span>.
-              </Link>
-            </li>
-          ))}
-          {/* <li className="inline">
+    <DarkModeContext.Provider value={darkMode.value}>
+      <div className="mt-[40px] mb-[100px] px-[24px]">
+        <header className="max-w-[800px] mt-[50px] mx-auto">
+          <div className="tracking-[1px] font-mono text-[11px]">
+            <a href="mailto:hello@klve.nl" className="!text-[#999]">
+              hello@<strong className="text-black dark:text-white">klve</strong>
+              .nl
+            </a>
+          </div>
+          <ul>
+            {menuItems.map((item) => (
+              <li className="inline mr-[10px]" key={item.title}>
+                <Link
+                  href={item.path}
+                  className={cx(
+                    "inline-block relative lowercase font-bold focus:underline text-2xl",
+                    item.path === router.pathname && "italic"
+                  )}
+                >
+                  <span>{item.title}</span>.
+                </Link>
+              </li>
+            ))}
+            {/* <li className="inline">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -59,9 +66,10 @@ export function Layout({ children }: Props) {
               <span>CV</span>.
             </a>
           </li> */}
-        </ul>
-      </header>
-      <main>{children}</main>
-    </div>
+          </ul>
+        </header>
+        <main>{children}</main>
+      </div>
+    </DarkModeContext.Provider>
   );
 }
