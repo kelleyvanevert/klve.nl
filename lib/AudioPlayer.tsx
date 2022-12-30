@@ -161,7 +161,7 @@ export function AudioPlayer({
       </div>
       <div>
         {info}{" "}
-        <span className="text-base">
+        <span className="text-base whitespace-nowrap">
           (
           <a
             className="link !font-normal"
