@@ -121,7 +121,7 @@ export function AudioPlayer({
           ],
         });
 
-        // instance.load(url);
+        instance.load(url);
 
         instance.on("ready", () => {
           setInstance(instance);
