@@ -1,12 +1,6 @@
-import {
-  forwardRef,
-  ReactNode,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
+// import CursorPlugin from "wavesurfer.js/src/plugin/cursor";
 import { useIsDarkMode } from "layouts/Layout";
 import { PlayPause } from "./PlayPause";
 import { useRefCallback } from "./useRefCallback";
@@ -76,7 +70,7 @@ export function AudioPlayer({
     }
   });
 
-  const play = useRefCallback(() => {
+  const play = useRefCallback((fromStart = false) => {
     if (!instance) return;
 
     (window as any).stopCurrentlyPlaying?.();
@@ -86,6 +80,9 @@ export function AudioPlayer({
 
     setPlaying(true);
     setMostRecentlyActive(true);
+    if (fromStart) {
+      instance.seekTo(0);
+    }
     instance?.play();
   });
 
@@ -113,6 +110,15 @@ export function AudioPlayer({
           cursorColor: colors.cursorColorWhenInactive,
           progressColor: colors.progressColor,
           waveColor: colors.waveColor,
+          plugins: [
+            // CursorPlugin.create({
+            //   showTime: false,
+            //   width: "2px",
+            //   opacity: "1",
+            //   color: colors.cursorColor,
+            //   ...({} as any),
+            // }),
+          ],
         });
 
         instance.load(url);
@@ -122,7 +128,7 @@ export function AudioPlayer({
           if (id) {
             (window as any).playerInstances = {
               ...(window as any).playerInstances,
-              [id]: play,
+              [id]: () => play(true),
             };
           }
         });

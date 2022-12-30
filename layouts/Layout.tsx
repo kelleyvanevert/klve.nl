@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext } from "react";
+import { createContext, ReactNode, useContext, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useDarkMode from "use-dark-mode";
@@ -28,6 +28,10 @@ export function Layout({ children }: Props) {
     storageKey: null,
     classNameDark: "dark",
   });
+
+  // useEffect(() => {
+  //   darkMode.disable();
+  // }, []);
 
   const router = useRouter();
 
