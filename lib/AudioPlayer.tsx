@@ -69,7 +69,7 @@ export function AudioPlayer({
     if (!instance) return;
 
     setPlaying(false);
-    instance.pause();
+    instance?.pause();
 
     if (fromOtherPlayer) {
       setMostRecentlyActive(false);
@@ -86,7 +86,7 @@ export function AudioPlayer({
 
     setPlaying(true);
     setMostRecentlyActive(true);
-    instance.play();
+    instance?.play();
   });
 
   const playOrPause = useRefCallback(() => {
@@ -140,6 +140,13 @@ export function AudioPlayer({
       })();
     }
   }, []);
+
+  useEffect(() => {
+    return () => {
+      instance?.pause();
+      // .destroy() would be better, because this technically could lead to a memory leak on lots of navigation, but, then there's a bug in my code where a nav back to the music page leads to "read from null" errors. So pausing will do for now :P
+    };
+  }, [instance]);
 
   return (
     <div className={className}>
