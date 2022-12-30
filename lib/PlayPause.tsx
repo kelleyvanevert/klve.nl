@@ -12,9 +12,13 @@ export function PlayPause({ loading, playing }: Props) {
         height="60"
         viewBox="-2 -2 48 48"
         xmlns="http://www.w3.org/2000/svg"
-        stroke="#fff"
       >
-        <g fill="none" fill-rule="evenodd" stroke-width="2">
+        <g
+          fill="none"
+          fill-rule="evenodd"
+          stroke-width="2"
+          className="stroke-black dark:stroke-white"
+        >
           <circle cx="22" cy="22" r="1">
             <animate
               attributeName="r"
