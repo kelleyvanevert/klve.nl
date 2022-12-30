@@ -10,7 +10,7 @@ type Props = {
   id?: string;
   playNext?: string;
   title: string;
-  info?: ReactNode;
+  info: ReactNode;
   url: string;
 };
 
@@ -159,7 +159,21 @@ export function AudioPlayer({
       <div className="font-bold text-black dark:text-white text-lg">
         {title}
       </div>
-      {!!info && <div>{info}</div>}
+      <div>
+        {info}{" "}
+        <span className="text-base">
+          (
+          <a
+            className="link !font-normal"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={url}
+          >
+            audio file
+          </a>
+          )
+        </span>
+      </div>
 
       <div className="mt-2 mb-4 h-[60px] flex">
         <button

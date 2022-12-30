@@ -55,7 +55,7 @@ export default function Page() {
         id="journey_around_the_sun"
         playNext="dying_android"
         title="Journey around the Sun"
-        url="https://music.klve.nl/emp2-4-v7-journey-around-the-sun.m4a"
+        url="https://music.klve.nl/emp2-4-v9-journey-around-the-sun.m4a"
         info={
           <span>
             With thanks to Olaf's{" "}
