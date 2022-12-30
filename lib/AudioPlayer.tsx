@@ -181,7 +181,7 @@ export function AudioPlayer({
           type="button"
           onClick={playOrPause}
         >
-          <PlayPause playing={playing} />
+          <PlayPause loading={!instance} playing={playing} />
         </button>
         <div
           ref={waveformContainer}
