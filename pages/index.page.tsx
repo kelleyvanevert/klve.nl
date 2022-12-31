@@ -73,7 +73,7 @@ function Intro() {
       </span>{" "}
       and{" "}
       <span className="whitespace-nowrap">
-        <Link href="/projects" className="link">
+        <Link href="/code" className="link">
           doodle
         </Link>
         .

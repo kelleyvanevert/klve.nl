@@ -112,7 +112,7 @@ export const photoCats: {
         },
       ],
     },
-    weddings: {
+    wedding: {
       title: "Weddings",
       photo: "/s/photography/wedding/s320/_MG_8162.jpg",
       images: [
