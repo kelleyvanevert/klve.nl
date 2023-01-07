@@ -9,6 +9,7 @@ dist
 out
 .next
 
+
 # dependencies
 /node_modules
 /.pnp
