@@ -11,11 +11,17 @@ export default function Page() {
     <section className="wrap">
       <h1 className="hidden">Music</h1>
       <p className="relative top-[-30px]">
-        Below is the (incomplete and still very much work-in-progress) track
-        listing for my upcoming album{" "}
-        <em style={{ fontVariant: "small-caps" }}>Inorganic Mechanic</em>,
+        Lately I've been learning how to produce electronic music, something
+        that's been on my mind since I was in high school tbh, and I'm currently
+        working on completing my first album,{" "}
+        <span className="whitespace-nowrap">
+          <em style={{ fontVariant: "small-caps", fontWeight: "bold" }}>
+            Inorganic Mechanic
+          </em>
+          ,
+        </span>{" "}
         thematized around a little worker android's adventures in space. Hope
-        you like it {`:)`}
+        you like it!
       </p>
 
       <AudioPlayer

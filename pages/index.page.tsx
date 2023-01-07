@@ -165,7 +165,7 @@ function Content() {
         </span>
       </p>
       <p className="indent-3">
-        Here's my{" "}
+        Here's my (slightly outdated){" "}
         <a
           target="_blank"
           rel="noopener noreferrer"

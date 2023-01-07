@@ -124,6 +124,10 @@ const bookmarkSections = [
             title: "Jon's videos",
             url: "https://www.youtube.com/c/JonGjengset",
           },
+          {
+            title: "pretzelhammer's Rust blog 🦀",
+            url: "https://github.com/pretzelhammer/rust-blog",
+          },
         ],
       },
     ],
@@ -173,6 +177,16 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          My Rusty 🦀 solutions to Advent of Code 2022 🎄 (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/adventofcode2022"
+          >
+            code
+          </a>
+          )
+        </li>
+        <li>
           El Trombonista (
           <a
             className="link"
@@ -180,7 +194,7 @@ export default function Sandbox() {
           >
             mini animation
           </a>
-          ) -- collab Carlota
+          ) &mdash; <em>collab Carlota</em>
         </li>
         <li>
           Some of my favorite recipes, with a fun ascii morphing effect (
@@ -208,14 +222,14 @@ export default function Sandbox() {
           <a className="link" href="https://visualized-execution.js.org/">
             js sketch
           </a>
-          ) -- <em>WORK IN PROGRESS</em>
+          ) &mdash; <em>WORK IN PROGRESS</em>
         </li>
         <li>
           The <em>Scopes</em> programming language (
           <a className="link" href="https://scopes.js.org/">
             tentative idea
           </a>
-          ) -- <em>WORK IN PROGRESS</em>
+          ) &mdash; <em>WORK IN PROGRESS</em>
         </li>
         <li>
           Literal JSX: an idea (

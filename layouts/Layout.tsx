@@ -5,11 +5,11 @@ import useDarkMode from "use-dark-mode";
 import cx from "classnames";
 
 const menuItems = [
-  { title: "About", path: "/" },
-  { title: "Photos", path: "/photography" },
-  { title: "Doodles", path: "/code" },
-  { title: "Drawings", path: "/drawings" },
-  { title: "Music", path: "/music" },
+  { title: "Whoami", path: "/", match: /^\/$/ },
+  { title: "Music", path: "/music", match: /^\/music/ },
+  { title: "Photos", path: "/photography", match: /^\/photography/ },
+  { title: "Drawings", path: "/drawings", match: /^\/drawings/ },
+  { title: "Doodles", path: "/code", match: /^\/code/ },
 ];
 
 type Props = {
@@ -52,24 +52,13 @@ export function Layout({ children }: Props) {
                   href={item.path}
                   className={cx(
                     "inline-block relative lowercase font-bold focus:underline text-2xl",
-                    item.path === router.pathname && "italic"
+                    item.match.test(router.pathname) && "italic"
                   )}
                 >
                   <span>{item.title}</span>.
                 </Link>
               </li>
             ))}
-            {/* <li className="inline">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block relative font-bold focus:underline text-2xl"
-              style={{ fontVariant: "small-caps" }}
-              href="https://content.klve.nl/s/cv.pdf"
-            >
-              <span>CV</span>.
-            </a>
-          </li> */}
           </ul>
         </header>
         <main>{children}</main>
