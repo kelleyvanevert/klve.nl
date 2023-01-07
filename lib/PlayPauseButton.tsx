@@ -1,9 +1,22 @@
 type Props = {
   loading?: boolean;
   playing: boolean;
+  onClick?: () => void;
 };
 
-export function PlayPause({ loading, playing }: Props) {
+export function PlayPauseButton({ loading, playing, onClick }: Props) {
+  return (
+    <button
+      className="w-[60px] h-[60px] grow-0 shrink-0 group transform transition-transform active:scale-90"
+      type="button"
+      onClick={onClick}
+    >
+      {renderIcon(loading, playing)}
+    </button>
+  );
+}
+
+function renderIcon(loading = false, playing = false) {
   if (loading) {
     return (
       <svg
@@ -97,11 +110,15 @@ export function PlayPause({ loading, playing }: Props) {
       ) : (
         <g key="paused">
           <path
-            d="M24 41V19L42 29.7179L24 41Z"
+            d="M22.5,30 v-11 l18,11 l-18,11 z"
             className="fill-black dark:fill-white"
           />
         </g>
       )}
+      <path
+        d="M18,44 h24 v2.5 h-24 z"
+        className="fill-black dark:fill-white invisible group-focus:visible"
+      />
     </svg>
   );
 }

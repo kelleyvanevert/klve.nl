@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 // import CursorPlugin from "wavesurfer.js/src/plugin/cursor";
 import { useIsDarkMode } from "layouts/Layout";
-import { PlayPause } from "./PlayPause";
+import { PlayPauseButton } from "./PlayPauseButton";
 import { useRefCallback } from "./useRefCallback";
 
 type Props = {
@@ -176,13 +176,11 @@ export function AudioPlayer({
       </div>
 
       <div className="mt-2 mb-4 h-[60px] flex">
-        <button
-          className="w-[60px] h-[60px] grow-0 shrink-0 transform transition-transform active:scale-90"
-          type="button"
+        <PlayPauseButton
           onClick={playOrPause}
-        >
-          <PlayPause loading={!instance} playing={playing} />
-        </button>
+          loading={!instance}
+          playing={playing}
+        />
         <div
           ref={waveformContainer}
           className="grow h-[60px] cursor-pointer"

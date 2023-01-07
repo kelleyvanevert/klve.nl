@@ -1,98 +1,95 @@
-import { useCallback, useRef, forwardRef, ReactNode } from "react";
-import cx from "classnames";
-import Link from "next/link";
 import "react-photoswipe-2/lib/photoswipe.css";
 // @ts-ignore
 import { PhotoSwipeGallery } from "react-photoswipe-2";
 
-import styles from "./PhotoGrid.module.css";
-
-type PhotoGridProps = {
-  borders?: boolean;
-  wide?: boolean;
-  children?: ReactNode;
-};
-
-export const PhotoGrid = forwardRef<HTMLDivElement, PhotoGridProps>(
-  ({ borders, wide, children = null }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cx(
-          styles.grid,
-          borders && styles.borders,
-          wide && styles.wide
-        )}
-      >
-        <div className={styles.contents}>{children}</div>
-      </div>
-    );
-  }
-);
-
-type PhotoNavGrid = {
-  items: Array<{
-    to: string;
-    photo: string;
-  }>;
-};
-
-export function PhotoGridNav({ items }: PhotoNavGrid) {
-  return (
-    <PhotoGrid>
-      {items.map((item) => (
-        <div key={item.photo} className={styles.image}>
-          <div className={styles.ratio} />
-          <Link href={item.to} className={styles.a}>
-            <img alt="" src={item.photo} />
-          </Link>
-        </div>
-      ))}
-    </PhotoGrid>
-  );
-}
-
-export interface PhotoGridItem {
+export type PhotoGridItem = {
   photo: string;
   src: string;
   w: number;
   h: number;
   title?: string;
-}
+};
 
-interface PhotoswipeGridProps {
+type Props = {
   items: PhotoGridItem[];
-}
+};
 
-export function PhotoGridSwipe({ items }: PhotoswipeGridProps) {
-  const ref = useRef<HTMLDivElement>(null);
+const options = {
+  mainClass: "pswp--minimal--dark",
+  barsSize: { top: 0, bottom: 0 },
+  // captionEl: false,
+  shareEl: false,
+};
 
-  const renderThumb = useCallback(
-    (item: PhotoGridItem) => (
-      <div key={item.photo} className={styles.image}>
-        <div className={styles.ratio} />
-        <div className={styles.a}>
-          <img alt="" src={item.photo} />
-        </div>
-      </div>
-    ),
-    []
-  );
-
-  const options = {
-    mainClass: "pswp--minimal--dark",
-    barsSize: { top: 0, bottom: 0 },
-    // captionEl: false,
-    shareEl: false,
-  };
-
+export function PhotoGrid({ items }: Props) {
   return (
-    <PhotoGrid wide borders ref={ref}>
+    <>
+      <style>{`
+        .pswp-gallery {
+          /* break out off page layout padding */
+          margin: 0 -24px;
+        }
+
+        .pswp-thumbnails {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .pswp-thumbnail {
+          flex-shrink: 0;
+          flex-grow: 0;
+          aspect-ratio: 1/1;
+          cursor: pointer;
+          user-select: none;
+          position: relative;
+          width: 20%;
+        }
+
+        @media (max-width: 1200px) {
+          .pswp-thumbnail {
+            width: 25%;
+          }
+        }
+
+        @media (max-width: 960px) {
+          .pswp-thumbnail {
+            width: 33.3333%;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .pswp-thumbnail {
+            width: 50%;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .pswp-thumbnail {
+            width: 100%;
+          }
+        }
+      `}</style>
+
       <PhotoSwipeGallery
         items={items}
         options={options}
-        thumbnailContent={renderThumb}
+        thumbnailContent={(item: PhotoGridItem) => {
+          return (
+            // Just so that focusing is possible
+            <a
+              href={item.src}
+              onClick={(e) => e.preventDefault()}
+              className="group absolute inset-[22px] flex justify-center items-center"
+            >
+              <img
+                key={item.photo}
+                className="group-focus:outline outline-2 outline-offset-2 outline-black block max-w-[100%] max-h-[100%]"
+                src={item.photo}
+              />
+            </a>
+          );
+        }}
       />
-    </PhotoGrid>
+    </>
   );
 }

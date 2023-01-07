@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 
-import { PhotoGridSwipe } from "../../lib/PhotoGrid";
+import { PhotoGrid } from "../../lib/PhotoGrid";
 import { photoCats, PhotoCat } from "../../lib/photos";
 
 type Props = {
@@ -51,7 +51,7 @@ export default function PhotoCategory({ cat }: Props) {
           {cat.title}
         </h1>
       </div>
-      <PhotoGridSwipe items={cat.images} />
+      <PhotoGrid items={cat.images} />
     </section>
   );
 }
