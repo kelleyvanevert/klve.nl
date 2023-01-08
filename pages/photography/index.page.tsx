@@ -3,7 +3,7 @@ import { photoCats } from "../../lib/photos";
 
 export default function Photography() {
   return (
-    <section className="wrap">
+    <section className="wrap relative mt-[100px]">
       <h1 className="hidden">Photography</h1>
       <p className="relative top-[-30px]">
         I used to photograph a lot, and here's a little overview of some of the
@@ -18,7 +18,7 @@ export default function Photography() {
             >
               <Link href={`/photography/${key}`} className="block group">
                 <div
-                  className="h-[220px] aspect-[213/320] bg-cover bg-gray-200 group-focus:outline outline-2 outline-offset-2 outline-black"
+                  className="h-[220px] aspect-[213/320] bg-cover bg-gray-200 group-focus:outline outline-2 outline-offset-2 outline-black dark:outline-white"
                   style={{ backgroundImage: `url(${cat.photo})` }}
                 />
               </Link>

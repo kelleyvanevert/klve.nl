@@ -39,7 +39,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function PhotoCategory({ cat }: Props) {
   return (
-    <section>
+    <section className="relative mt-[100px]">
       <div className="wrap">
         <h1>
           <Link

@@ -8,7 +8,7 @@ const AudioPlayer = dynamic(
 
 export default function Page() {
   return (
-    <section className="wrap">
+    <section className="wrap relative mt-[100px]">
       <h1 className="hidden">Music</h1>
       <p className="relative top-[-30px]">
         Lately I've been learning how to produce electronic music, something

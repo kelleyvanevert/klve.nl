@@ -11,7 +11,7 @@ import { CONTENT_BASE } from "../lib/config";
 
 export default function Home() {
   return (
-    <section className="wrapr relative">
+    <section className="wrapr relative mt-[100px]">
       <div className="md:ml-[330px] lg:ml-[440px] xl:ml-[500px]">
         <h1 className="hidden">Kelley van Evert</h1>
         <Intro />

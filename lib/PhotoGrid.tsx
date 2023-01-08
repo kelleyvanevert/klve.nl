@@ -1,6 +1,7 @@
-import "react-photoswipe-2/lib/photoswipe.css";
+import { useEffect, useRef } from "react";
 // @ts-ignore
-import { PhotoSwipeGallery } from "react-photoswipe-2";
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
 
 export type PhotoGridItem = {
   photo: string;
@@ -14,82 +15,54 @@ type Props = {
   items: PhotoGridItem[];
 };
 
-const options = {
-  mainClass: "pswp--minimal--dark",
-  barsSize: { top: 0, bottom: 0 },
-  // captionEl: false,
-  shareEl: false,
-};
-
 export function PhotoGrid({ items }: Props) {
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!galleryRef.current) return;
+
+    let lightbox = new PhotoSwipeLightbox({
+      gallery: galleryRef.current,
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    });
+
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+      lightbox = null;
+    };
+  }, []);
+
   return (
     <>
-      <style>{`
-        .pswp-gallery {
-          /* break out off page layout padding */
-          margin: 0 -24px;
-        }
-
-        .pswp-thumbnails {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
-        .pswp-thumbnail {
-          flex-shrink: 0;
-          flex-grow: 0;
-          aspect-ratio: 1/1;
-          cursor: pointer;
-          user-select: none;
-          position: relative;
-          width: 20%;
-        }
-
-        @media (max-width: 1200px) {
-          .pswp-thumbnail {
-            width: 25%;
-          }
-        }
-
-        @media (max-width: 960px) {
-          .pswp-thumbnail {
-            width: 33.3333%;
-          }
-        }
-
-        @media (max-width: 600px) {
-          .pswp-thumbnail {
-            width: 50%;
-          }
-        }
-
-        @media (max-width: 400px) {
-          .pswp-thumbnail {
-            width: 100%;
-          }
-        }
-      `}</style>
-
-      <PhotoSwipeGallery
-        items={items}
-        options={options}
-        thumbnailContent={(item: PhotoGridItem) => {
+      {/* break out off page layout padding */}
+      <div ref={galleryRef} className="mx-[-24px] flex flex-wrap">
+        {items.map((item) => {
           return (
-            // Just so that focusing is possible
-            <a
-              href={item.src}
-              onClick={(e) => e.preventDefault()}
-              className="group absolute inset-[22px] flex justify-center items-center"
+            <div
+              key={item.photo}
+              className="shrink-0 grow-0 aspect-square cursor-pointer select-none relative w-[50%] md:w-[33%] lg:w-[25%] xl:w-[20%]"
             >
-              <img
-                key={item.photo}
-                className="group-focus:outline outline-2 outline-offset-2 outline-black block max-w-[100%] max-h-[100%]"
-                src={item.photo}
-              />
-            </a>
+              {/* Just so that focusing is possible */}
+              <a
+                href={item.src}
+                onClick={(e) => e.preventDefault()}
+                data-pswp-width={item.w}
+                data-pswp-height={item.h}
+                className="group absolute inset-[22px] flex justify-center items-center"
+              >
+                <img
+                  key={item.photo}
+                  className="group-focus:outline outline-2 outline-offset-2 outline-black dark:outline-white block max-w-[100%] max-h-[100%]"
+                  src={item.photo}
+                />
+              </a>
+            </div>
           );
-        }}
-      />
+        })}
+      </div>
     </>
   );
 }
