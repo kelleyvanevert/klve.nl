@@ -27,6 +27,10 @@ const bookmarkSections = [
             title: "JSXGraph",
             url: "https://jsxgraph.uni-bayreuth.de/wp/",
           },
+          {
+            title: "thi.ng",
+            url: "https://thi.ng/",
+          },
         ],
       },
       {
@@ -128,6 +132,10 @@ const bookmarkSections = [
             title: "pretzelhammer's Rust blog 🦀",
             url: "https://github.com/pretzelhammer/rust-blog",
           },
+          {
+            title: "Faultlore",
+            url: "https://faultlore.com/blah/robinhood-part-1/",
+          },
         ],
       },
     ],
@@ -158,6 +166,7 @@ const bookmarkSections = [
           { title: "Markus", url: "http://lambdanaut.net/" },
           { title: "Cyril", url: "https://cyrcle.nl/" },
           { title: "Rein", url: "https://youcancode.it/" },
+          { title: "Blaž", url: "https://soundcloud.com/blaz-pavlica" },
         ],
       },
       {
