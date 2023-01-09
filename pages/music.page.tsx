@@ -28,7 +28,7 @@ export default function Page() {
         className="mb-12"
         id="first_steps"
         playNext="lost_in_space"
-        title="First Steps / Warm Embrace"
+        title="First Steps / Loving Embrace"
         url="https://music.klve.nl/halle-saale-v10-first-steps-warm-embrace.m4a"
         info={
           <span>
