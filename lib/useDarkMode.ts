@@ -10,7 +10,14 @@ export function useDarkMode() {
   });
 
   useEffect(() => {
-    const handler = (e: { matches: boolean }) => setDarkMode(e.matches);
+    const handler = (e: { matches: boolean }) => {
+      setDarkMode(e.matches);
+      if (e.matches) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    };
 
     const q = window.matchMedia("(prefers-color-scheme: dark)");
     handler(q);
