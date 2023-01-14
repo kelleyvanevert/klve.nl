@@ -1,8 +1,8 @@
 import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 // import CursorPlugin from "wavesurfer.js/src/plugin/cursor";
-import { useIsDarkMode } from "layouts/Layout";
 import { PlayPauseButton } from "./PlayPauseButton";
+import { useDarkMode } from "./useDarkMode";
 import { useRefCallback } from "./useRefCallback";
 
 type Props = {
@@ -22,7 +22,7 @@ export function AudioPlayer({
   info,
   url,
 }: Props) {
-  const isDarkMode = useIsDarkMode();
+  const isDarkMode = useDarkMode();
 
   const waveformContainer = useRef<HTMLDivElement>(null);
   const initialized = useRef(false);

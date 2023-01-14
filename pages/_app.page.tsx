@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-// import "photoswipe/style.css";
 
 import "./styles.css";
 

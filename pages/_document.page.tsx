@@ -28,6 +28,19 @@ export default function Document() {
           type="text/css"
           href="https://use.typekit.net/pak0fwg.css?123"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const q = window.matchMedia("(prefers-color-scheme: dark)");
+              window._initialDarkMode = q.matches;
+              if (q.matches) {
+                document.documentElement.classList.add('dark')
+              } else {
+                document.documentElement.classList.remove('dark')
+              }
+            `,
+          }}
+        ></script>
       </Head>
       <body>
         <Main />
