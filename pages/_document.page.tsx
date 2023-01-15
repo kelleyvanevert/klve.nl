@@ -28,6 +28,8 @@ export default function Document() {
           type="text/css"
           href="https://use.typekit.net/pak0fwg.css?123"
         />
+      </Head>
+      <body>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -41,8 +43,6 @@ export default function Document() {
             `,
           }}
         ></script>
-      </Head>
-      <body>
         <Main />
         <NextScript />
       </body>
