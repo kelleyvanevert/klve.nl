@@ -34,9 +34,9 @@ export default function Document() {
               const q = window.matchMedia("(prefers-color-scheme: dark)");
               window._initialDarkMode = q.matches;
               if (q.matches) {
-                document.documentElement.classList.add('dark')
+                document.body.classList.add('dark')
               } else {
-                document.documentElement.classList.remove('dark')
+                document.body.classList.remove('dark')
               }
             `,
           }}
