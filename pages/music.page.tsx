@@ -16,7 +16,7 @@ export default function Page() {
         working on completing my first album,{" "}
         <span className="whitespace-nowrap">
           <em style={{ fontVariant: "small-caps", fontWeight: "bold" }}>
-            Inorganic Mechanic
+            Journey around the Sun
           </em>
           ,
         </span>{" "}
