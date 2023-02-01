@@ -27,7 +27,7 @@ export default function Page() {
       <AudioPlayer
         className="mb-12"
         id="first_steps"
-        playNext="lost_in_space"
+        playNext="lost"
         title="First Steps / Loving Embrace"
         url="https://music.klve.nl/halle-saale-v10-first-steps-warm-embrace.m4a"
         info={
@@ -40,9 +40,9 @@ export default function Page() {
 
       <AudioPlayer
         className="mb-12"
-        id="lost_in_space"
+        id="lost"
         playNext="heart_surgery"
-        title="Lost in Space"
+        title="Lost"
         url="https://music.klve.nl/2022-11-v4-lost-in-space.m4a"
         info={<span>Winter cold, new colleagues, recalibrating.</span>}
       />
