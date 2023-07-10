@@ -21,12 +21,7 @@ export default function Home() {
         <div className="w-full max-w-[430px] mx-auto pt-[4px] md:mx-0 md:absolute md:top-0 md:left-0 md:w-[300px] lg:w-[400px] xl:w-[450px]">
           <div className="relative overflow-hidden">
             <div className="pt-[57%] box-border" />
-            <a
-              href={chen1small.src}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-[0%] w-full transition-all hover:top-[-13%] focus:outline-none"
-            >
+            <div className="absolute top-[0%] w-full transition-all hover:top-[-13%] focus:outline-none">
               <Image src={chen1small} alt="" className="block w-full h-auto" />
               {/* <img
                 className="block w-full h-auto"
@@ -52,10 +47,10 @@ export default function Home() {
                 // sound design 2022
                 src={`${CONTENT_BASE}/s/me/DSCF2881.jpg`}
               /> */}
-            </a>
+            </div>
           </div>
           <div className="text-right m-[5px] text-[13px] italic">
-            photo taken by 晨
+            photo by <span className="not-italic">晨</span>
           </div>
         </div>
         <Content />
