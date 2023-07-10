@@ -28,8 +28,8 @@ function renderIcon(loading = false, playing = false) {
       >
         <g
           fill="none"
-          fill-rule="evenodd"
-          stroke-width="2"
+          fillRule="evenodd"
+          strokeWidth="2"
           className="stroke-black dark:stroke-white"
         >
           <circle cx="22" cy="22" r="1">

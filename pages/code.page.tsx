@@ -214,7 +214,7 @@ export default function Sandbox() {
         </li>
         <li>
           Visualizing JS execution through a meta-syntactic transform (
-          <a className="link" href="https://jsviz2.klve.nl/">
+          <a className="link" href="https://jsviz.klve.nl/">
             js sketch
           </a>
           )

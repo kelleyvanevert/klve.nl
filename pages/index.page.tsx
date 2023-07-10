@@ -142,7 +142,7 @@ function Content() {
       </p>
       <p className="indent-3">
         You will typically find me: writing{" "}
-        <TagLink href="https://jsviz2.klve.nl/">JS code</TagLink>, listening to{" "}
+        <TagLink href="https://jsviz.klve.nl/">JS code</TagLink>, listening to{" "}
         <TagLink href="https://www.youtube.com/watch?v=hqsSYvnUyR0">
           Avishai Cohen
         </TagLink>{" "}
