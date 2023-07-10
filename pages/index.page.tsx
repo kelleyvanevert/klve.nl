@@ -18,10 +18,10 @@ export default function Home() {
       <div className="md:ml-[330px] lg:ml-[440px] xl:ml-[500px]">
         <h1 className="hidden">Kelley van Evert</h1>
         <Intro />
-        <div className="w-full max-w-[430px] mx-auto pt-[4px] md:mx-0 md:absolute md:top-0 md:left-0 md:w-[300px] lg:w-[400px] xl:w-[450px]">
+        <div className="w-full max-w-[430px] mx-auto pt-[4px] md:mx-0 md:absolute md:top-0 md:left-0 md:w-[300px] lg:w-[400px] xl:w-[450px] group/me">
           <div className="relative overflow-hidden">
             <div className="pt-[57%] box-border" />
-            <div className="absolute top-[0%] w-full transition-all hover:top-[-13%] focus:outline-none">
+            <div className="absolute top-[0%] w-full transition-all group-hover/me:top-[-13%] group-focus/me:outline-none">
               <Image src={chen1small} alt="" className="block w-full h-auto" />
               {/* <img
                 className="block w-full h-auto"
@@ -49,8 +49,22 @@ export default function Home() {
               /> */}
             </div>
           </div>
-          <div className="text-right m-[5px] text-[13px] italic">
-            photo by <span className="not-italic">晨</span>
+          <div className="flex justify-end m-[5px] text-[13px] italic">
+            <span>
+              photo by <span className="not-italic">晨</span>
+            </span>
+            <a
+              className="group/link ml-2"
+              href={chen1small.src}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              (
+              <span className="group-hover/link:underline group-focus/link:underline">
+                view full
+              </span>
+              )
+            </a>
           </div>
         </div>
         <Content />
