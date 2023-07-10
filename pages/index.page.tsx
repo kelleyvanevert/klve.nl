@@ -1,7 +1,10 @@
 import { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { CONTENT_BASE } from "../lib/config";
+
+import chen1small from "../assets/chen1small.jpg";
 
 // const images: Array<{ url: string; caption?: string }> = [
 //   {
@@ -17,9 +20,15 @@ export default function Home() {
         <Intro />
         <div className="w-full max-w-[430px] mx-auto pt-[4px] md:mx-0 md:absolute md:top-0 md:left-0 md:w-[300px] lg:w-[400px] xl:w-[450px]">
           <div className="relative overflow-hidden">
-            <div className="pt-[66.5%] box-border" />
-            <div className="absolute top-0 w-full">
-              <img
+            <div className="pt-[57%] box-border" />
+            <a
+              href={chen1small.src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute top-[0%] w-full transition-all hover:top-[-13%] focus:outline-none"
+            >
+              <Image src={chen1small} alt="" className="block w-full h-auto" />
+              {/* <img
                 className="block w-full h-auto"
                 alt=""
                 // met cyril op een toren in wenen
@@ -42,11 +51,11 @@ export default function Home() {
 
                 // sound design 2022
                 src={`${CONTENT_BASE}/s/me/DSCF2881.jpg`}
-              />
-            </div>
+              /> */}
+            </a>
           </div>
           <div className="text-right m-[5px] text-[13px] italic">
-            photo taken by Isabel
+            photo taken by 晨
           </div>
         </div>
         <Content />
