@@ -190,6 +190,16 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          Rust audio livecode editor (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/rust_live"
+          >
+            github repo
+          </a>
+          ) &mdash; <em>WORK IN PROGRESS</em>
+        </li>
+        <li>
           My Rusty 🦀 solutions to Advent of Code 2022 🎄 (
           <a
             className="link"
