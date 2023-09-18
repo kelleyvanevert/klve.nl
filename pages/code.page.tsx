@@ -79,6 +79,18 @@ const bookmarkSections = [
             title: "Babel plugin handbook",
             url: "https://github.com/jamiebuilds/babel-handbook/blob/master/translations/en/plugin-handbook.md",
           },
+          {
+            title: "Free stuff for devs",
+            url: "https://freestuff.dev/",
+          },
+          {
+            title: "Excalidraw",
+            url: "https://excalidraw.com/",
+          },
+          {
+            title: "tldraw",
+            url: "https://www.tldraw.com/",
+          },
         ],
       },
       {
@@ -172,10 +184,6 @@ const bookmarkSections = [
           { title: "Rein", url: "https://youcancode.it/" },
           { title: "Blaž", url: "https://soundcloud.com/blaz-pavlica" },
         ],
-      },
-      {
-        title: "People",
-        bookmarks: [{ title: "Evan Wallace", url: "http://madebyevan.com/" }],
       },
     ],
   },
