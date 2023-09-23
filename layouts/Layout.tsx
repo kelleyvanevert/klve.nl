@@ -9,6 +9,7 @@ const menuItems = [
   { title: "Music", path: "/music", match: /^\/music/ },
   { title: "Photos", path: "/photography", match: /^\/photography/ },
   { title: "Drawings", path: "/drawings", match: /^\/drawings/ },
+  { title: "Crochet", path: "/crochet", match: /^\/crochet/ },
   { title: "Doodles", path: "/code", match: /^\/code/ },
 ];
 
