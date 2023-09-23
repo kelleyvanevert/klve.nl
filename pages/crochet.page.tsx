@@ -49,6 +49,16 @@ export default function Crochet({ projects }: Props) {
     <section className="relative mt-[100px]">
       <div className="wrap">
         <h1>Crochet</h1>
+        <p className="relative text-center top-[-30px]">
+          You can find more pics and stuff at my{" "}
+          <a
+            className="link"
+            href="https://www.ravelry.com/projects/kellleyvanevert"
+          >
+            Ravelry
+          </a>{" "}
+          account :)
+        </p>
       </div>
 
       {/* break out off page layout padding */}
