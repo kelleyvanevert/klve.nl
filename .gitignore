@@ -39,3 +39,5 @@ public/sw.js
 public/workbox-*.js
 
 .env
+
+# added new crochet project
