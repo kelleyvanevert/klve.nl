@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://klve.nl/" />
-        <meta property="og:image" content={chen1small.src} />
+        <meta property="og:image" content={base(chen1small.src)} />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content={"" + chen1small.width} />
         <meta property="og:image:height" content={"" + chen1small.height} />
@@ -32,4 +32,16 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </Layout>
   );
+}
+
+function base(url: string) {
+  if (!url.startsWith("http")) {
+    url = join("https://klve.nl", url);
+  }
+
+  return url;
+}
+
+function join(a: string, b: string) {
+  return a.replace(/\/$/, "") + "/" + b.replace(/^\//, "");
 }
