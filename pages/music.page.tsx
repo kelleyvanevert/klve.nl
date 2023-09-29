@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { GetServerSideProps } from "next";
-import { executeQraphQLRequest } from "../lib/graphql";
+import { GetStaticProps } from "next";
+import { executeQraphQLRequest } from "lib/graphql";
 import { Markdown } from "lib/Markdown";
 
 const AudioPlayer = dynamic(
@@ -25,7 +25,7 @@ type Props = {
   tracks: Track[];
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const { tracks } = await executeQraphQLRequest(
     `
       {
