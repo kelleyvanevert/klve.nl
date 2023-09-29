@@ -22,18 +22,35 @@ type Props = {
   projects: CrochetProject[];
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const res = await fetch(
-    "https://api.ravelry.com/projects/kellleyvanevert//list.json?sort=status&page_size=50",
-    {
-      method: "GET",
-      headers: {
-        Authorization: `Basic ${Buffer.from(
-          process.env.RAVELRY_PERSONAL_AUTH!
-        ).toString("base64")}`,
-      },
+async function retry<T>(f: () => Promise<T>, max = 3): Promise<T> {
+  try {
+    return await f();
+  } catch (error) {
+    if (max === 0) {
+      console.error("Max retries reached => bail");
+      throw error;
     }
-  ).then((r) => r.json());
+    console.warn("Failed => retry again in 100ms");
+    await new Promise((r) => setTimeout(r, 100));
+    return await retry(f, max - 1);
+  }
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const res = await retry(
+    async () =>
+      await fetch(
+        "https://api.ravelry.com/projects/kellleyvanevert/list.json?sort=status&page_size=50",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Basic ${Buffer.from(
+              process.env.RAVELRY_PERSONAL_AUTH!
+            ).toString("base64")}`,
+          },
+        }
+      ).then((r) => r.json())
+  );
 
   const { projects } = res;
 
