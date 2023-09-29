@@ -1,9 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function NotFound() {
-  const router = useRouter();
-
   return (
     <div className="fixed inset-0 flex flex-col justify-center items-center">
       <div className="font-bold text-6xl">404</div>
