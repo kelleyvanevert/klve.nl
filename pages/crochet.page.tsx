@@ -58,6 +58,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       projects,
     },
+    revalidate: 60 * 60, // at most once every hour
   };
 };
 
