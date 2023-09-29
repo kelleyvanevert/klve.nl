@@ -8,8 +8,10 @@ import { Layout } from "../layouts/Layout";
 import chen1small from "../assets/chen1small.jpg";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const LayoutComp = (Component as any).disableLayout ? "div" : Layout;
+
   return (
-    <Layout>
+    <LayoutComp>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kelley van Evert</title>
@@ -30,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image:height" content={"" + chen1small.height} />
       </Head>
       <Component {...pageProps} />
-    </Layout>
+    </LayoutComp>
   );
 }
 

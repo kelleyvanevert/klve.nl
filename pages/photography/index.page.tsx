@@ -3,7 +3,7 @@ import { photoCats } from "../../lib/photos";
 
 export default function Photography() {
   return (
-    <section className="wrap relative mt-[100px]">
+    <section className="wrap relative mt-[60px] md:mt-[100px]">
       <h1 className="hidden">Photography</h1>
       <p className="relative top-[-30px]">
         I used to photograph a lot, and here's a little overview of some of the

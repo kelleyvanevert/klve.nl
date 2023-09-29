@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 export default function Page({ tracks }: Props) {
   return (
-    <section className="wrap relative mt-[100px]">
+    <section className="wrap relative mt-[60px] md:mt-[100px]">
       <h1 className="hidden">Music</h1>
       <p className="relative top-[-30px]">
         Lately I've been learning how to produce electronic music, something

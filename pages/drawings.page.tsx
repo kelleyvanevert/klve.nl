@@ -77,7 +77,7 @@ const DRAWINGS: PhotoGridItem[] = [
 
 export default function Drawings() {
   return (
-    <section className="relative mt-[100px]">
+    <section className="relative mt-[60px] md:mt-[100px]">
       <div className="wrap">
         <h1>Drawings</h1>
       </div>

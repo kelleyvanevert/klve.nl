@@ -156,12 +156,10 @@ export function AudioPlayer({
 
   return (
     <div className={className}>
-      <div className="font-bold text-black dark:text-white text-lg">
-        {title}
-      </div>
-      <div>
+      <div className="font-bold text-black dark:text-white">{title}</div>
+      <div className="text-sm">
         {info}{" "}
-        <span className="text-base whitespace-nowrap">
+        <span className="whitespace-nowrap">
           (
           <a
             className="link !font-normal"
@@ -175,7 +173,7 @@ export function AudioPlayer({
         </span>
       </div>
 
-      <div className="mt-2 mb-4 h-[60px] flex">
+      <div className="mt-3 mb-4 h-[60px] flex">
         <PlayPauseButton
           onClick={playOrPause}
           loading={!instance}

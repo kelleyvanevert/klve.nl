@@ -14,7 +14,7 @@ import chen1small from "../assets/chen1small.jpg";
 
 export default function Home() {
   return (
-    <section className="wrapr relative mt-[100px]">
+    <section className="wrapr relative mt-[60px] md:mt-[100px]">
       <div className="md:ml-[330px] lg:ml-[440px] xl:ml-[500px]">
         <h1 className="hidden">Kelley van Evert</h1>
         <Intro />
@@ -75,7 +75,7 @@ export default function Home() {
 
 function Intro() {
   return (
-    <p className="text-2xl mb-[20px] md:mb-[28px]">
+    <p className="text-xl mb-[20px] md:mb-[28px]">
       Hi there!&emsp;I'm Kelley. I{" "}
       <span className="whitespace-nowrap">
         <a className="link" href="https://ijsfontein.nl">

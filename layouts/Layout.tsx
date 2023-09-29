@@ -37,7 +37,7 @@ export function Layout({ children }: Props) {
               <Link
                 href={item.path}
                 className={cx(
-                  "inline-block relative lowercase font-bold focus:underline text-2xl",
+                  "inline-block relative lowercase font-bold focus:underline text-[1.3rem]",
                   item.match.test(router.pathname) && "italic"
                 )}
               >

@@ -64,7 +64,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 export default function Crochet({ projects }: Props) {
   return (
-    <section className="relative mt-[100px]">
+    <section className="relative mt-[60px] md:mt-[100px]">
       <div className="wrap">
         <h1>Crochet</h1>
         <p className="relative text-center top-[-30px]">
