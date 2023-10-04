@@ -96,7 +96,7 @@ p {
   margin: 20px 0;
 }
 
-a.link {
+.link {
   color: black;
   font-weight: bold;
 
@@ -109,11 +109,11 @@ a.link {
   text-decoration: none;
 }
 
-.dark a.link {
+.dark .link {
   color: white;
 }
 
-a.link:after {
+.link:after {
   content: " ";
   pointer-events: none;
   position: absolute;
@@ -124,24 +124,24 @@ a.link:after {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-.dark a.link:after {
+.dark .link:after {
   border-bottom-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-a.link:hover::after {
+.link:hover::after {
   border-bottom-color: black;
 }
 
-.dark a.link:hover::after {
+.dark .link:hover::after {
   border-bottom-color: white !important;
 }
 
-a.link:focus::after {
+.link:focus::after {
   left: -2px;
   right: -2px;
   border: 2px solid black;
 }
 
-.dark a.link:focus::after {
+.dark .link:focus::after {
   border-color: white !important;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import dynamic from "next/dynamic";
 import { GetStaticProps } from "next";
 import { executeQraphQLRequest } from "lib/graphql";
@@ -54,6 +54,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 export default function Page({ tracks }: Props) {
+  const [rock, setRock] = useState(false);
+
   return (
     <section className="wrap relative mt-[60px] md:mt-[100px]">
       <h1 className="hidden">Music</h1>
@@ -84,6 +86,43 @@ export default function Page({ tracks }: Props) {
           />
         );
       })}
+
+      <h2>Rocktober 2023</h2>
+      <p className="relative">
+        Let's see if anything good comes from this... (
+        <button className="link" onClick={() => setRock((b) => !b)}>
+          toggle
+        </button>
+        )
+      </p>
+
+      {rock && (
+        <Fragment>
+          <AudioPlayer
+            className="mt-12"
+            title="Day 04 - Breathe"
+            url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/04 - Breathe.wav"
+          />
+
+          <AudioPlayer
+            className="mt-12"
+            title="Day 03 - Kort geding"
+            url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/03 - Kort geding.wav"
+          />
+
+          <AudioPlayer
+            className="mt-12"
+            title="Day 02 - Love is blind"
+            url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/02 - Love is blind.wav"
+          />
+
+          <AudioPlayer
+            className="mt-12"
+            title="Day 01 - Carlota explores the ocean"
+            url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/01 - Carlota explores the ocean.wav"
+          />
+        </Fragment>
+      )}
     </section>
   );
 }

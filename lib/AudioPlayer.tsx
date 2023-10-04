@@ -10,7 +10,7 @@ type Props = {
   id?: string;
   playNext?: string;
   title: string;
-  info: ReactNode;
+  info?: ReactNode;
   url: string;
 };
 
@@ -156,22 +156,41 @@ export function AudioPlayer({
 
   return (
     <div className={className}>
-      <div className="font-bold text-black dark:text-white">{title}</div>
-      <div className="text-sm">
-        {info}{" "}
-        <span className="whitespace-nowrap">
-          (
-          <a
-            className="link !font-normal"
-            target="_blank"
-            rel="noopener noreferrer"
-            href={url}
-          >
-            audio file
-          </a>
-          )
-        </span>
+      <div className="font-bold text-black dark:text-white">
+        {title}
+        {!info && (
+          <span className="ml-1 whitespace-nowrap font-normal text-sm">
+            {" "}
+            (
+            <a
+              className="link !font-normal"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={url}
+            >
+              audio file
+            </a>
+            )
+          </span>
+        )}
       </div>
+      {!!info && (
+        <div className="text-sm">
+          {info}{" "}
+          <span className="whitespace-nowrap">
+            (
+            <a
+              className="link !font-normal"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={url}
+            >
+              audio file
+            </a>
+            )
+          </span>
+        </div>
+      )}
 
       <div className="mt-3 mb-4 h-[60px] flex">
         <PlayPauseButton
