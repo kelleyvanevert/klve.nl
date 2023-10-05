@@ -21,11 +21,6 @@ module.exports = withPWA({
         source: "/:path*",
         headers: [
           {
-            key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; img-src https://*; media-src https://*;",
-          },
-          {
             key: "Access-Control-Allow-Origin",
             value: "https://klve.nl",
           },
