@@ -23,7 +23,7 @@ module.exports = withPWA({
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'none'; script-src 'self'; font-src 'self'; connect-src 'self'; img-src 'self' content.klve.nl data.klve.nl cdn.jsdelivr.net; media-src 'self' content.klve.nl data.klve.nl cdn.jsdelivr.net; style-src 'self'; frame-ancestors 'self'; form-action 'self';",
+              "default-src 'self'; img-src https://*; media-src https://*;",
           },
           {
             key: "Access-Control-Allow-Origin",
