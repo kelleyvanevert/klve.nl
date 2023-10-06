@@ -100,6 +100,12 @@ export default function Page({ tracks }: Props) {
         <Fragment>
           <AudioPlayer
             className="mt-12"
+            title="Day 06 - Exhausted"
+            url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/06 - Exhausted.wav"
+          />
+
+          <AudioPlayer
+            className="mt-12"
             title="Day 05 - Scary story"
             url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/05 - Scary story.wav"
           />
