@@ -100,6 +100,12 @@ export default function Page({ tracks }: Props) {
         <Fragment>
           <AudioPlayer
             className="mt-12"
+            title="Day 07 - Rust, a memory-safe programming language"
+            url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/07 - Rust, a memory-safe programming language.wav"
+          />
+
+          <AudioPlayer
+            className="mt-12"
             title="Day 06 - Exhausted"
             url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/06 - Exhausted.wav"
           />
