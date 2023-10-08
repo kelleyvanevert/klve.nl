@@ -106,6 +106,12 @@ export default function Page({ tracks }: Props) {
 
           <AudioPlayer
             className="mt-12"
+            title="Day 08 - Powerbank"
+            url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/08 - Powerbank.wav"
+          />
+
+          <AudioPlayer
+            className="mt-12"
             title="Day 06 - Exhausted"
             url="https://cdn.jsdelivr.net/gh/kelleyvanevert/rocktober2023/06 - Exhausted.wav"
           />
