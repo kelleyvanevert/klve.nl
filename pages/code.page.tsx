@@ -192,11 +192,19 @@ const bookmarkSections = [
 export default function Sandbox() {
   return (
     <section className="wrap relative mt-[60px] md:mt-[100px]">
-      <h1 className="hidden">Code</h1>
-
-      <h2>Doodles</h2>
+      <h1 className="hidden">Doodles</h1>
 
       <ul className="list-disc ml-[24px]">
+        <li>
+          Rocktober 2023 (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/rocktober2023"
+          >
+            github repo
+          </a>
+          )
+        </li>
         <li>
           Rust audio livecode editor (
           <a
