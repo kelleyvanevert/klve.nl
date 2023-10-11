@@ -197,11 +197,8 @@ export default function Sandbox() {
       <ul className="list-disc ml-[24px]">
         <li>
           Rocktober 2023 (
-          <a
-            className="link"
-            href="https://github.com/kelleyvanevert/rocktober2023"
-          >
-            github repo
+          <a className="link" href="https://rock2023.klve.nl/">
+            project site
           </a>
           )
         </li>
