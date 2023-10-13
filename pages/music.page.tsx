@@ -1,61 +1,14 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { GetStaticProps } from "next";
-import { executeQraphQLRequest } from "lib/graphql";
-import { Markdown } from "lib/Markdown";
 
 const AudioPlayer = dynamic(
   () => import("lib/AudioPlayer").then((m) => m.AudioPlayer),
   { ssr: false }
 );
 
-type Track = {
-  id: string;
-  title: string;
-  description: string;
-  file: {
-    id: string;
-    filesize: string;
-    type: string;
-    filename_download: string;
-  };
-};
-
-type Props = {
-  tracks: Track[];
-};
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { tracks } = await executeQraphQLRequest(
-    `
-      {
-        tracks {
-          id
-          title
-          description
-          file {
-            id
-            filesize
-            type
-            filename_download
-          }
-        }
-      }
-    `,
-    {}
-  );
-
-  return {
-    props: {
-      tracks,
-    },
-    revalidate: 60 * 60, // at most once every hour
-  };
-};
-
-export default function Page({ tracks }: Props) {
+export default function Page() {
   return (
-    <section className="wrap relative mt-[60px] md:mt-[100px]">
+    <section className="wrap relative mt-[100px]">
       <h1 className="hidden">Music</h1>
       <p className="relative top-[-30px]">
         Lately I've been learning how to produce electronic music, something
@@ -71,19 +24,77 @@ export default function Page({ tracks }: Props) {
         you like it!
       </p>
 
-      {tracks.map((track, i) => {
-        return (
-          <AudioPlayer
-            key={track.id}
-            className="mb-12"
-            id={track.id}
-            playNext={tracks[i + 1]?.id}
-            title={track.title}
-            url={`https://data.klve.nl/assets/${track.file.id}/${track.file.filename_download}`}
-            info={<Markdown source={track.description} inline />}
-          />
-        );
-      })}
+      <AudioPlayer
+        className="mb-12"
+        id="first_steps"
+        playNext="lost"
+        title="First Steps / Loving Embrace"
+        url="https://music.klve.nl/halle-saale-v10-first-steps-warm-embrace.m4a"
+        info={
+          <span>
+            Experimenting with glitches and embracing major chords, while
+            visiting Nikko in Halle.
+          </span>
+        }
+      />
+
+      <AudioPlayer
+        className="mb-12"
+        id="lost"
+        playNext="heart_surgery"
+        title="Lost"
+        url="https://music.klve.nl/2022-11-v4-lost-in-space.m4a"
+        info={<span>Winter cold, new colleagues, recalibrating.</span>}
+      />
+
+      <AudioPlayer
+        className="mb-12"
+        id="heart_surgery"
+        playNext="journey_around_the_sun"
+        title="Heart Surgery"
+        url="https://music.klve.nl/9-v11-heart-surgery.m4a"
+        info={<span>Exploring wavetables with Isabel.</span>}
+      />
+
+      <AudioPlayer
+        className="mb-12"
+        id="journey_around_the_sun"
+        playNext="dying_android"
+        title="Journey around the Sun"
+        url="https://music.klve.nl/emp2-4-v10-journey-around-the-sun.m4a"
+        info={
+          <span>
+            With thanks to Olaf's{" "}
+            <a
+              className="link"
+              href="https://www.crea.nl/courses/film-design-and-media-en/electronic-music-production-ii"
+            >
+              EMP II
+            </a>{" "}
+            course at CREA, and Lisanna's enthusiasm.
+          </span>
+        }
+      />
+
+      <AudioPlayer
+        className="mb-12"
+        id="dying_android"
+        title="Dying Android"
+        url="https://music.klve.nl/7-v3-dying-android.m4a"
+        info={
+          <span>
+            Defying kick patterns and refusing Ableton's timescales; with thanks
+            to Olaf's{" "}
+            <a
+              className="link"
+              href="https://www.crea.nl/courses/film-design-and-media-en/electronic-music-production"
+            >
+              EMP
+            </a>{" "}
+            course at CREA.
+          </span>
+        }
+      />
     </section>
   );
 }
