@@ -174,6 +174,10 @@ const bookmarkSections = [
             title: "Polyline tool",
             url: "https://www.keene.edu/campus/maps/tool/",
           },
+          {
+            title: "Vocal Remover",
+            url: "https://vocalremover.org/",
+          },
         ],
       },
       {
