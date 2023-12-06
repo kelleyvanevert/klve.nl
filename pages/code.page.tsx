@@ -178,6 +178,14 @@ const bookmarkSections = [
             title: "Vocal Remover",
             url: "https://vocalremover.org/",
           },
+          {
+            title: "PRQL",
+            url: "https://prql-lang.org/",
+          },
+          {
+            title: "DuckDB",
+            url: "https://duckdb.org/",
+          },
         ],
       },
       {
@@ -199,6 +207,16 @@ export default function Sandbox() {
       <h1 className="hidden">Doodles</h1>
 
       <ul className="list-disc ml-[24px]">
+        <li>
+          Advent of Code 2023 ⚡️ (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/adventofcode2023"
+          >
+            code
+          </a>
+          )
+        </li>
         <li>
           Rocktober 2023 (
           <a className="link" href="https://rock2023.klve.nl/">
