@@ -186,6 +186,10 @@ const bookmarkSections = [
             title: "DuckDB",
             url: "https://duckdb.org/",
           },
+          {
+            title: "Typst",
+            url: "https://typst.app/",
+          },
         ],
       },
       {
