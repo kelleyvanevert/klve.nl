@@ -94,8 +94,8 @@ export default function Crochet({ projects }: Props) {
                   className="block max-w-[100%] max-h-[100%]"
                   src={project.first_photo?.medium2_url}
                 />
-                {!!project.made_for.trim() && (
-                  <p className="mt-1 m-0 italic">For {project.made_for}</p>
+                {!!project.name.trim() && (
+                  <p className="mt-1 m-0 italic">{project.name}</p>
                 )}
               </div>
             </div>
