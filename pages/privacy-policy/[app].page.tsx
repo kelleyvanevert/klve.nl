@@ -1,3 +1,6 @@
+import React from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
+
 type AppInfo = {
   title: string;
 };
@@ -18,7 +21,7 @@ const APPS: Record<string, AppInfo> = {
   },
 };
 
-export const getStaticProps: GetStaticProps<Props, { info: AppInfo }> = async ({
+export const getStaticProps: GetStaticProps<Props, { app: string }> = async ({
   params,
 }) => {
   if (!params || !APPS[params.app]) {
