@@ -19,6 +19,9 @@ const APPS: Record<string, AppInfo> = {
   "perry-16": {
     title: "Perry's 16",
   },
+  hexastack: {
+    title: "Hexastack",
+  },
 };
 
 export const getStaticProps: GetStaticProps<Props, { app: string }> = async ({
