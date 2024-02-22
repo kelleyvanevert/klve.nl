@@ -212,6 +212,21 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          Hexastack (
+          <a className="link" href="https://hexastack.klve.nl">
+            web app
+          </a>
+          {/*{" "}
+          /{" "}
+          <a
+            href="https://play.google.com/store/apps/details?id=nl.klve.hexastack"
+            className="link"
+          >
+            android app
+          </a>*/}
+          )
+        </li>
+        <li>
           Advent of Code 2023 ⚡️ (
           <a
             className="link"

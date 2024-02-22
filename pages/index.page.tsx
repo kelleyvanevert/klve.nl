@@ -152,7 +152,7 @@ function Content() {
       <p className="indent-3">
         You will typically find me: writing{" "}
         <TagLink href="https://jsviz.klve.nl/">JS</TagLink> or{" "}
-        <TagLink href="https://github.com/kelleyvanevert/adventofcode2022">
+        <TagLink href="https://github.com/kelleyvanevert/adventofcode2023">
           Rust
         </TagLink>
         , crocheting some{" "}
