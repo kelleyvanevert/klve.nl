@@ -215,15 +215,14 @@ export default function Sandbox() {
           Hexastack (
           <a className="link" href="https://hexastack.klve.nl">
             web app
-          </a>
-          {/*{" "}
+          </a>{" "}
           /{" "}
           <a
             href="https://play.google.com/store/apps/details?id=nl.klve.hexastack"
             className="link"
           >
             android app
-          </a>*/}
+          </a>
           )
         </li>
         <li>
