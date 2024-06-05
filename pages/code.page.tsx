@@ -31,6 +31,10 @@ const bookmarkSections = [
             title: "thi.ng",
             url: "https://thi.ng/",
           },
+          {
+            title: "Chocolat",
+            url: "https://chocolat.insipi.de/",
+          },
         ],
       },
       {
