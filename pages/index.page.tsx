@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { CONTENT_BASE } from "../lib/config";
 
-import chen1small from "../assets/chen1small.jpg";
+import pic from "../assets/_DSC0720.jpg";
 
 // const images: Array<{ url: string; caption?: string }> = [
 //   {
@@ -18,11 +18,14 @@ export default function Home() {
       <div className="md:ml-[330px] lg:ml-[440px] xl:ml-[500px]">
         <h1 className="hidden">Kelley van Evert</h1>
         <Intro />
-        <div className="w-full max-w-[430px] mx-auto pt-[4px] md:mx-0 md:absolute md:top-0 md:left-0 md:w-[300px] lg:w-[400px] xl:w-[450px] group/me">
+        <div className="w-full max-w-[430px] mx-auto pt-[4px] md:mx-0 md:absolute md:top-0 md:left-0 md:w-[300px] lg:w-[400px] xl:w-[450px]">
           <div className="relative overflow-hidden">
-            <div className="pt-[57%] box-border" />
-            <div className="absolute top-[0%] w-full transition-all group-hover/me:top-[-13%] group-focus/me:outline-none">
-              <Image src={chen1small} alt="" className="block w-full h-auto" />
+            <div
+              className="box-border"
+              style={{ paddingTop: `${(pic.height / pic.width) * 100}%` }}
+            />
+            <div className="absolute top-[0%] w-full">
+              <Image src={pic} alt="" className="block w-full h-auto" />
               {/* <img
                 className="block w-full h-auto"
                 alt=""
@@ -53,18 +56,6 @@ export default function Home() {
             <span>
               photo by <span className="not-italic">晨</span>
             </span>
-            <a
-              className="group/link ml-2"
-              href={chen1small.src}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              (
-              <span className="group-hover/link:underline group-focus/link:underline">
-                view full
-              </span>
-              )
-            </a>
           </div>
         </div>
         <Content />

@@ -5,7 +5,7 @@ import "./styles.css";
 
 import { Layout } from "../layouts/Layout";
 
-import chen1small from "../assets/chen1small.jpg";
+import pic from "../assets/_DSC0720.jpg";
 
 export default function App({ Component, pageProps }: AppProps) {
   const LayoutComp = (Component as any).disableLayout ? "div" : Layout;
@@ -26,10 +26,10 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://klve.nl/" />
-        <meta property="og:image" content={base(chen1small.src)} />
+        <meta property="og:image" content={base(pic.src)} />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content={"" + chen1small.width} />
-        <meta property="og:image:height" content={"" + chen1small.height} />
+        <meta property="og:image:width" content={"" + pic.width} />
+        <meta property="og:image:height" content={"" + pic.height} />
       </Head>
       <Component {...pageProps} />
     </LayoutComp>
