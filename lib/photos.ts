@@ -19,6 +19,13 @@ export const photoCats: {
     photo: im("/s/photography/portraiture/s320/_MG_7811.jpg"),
     images: [
       {
+        // chen
+        photo: im("/s/photography/portraiture/s320/_DSC0982.jpg"),
+        src: im("/s/photography/portraiture/s1500/_DSC0982.jpg"),
+        w: 1365,
+        h: 2048,
+      },
+      {
         photo: im("/s/photography/portraiture/s320/_MG_5079.jpg"),
         src: im("/s/photography/portraiture/s1500/_MG_5079.jpg"),
         w: 1500,
@@ -64,12 +71,6 @@ export const photoCats: {
       {
         photo: im("/s/photography/portraiture/s320/_MG_6065.jpg"),
         src: im("/s/photography/portraiture/s1500/_MG_6065.jpg"),
-        w: 999,
-        h: 1500,
-      },
-      {
-        photo: im("/s/photography/portraiture/s320/_MG_6103.jpg"),
-        src: im("/s/photography/portraiture/s1500/_MG_6103.jpg"),
         w: 999,
         h: 1500,
       },
