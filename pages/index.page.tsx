@@ -3,8 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { CONTENT_BASE } from "../lib/config";
-
-import pic from "../assets/_DSC0720.jpg";
+import { pic } from "../lib/pic";
 
 // const images: Array<{ url: string; caption?: string }> = [
 //   {

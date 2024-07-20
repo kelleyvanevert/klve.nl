@@ -4,8 +4,7 @@ import Head from "next/head";
 import "./styles.css";
 
 import { Layout } from "../layouts/Layout";
-
-import pic from "../assets/_DSC0720.jpg";
+import { pic } from "../lib/pic";
 
 export default function App({ Component, pageProps }: AppProps) {
   const LayoutComp = (Component as any).disableLayout ? "div" : Layout;
