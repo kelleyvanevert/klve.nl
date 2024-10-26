@@ -216,6 +216,13 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          Rocktober 2024 (
+          <a className="link" href="https://rock2024.klve.nl/">
+            project site
+          </a>
+          )
+        </li>
+        <li>
           Hexastack (
           <a className="link" href="https://hexastack.klve.nl">
             web app
