@@ -126,6 +126,20 @@ const bookmarkSections = [
           { title: "Materialize", url: "https://materialize.io/" },
           { title: "Hasura", url: "https://hasura.io/" },
           { title: "Zapatos", url: "https://github.com/jawj/zapatos" },
+          { title: "SurrealDB", url: "https://surrealdb.com/features" },
+        ],
+      },
+      {
+        title: "Setup",
+        bookmarks: [
+          {
+            title: "Nerd-font",
+            url: "https://github.com/ryanoasis/nerd-fonts",
+          },
+          {
+            title: "lsd (ls alternative)",
+            url: "https://github.com/lsd-rs/lsd",
+          },
         ],
       },
     ],

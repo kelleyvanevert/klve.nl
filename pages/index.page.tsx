@@ -89,22 +89,20 @@ function Intro() {
       Sometimes I make{" "}
       <Link href="/photography" className="link">
         pictures
-      </Link>{" "}
-      or{" "}
-      <span className="whitespace-nowrap">
-        <Link href="/drawings" className="link">
-          drawings
-        </Link>
-        ,
-      </span>{" "}
-      and in the past I've produced{" "}
-      <span className="whitespace-nowrap">
-        <a className="link" href="https://cargocollective.com/kvhku">
-          some art
-        </a>
-        .
-      </span>{" "}
-      Also I studied theoretical computer science and learned many{" "}
+      </Link>
+      ,{" "}
+      <Link href="/drawings" className="link">
+        drawings
+      </Link>
+      , or{" "}
+      <Link href="/music" className="link">
+        soundwaves
+      </Link>
+      , and in the past I've produced some{" "}
+      <a className="link" href="https://cargocollective.com/kvhku">
+        art
+      </a>
+      . I also studied theoretical computer science and learned many{" "}
       <a className="link" href="https://content.klve.nl/s/thb.pdf">
         interesting
       </a>{" "}
