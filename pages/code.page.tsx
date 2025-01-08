@@ -230,6 +230,16 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          Advent of Code 2024 ⚡️ (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/adventofcode2024"
+          >
+            code
+          </a>
+          )
+        </li>
+        <li>
           Rocktober 2024 (
           <a className="link" href="https://rock2024.klve.nl/">
             project site
