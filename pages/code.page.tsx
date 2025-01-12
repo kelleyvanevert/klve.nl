@@ -145,7 +145,7 @@ const bookmarkSections = [
     ],
   },
   {
-    title: "Learning Rust",
+    title: "Rust",
     lists: [
       {
         title: "",
@@ -251,6 +251,13 @@ export default function Sandbox() {
           >
             2024
           </a>
+          ) <span className="mx-2">+</span> Adventlang (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/adventofcode2023/tree/main?tab=readme-ov-file#syntax-example"
+          >
+            code
+          </a>
           )
         </li>
         <li>
@@ -279,59 +286,59 @@ export default function Sandbox() {
           )
         </li>
         <li>
-          Rust audio livecode editor (
+          <WIP /> Rust audio livecode editor (
           <a
             className="link"
             href="https://github.com/kelleyvanevert/rust_live"
           >
-            github repo
+            code
           </a>
-          ) &mdash; <em>WORK IN PROGRESS</em>
+          )
         </li>
         <li>
-          El Trombonista (
+          El Trombonista, collab Carlota (
           <a
             className="link"
             href="https://kelleyvanevert.github.io/el-trombonista/"
           >
             mini animation
           </a>
-          ) &mdash; <em>collab Carlota</em>
+          )
         </li>
         <li>
-          Some of my favorite recipes, with a fun ascii morphing effect (
+          <span className="mr-0.5">ASCII</span>recip.es (
           <a className="link" href="https://asciirecip.es/">
-            asciirecip.es
+            website
           </a>
           )
         </li>
         <li>
           Visualizing JS execution through a meta-syntactic transform (
           <a className="link" href="https://jsviz.klve.nl/">
-            js sketch
+            teaching tool
           </a>
           )
         </li>
         <li>
           A visual guide to formulating an SQL query (
           <a className="link" href="https://sqlviz.klve.nl/">
-            js sketch + cheat sheet
+            teaching tool
           </a>
           )
         </li>
         <li>
-          JavaScript execution stepper / runtime visualizer (
+          <WIP /> JavaScript execution stepper / runtime visualizer (
           <a className="link" href="https://visualized-execution.js.org/">
-            js sketch
+            teaching tool
           </a>
-          ) &mdash; <em>WORK IN PROGRESS</em>
+          )
         </li>
         <li>
-          The <em>Scopes</em> programming language (
+          <WIP /> The <em>Scopes</em> programming language (
           <a className="link" href="https://scopes.js.org/">
             tentative idea
           </a>
-          ) &mdash; <em>WORK IN PROGRESS</em>
+          )
         </li>
         <li>
           Literal JSX: an idea (
@@ -353,7 +360,7 @@ export default function Sandbox() {
             href="https://kelleyvanevert.github.io/jspath-for-ast-querying/"
             className="link"
           >
-            js sketch
+            doodle
           </a>
           )
         </li>
@@ -366,29 +373,33 @@ export default function Sandbox() {
         <li>
           SVG arcs (
           <a href={`${CONTENT_BASE}/scratch/svg-arcs/`} className="link">
-            js sketch
+            doodle
           </a>
           )
         </li>
         <li>
           Kabouter Wesley speech balloons (
           <a href={`${CONTENT_BASE}/scratch/kabouter_wesley/`} className="link">
-            js sketch
+            doodle
           </a>
           )
         </li>
         <li>
           Tiling butterflies to get a Dragon's Egg origami model (
           <a href={`${CONTENT_BASE}/scratch/butterflies/`} className="link">
-            js sketch
+            doodle
+          </a>{" "}
+          /{" "}
+          <a
+            href="https://observablehq.com/@kelleyvanevert/tiling-butterflies-to-get-a-dragons-egg-origami-model"
+            className="link"
+          >
+            interactive notebook
           </a>
           )
         </li>
         <li>
-          <a href="https://bl.ocks.org/kelleyvanevert" className="link">
-            D3 blocks
-          </a>{" "}
-          and{" "}
+          My{" "}
           <a
             href="https://beta.observablehq.com/@kelleyvanevert"
             className="link"
@@ -399,9 +410,9 @@ export default function Sandbox() {
         <li>
           Learn some Arabic words (
           <a className="link" href={`${CONTENT_BASE}/scratch/arabic/`}>
-            js sketch
-          </a>{" "}
-          resp.{" "}
+            web app
+          </a>
+          {" / "}
           <a
             href="https://play.google.com/store/apps/details?id=nl.kelleyvanevert.arabic"
             className="link"
@@ -413,7 +424,7 @@ export default function Sandbox() {
         <li>
           Go on a Torus (
           <a href={`${CONTENT_BASE}/scratch/go_torus/`} className="link">
-            js sketch
+            doodle
           </a>
           )
         </li>
@@ -424,7 +435,7 @@ export default function Sandbox() {
             href="https://github.com/kelleyvanevert/fastmail-plus"
             className="link"
           >
-            github repo
+            code
           </a>{" "}
           /{" "}
           <a
@@ -449,35 +460,35 @@ export default function Sandbox() {
         <li>
           Minimalist Go made with Vue.js (
           <a className="link" href={`${CONTENT_BASE}/scratch/vue-go/`}>
-            js sketch
+            doodle
           </a>
           )
         </li>
         <li>
           Ridiculous CSS 3D transforms (
           <a className="link" href={`${CONTENT_BASE}/scratch/css3d/`}>
-            js sketch
+            doodle
           </a>
           )
         </li>
         <li>
           Loesje poster design studio (
           <a className="link" href={`${CONTENT_BASE}/scratch/loesje/`}>
-            js app
+            web app
           </a>
           )
         </li>
         <li>
           Extendable table (
           <a href={`${CONTENT_BASE}/scratch/cyril_tafel/`} className="link">
-            js plan sketch
+            design tool
           </a>{" "}
           /{" "}
           <a
-            href="http://cyrcle.nl/portfolio/uitbreidbare-tafel/"
+            href="https://github.com/kelleyvanevert/extendable_table"
             className="link"
           >
-            docu
+            documentary GIFs
           </a>
           )
         </li>
@@ -487,7 +498,7 @@ export default function Sandbox() {
             href={`${CONTENT_BASE}/scratch/cyril_origami_pixels/`}
             className="link"
           >
-            js sketch
+            doodle
           </a>{" "}
           /{" "}
           <a
@@ -511,7 +522,7 @@ export default function Sandbox() {
         <li>
           Processing.js Boids (
           <a className="link" href={`${CONTENT_BASE}/scratch/boids/`}>
-            js sketch
+            doodle
           </a>
           )
         </li>
@@ -545,4 +556,8 @@ export default function Sandbox() {
       })}
     </section>
   );
+}
+
+function WIP() {
+  return <span className="mr-2 text-xs font-mono text-neutral-400">[WIP]</span>;
 }
