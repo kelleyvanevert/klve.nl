@@ -230,19 +230,37 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
-          Advent of Code 2024 ⚡️ (
+          Advent of Code 🎄/🦀 (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/adventofcode2022"
+          >
+            2022
+          </a>
+          ) (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/adventofcode2023"
+          >
+            2023
+          </a>
+          ) (
           <a
             className="link"
             href="https://github.com/kelleyvanevert/adventofcode2024"
           >
-            code
+            2024
           </a>
           )
         </li>
         <li>
-          Rocktober 2024 (
+          Rocktober (
+          <a className="link" href="https://rock2023.klve.nl/">
+            2023
+          </a>
+          ) (
           <a className="link" href="https://rock2024.klve.nl/">
-            project site
+            2024
           </a>
           )
         </li>
@@ -261,23 +279,6 @@ export default function Sandbox() {
           )
         </li>
         <li>
-          Advent of Code 2023 ⚡️ (
-          <a
-            className="link"
-            href="https://github.com/kelleyvanevert/adventofcode2023"
-          >
-            code
-          </a>
-          )
-        </li>
-        <li>
-          Rocktober 2023 (
-          <a className="link" href="https://rock2023.klve.nl/">
-            project site
-          </a>
-          )
-        </li>
-        <li>
           Rust audio livecode editor (
           <a
             className="link"
@@ -286,16 +287,6 @@ export default function Sandbox() {
             github repo
           </a>
           ) &mdash; <em>WORK IN PROGRESS</em>
-        </li>
-        <li>
-          My Rusty 🦀 solutions to Advent of Code 2022 🎄 (
-          <a
-            className="link"
-            href="https://github.com/kelleyvanevert/adventofcode2022"
-          >
-            code
-          </a>
-          )
         </li>
         <li>
           El Trombonista (
