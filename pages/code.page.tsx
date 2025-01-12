@@ -167,8 +167,16 @@ const bookmarkSections = [
             url: "https://github.com/pretzelhammer/rust-blog",
           },
           {
-            title: "Faultlore",
-            url: "https://faultlore.com/blah/robinhood-part-1/",
+            title: "Blessed crates",
+            url: "https://blessed.rs/crates",
+          },
+          {
+            title: "Learn WGPU",
+            url: "https://sotrh.github.io/learn-wgpu/#what-is-wgpu",
+          },
+          {
+            title: "Makepad",
+            url: "https://makepad.dev/",
           },
         ],
       },
@@ -178,7 +186,7 @@ const bookmarkSections = [
     title: "Other",
     lists: [
       {
-        title: "",
+        title: "Tools & resources",
         bookmarks: [
           {
             title: "Exercism",
@@ -207,6 +215,31 @@ const bookmarkSections = [
           {
             title: "Typst",
             url: "https://typst.app/",
+          },
+          {
+            title: "Sourcehut",
+            url: "https://sr.ht/",
+          },
+          {
+            title: "Kenney free game assets",
+            url: "https://kenney.nl/",
+          },
+        ],
+      },
+      {
+        title: "Interesting people & blogs",
+        bookmarks: [
+          {
+            title: "Needlessly complex",
+            url: "https://mzucker.github.io/",
+          },
+          {
+            title: "Ink & switch",
+            url: "https://www.inkandswitch.com/",
+          },
+          {
+            title: "Faultlore",
+            url: "https://faultlore.com/blah/robinhood-part-1/",
           },
         ],
       },
