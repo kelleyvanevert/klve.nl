@@ -319,6 +319,13 @@ export default function Sandbox() {
           )
         </li>
         <li>
+          Visualizing JS execution through a meta-syntactic transform (
+          <a className="link" href="https://jsviz.klve.nl/">
+            teaching tool
+          </a>
+          )
+        </li>
+        <li>
           <WIP /> Rust audio livecode editor (
           <a
             className="link"
@@ -342,13 +349,6 @@ export default function Sandbox() {
           <span className="mr-0.5">ASCII</span>recip.es (
           <a className="link" href="https://asciirecip.es/">
             website
-          </a>
-          )
-        </li>
-        <li>
-          Visualizing JS execution through a meta-syntactic transform (
-          <a className="link" href="https://jsviz.klve.nl/">
-            teaching tool
           </a>
           )
         </li>
