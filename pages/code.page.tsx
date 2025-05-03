@@ -375,7 +375,7 @@ export default function Sandbox() {
         </li>
         <li>
           Literal JSX: an idea (
-          <a className="link" href="https://literal-jsx.org/">
+          <a className="link" href="https://literal-jsx.klve.org/">
             website
           </a>
           ) and an example parser implementation (
@@ -399,7 +399,7 @@ export default function Sandbox() {
         </li>
         <li>
           brug{" "}
-          <a className="link" href="https://brugfilm.nl/">
+          <a className="link" href="https://brugfilm.klve.nl/">
             (short film)
           </a>
         </li>
