@@ -29,7 +29,7 @@ export const Markdown = memo(
   ({ source, className, inline = false, contentBlocks = true }: Props) => {
     const blocks = useContext(ContentBlocksContext);
 
-    const renderer = useRef<AstRenderer>();
+    const renderer = useRef<AstRenderer>(undefined);
     if (!renderer.current) {
       renderer.current = new AstRenderer(
         renderRules,
