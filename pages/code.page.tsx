@@ -347,7 +347,7 @@ export default function Sandbox() {
         </li>
         <li>
           <span className="mr-0.5">ASCII</span>recip.es (
-          <a className="link" href="https://asciirecip.es/">
+          <a className="link" href="https://asciirecipes.klve.nl/">
             website
           </a>
           )
