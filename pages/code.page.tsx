@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, ReactNode } from "react";
 import { CONTENT_BASE } from "../lib/config";
 
 const bookmarkSections = [
@@ -263,7 +263,7 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
-          Advent of Code 🎄/🦀 (
+          Advent of Code 🎄🦀 (
           <a
             className="link"
             href="https://github.com/kelleyvanevert/adventofcode2022"
@@ -284,7 +284,7 @@ export default function Sandbox() {
           >
             2024
           </a>
-          ) <span className="mx-2">+</span> Adventlang (
+          ), Adventlang (
           <a
             className="link"
             href="https://github.com/kelleyvanevert/adventofcode2023/tree/main?tab=readme-ov-file#syntax-example"
@@ -292,6 +292,10 @@ export default function Sandbox() {
             code
           </a>
           )
+          <Desc>
+            having a lot of fun solving coding challenges in Rust + creating my
+            own language for it
+          </Desc>
         </li>
         <li>
           Rocktober (
@@ -303,6 +307,9 @@ export default function Sandbox() {
             2024
           </a>
           )
+          <Desc>
+            pushing myself to create often silly electronic music every day
+          </Desc>
         </li>
         <li>
           Hexastack (
@@ -315,15 +322,35 @@ export default function Sandbox() {
             className="link"
           >
             android app
+          </a>{" "}
+          /{" "}
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/hexastack"
+          >
+            code
           </a>
           )
+          <Desc>
+            an experiment in hand-crafting an immediate mode React-style UI lib
+          </Desc>
         </li>
         <li>
-          Visualizing JS execution through a meta-syntactic transform (
+          JS viz (
           <a className="link" href="https://jsviz.klve.nl/">
             teaching tool
           </a>
           )
+          <Desc>
+            visualizing JS execution through a meta-syntactic transform
+          </Desc>
+        </li>
+        <li>
+          <span className="mr-0.5">ASCII</span>recip.es (
+          <a className="link" href="https://asciirecipes.klve.nl/">
+            website
+          </a>
+          )<Desc>a goofy ASCII representation of my cookbook</Desc>
         </li>
         <li>
           <WIP /> Rust audio livecode editor (
@@ -342,13 +369,6 @@ export default function Sandbox() {
             href="https://kelleyvanevert.github.io/el-trombonista/"
           >
             mini animation
-          </a>
-          )
-        </li>
-        <li>
-          <span className="mr-0.5">ASCII</span>recip.es (
-          <a className="link" href="https://asciirecipes.klve.nl/">
-            website
           </a>
           )
         </li>
@@ -589,6 +609,10 @@ export default function Sandbox() {
       })}
     </section>
   );
+}
+
+function Desc({ children }: { children?: ReactNode }) {
+  return <div className="ml-1 -mt-[3px] mb-[3px] italic">{children}</div>;
 }
 
 function WIP() {
