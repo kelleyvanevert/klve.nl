@@ -1,6 +1,4 @@
-import React from "react";
-
-import { PhotoGrid, PhotoGridItem } from "../lib/PhotoGrid";
+import { PhotoGrid, PhotoGridItem } from "lib/PhotoGrid";
 
 const DRAWINGS: PhotoGridItem[] = [
   {

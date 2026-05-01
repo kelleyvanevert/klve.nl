@@ -1,4 +1,4 @@
-const withPWA = require("next-pwa")({
+const withPWA = require("@ducanh2912/next-pwa").default({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
   register: true,
@@ -6,12 +6,8 @@ const withPWA = require("next-pwa")({
 });
 
 /** @type {import('next').NextConfig} */
-module.exports = withPWA({
+const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
-  // experimental: {
-  //   externalDir: true,
-  // },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -49,4 +45,6 @@ module.exports = withPWA({
       },
     ];
   },
-});
+};
+
+module.exports = withPWA(nextConfig);

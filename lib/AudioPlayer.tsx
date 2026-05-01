@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 // import CursorPlugin from "wavesurfer.js/src/plugin/cursor";
@@ -53,7 +55,7 @@ export function AudioPlayer({
     if (!instance) return;
 
     instance.setCursorColor(
-      mostRecentlyActive ? colors.cursorColor : colors.cursorColorWhenInactive
+      mostRecentlyActive ? colors.cursorColor : colors.cursorColorWhenInactive,
     );
     instance.setProgressColor(colors.progressColor);
     instance.setWaveColor(colors.waveColor);

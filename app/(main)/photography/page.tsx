@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { photoCats } from "../../lib/photos";
+import { photoCats } from "lib/photos";
 
 export default function Photography() {
   return (

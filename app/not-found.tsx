@@ -15,5 +15,3 @@ export default function NotFound() {
     </div>
   );
 }
-
-NotFound.disableLayout = true;

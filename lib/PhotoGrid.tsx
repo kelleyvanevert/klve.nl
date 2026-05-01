@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 // @ts-ignore
 import PhotoSwipeLightbox from "photoswipe/lightbox";
@@ -21,16 +23,17 @@ export function PhotoGrid({ items }: Props) {
   useEffect(() => {
     if (!galleryRef.current) return;
 
-    let lightbox = new PhotoSwipeLightbox({
-      gallery: galleryRef.current,
-      children: "a",
-      pswpModule: () => import("photoswipe"),
-    });
+    let lightbox: InstanceType<typeof PhotoSwipeLightbox> | null =
+      new PhotoSwipeLightbox({
+        gallery: galleryRef.current,
+        children: "a",
+        pswpModule: () => import("photoswipe"),
+      });
 
     lightbox.init();
 
     return () => {
-      lightbox.destroy();
+      lightbox?.destroy();
       lightbox = null;
     };
   }, []);

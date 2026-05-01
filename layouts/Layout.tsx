@@ -1,6 +1,8 @@
+"use client";
+
 import { ReactNode } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import cx from "classnames";
 import { useDarkMode } from "lib/useDarkMode";
 
@@ -20,7 +22,7 @@ type Props = {
 export function Layout({ children }: Props) {
   useDarkMode();
 
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <div className="mt-[40px] mb-[100px] px-[24px]">
@@ -38,7 +40,7 @@ export function Layout({ children }: Props) {
                 href={item.path}
                 className={cx(
                   "inline-block relative lowercase font-bold focus:underline text-[1.3rem]",
-                  item.match.test(router.pathname) && "italic"
+                  item.match.test(pathname) && "italic"
                 )}
               >
                 <span>{item.title}</span>.

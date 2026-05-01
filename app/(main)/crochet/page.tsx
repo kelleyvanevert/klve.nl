@@ -1,25 +1,18 @@
-import React from "react";
-import { GetStaticProps } from "next";
+export const revalidate = 3600;
 
 type CrochetPhoto = {
   id: number;
   medium2_url: string;
-  // ...and more
 };
 
 type CrochetProject = {
   id: number;
-  name: string; // personally formatted as "N. <name>"
+  name: string;
   made_for: string;
   permalink: string;
   first_photo?: CrochetPhoto;
-  status_name: string; // e.g. "Finished"
-  completed: string; // YYYY/MM/DD (?)
-  // ...and more
-};
-
-type Props = {
-  projects: CrochetProject[];
+  status_name: string;
+  completed: string;
 };
 
 async function retry<T>(f: () => Promise<T>, max = 3): Promise<T> {
@@ -36,7 +29,7 @@ async function retry<T>(f: () => Promise<T>, max = 3): Promise<T> {
   }
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+async function fetchProjects(): Promise<CrochetProject[]> {
   const res = await retry(
     async () =>
       await fetch(
@@ -48,21 +41,17 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
               process.env.RAVELRY_PERSONAL_AUTH!
             ).toString("base64")}`,
           },
+          next: { revalidate: 3600 },
         }
       ).then((r) => r.json())
   );
 
-  const { projects } = res;
+  return res.projects;
+}
 
-  return {
-    props: {
-      projects,
-    },
-    revalidate: 60 * 60, // at most once every hour
-  };
-};
+export default async function CrochetPage() {
+  const projects = await fetchProjects();
 
-export default function Crochet({ projects }: Props) {
   return (
     <section className="relative mt-[60px] md:mt-[100px]">
       <div className="wrap">
@@ -79,10 +68,10 @@ export default function Crochet({ projects }: Props) {
         </p>
       </div>
 
-      {/* break out off page layout padding */}
+      {/* break out of page layout padding */}
       <div className="mx-[-24px] flex flex-wrap">
         {projects.map((project) => {
-          if (!project.first_photo) return;
+          if (!project.first_photo) return null;
 
           return (
             <div
@@ -92,7 +81,8 @@ export default function Crochet({ projects }: Props) {
               <div className="absolute inset-[22px] flex flex-col justify-center items-center">
                 <img
                   className="block max-w-[100%] max-h-[100%]"
-                  src={project.first_photo?.medium2_url}
+                  src={project.first_photo.medium2_url}
+                  alt={project.name}
                 />
                 {!!project.name.trim() && (
                   <p className="mt-1 m-0 italic">{project.name}</p>

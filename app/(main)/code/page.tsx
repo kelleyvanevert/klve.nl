@@ -1,5 +1,5 @@
-import React, { Fragment, ReactNode } from "react";
-import { CONTENT_BASE } from "../lib/config";
+import { Fragment, ReactNode } from "react";
+import { CONTENT_BASE } from "lib/config";
 
 const bookmarkSections = [
   {

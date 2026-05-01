@@ -1,12 +1,6 @@
-import React from "react";
-import dynamic from "next/dynamic";
+import { AudioPlayer } from "lib/AudioPlayerDynamic";
 
-const AudioPlayer = dynamic(
-  () => import("lib/AudioPlayer").then((m) => m.AudioPlayer),
-  { ssr: false }
-);
-
-export default function Page() {
+export default function MusicPage() {
   return (
     <section className="wrap relative mt-[100px]">
       <h1 className="hidden">Music</h1>

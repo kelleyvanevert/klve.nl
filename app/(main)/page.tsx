@@ -2,14 +2,8 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { CONTENT_BASE } from "../lib/config";
-import { pic } from "../lib/pic";
-
-// const images: Array<{ url: string; caption?: string }> = [
-//   {
-//     url: CONTENT_BASE + "/s/me/_DSF7828.jpg",
-//   },
-// ];
+import { CONTENT_BASE } from "lib/config";
+import { pic } from "lib/pic";
 
 export default function Home() {
   return (
@@ -25,30 +19,6 @@ export default function Home() {
             />
             <div className="absolute top-[0%] w-full">
               <Image src={pic} alt="" className="block w-full h-auto" />
-              {/* <img
-                className="block w-full h-auto"
-                alt=""
-                // met cyril op een toren in wenen
-                // src={`${CONTENT_BASE}/s/me/_DSF7540.jpg`}
-
-                // met cyril op pytegga
-                // src={`${CONTENT_BASE}/s/me/_MG_2393.jpg`}
-
-                // vintagey, don't really remember where
-                // src={`${CONTENT_BASE}/s/me/19832674_1556692387714443_1437134954_n.jpg`}
-
-                // met Markus in de Weurtse uiterwaarden
-                // src={`${CONTENT_BASE}/s/me/IMG_1442.jpg`}
-
-                // met isabel in het rembrandtpark
-                // src={`${CONTENT_BASE}/s/me/DSCF2929.jpg`}
-
-                // paragliden
-                // src={`${CONTENT_BASE}/s/me/_DSF7828.jpg`}
-
-                // sound design 2022
-                src={`${CONTENT_BASE}/s/me/DSCF2881.jpg`}
-              /> */}
             </div>
           </div>
           <div className="flex justify-end m-[5px] text-[13px] italic">
