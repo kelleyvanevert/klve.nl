@@ -3,6 +3,7 @@
 import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 // import CursorPlugin from "wavesurfer.js/src/plugin/cursor";
+import posthog from "posthog-js";
 import { PlayPauseButton } from "./PlayPauseButton";
 import { useDarkMode } from "./useDarkMode";
 import { useRefCallback } from "./useRefCallback";
@@ -69,6 +70,8 @@ export function AudioPlayer({
 
     if (fromOtherPlayer) {
       setMostRecentlyActive(false);
+    } else {
+      posthog.capture("music_track_paused", { track_title: title, track_id: id });
     }
   });
 
@@ -91,6 +94,7 @@ export function AudioPlayer({
   const playOrPause = useRefCallback(() => {
     if (!playing) {
       play();
+      posthog.capture("music_track_played", { track_title: title, track_id: id });
     } else {
       pause();
     }
@@ -140,7 +144,8 @@ export function AudioPlayer({
         });
 
         instance.on("finish", () => {
-          pause();
+          pause(true);
+          posthog.capture("music_track_finished", { track_title: title, track_id: id });
           if (playNext) {
             (window as any).playerInstances?.[playNext]?.();
           }

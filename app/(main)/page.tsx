@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { CONTENT_BASE } from "lib/config";
 import { pic } from "lib/pic";
+import { TrackedExternalLink } from "lib/TrackedExternalLink";
 
 export default function Home() {
   return (
@@ -38,15 +39,25 @@ function Intro() {
     <p className="text-xl mb-[20px] md:mb-[28px]">
       Hi there!&emsp;I'm Kelley. I{" "}
       <span className="whitespace-nowrap">
-        <a className="link" href="https://ijsfontein.nl">
+        <TrackedExternalLink
+          className="link"
+          href="https://ijsfontein.nl"
+          event="home_external_link_clicked"
+          properties={{ link_label: "code" }}
+        >
           code
-        </a>
+        </TrackedExternalLink>
         ,
       </span>{" "}
       <span className="whitespace-nowrap">
-        <a className="link" href="https://hackyourfuture.net/">
+        <TrackedExternalLink
+          className="link"
+          href="https://hackyourfuture.net/"
+          event="home_external_link_clicked"
+          properties={{ link_label: "teach" }}
+        >
           teach
-        </a>
+        </TrackedExternalLink>
         ,
       </span>{" "}
       and{" "}
@@ -150,14 +161,15 @@ function Content() {
       </p>
       <p className="indent-3">
         Here's my (slightly outdated){" "}
-        <a
+        <TrackedExternalLink
           target="_blank"
           rel="noopener noreferrer"
           className="link indent-0"
           href="https://content.klve.nl/s/cv.pdf"
+          event="cv_link_clicked"
         >
           CV
-        </a>
+        </TrackedExternalLink>
         .
       </p>
     </>

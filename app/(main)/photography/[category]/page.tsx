@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { PhotoGrid } from "lib/PhotoGrid";
 import { photoCats } from "lib/photos";
+import { PhotoCategoryTracker } from "lib/PhotoCategoryTracker";
 
 export function generateStaticParams() {
   return Object.keys(photoCats).map((category) => ({ category }));
@@ -33,6 +34,7 @@ export default async function PhotoCategory({ params }: Props) {
           {cat.title}
         </h1>
       </div>
+      <PhotoCategoryTracker category={category} categoryTitle={cat.title} />
       <PhotoGrid items={cat.images} />
     </section>
   );
