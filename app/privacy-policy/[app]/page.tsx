@@ -48,8 +48,8 @@ export default async function PrivacyPolicyPage({ params }: Props) {
           your data, or track your usage in any way.
         </p>
         <p>
-          This app is just a little coding experiment, it doesn't provide any
-          user data or profiling features.
+          This app is just a little coding experiment. Your data stays on your
+          phone.
         </p>
       </div>
     </div>
