@@ -17,6 +17,9 @@ const APPS: Record<string, AppInfo> = {
   hexastack: {
     title: "Hexastack",
   },
+  jizhu: {
+    title: "JiZhu",
+  },
 };
 
 export function generateStaticParams() {
@@ -46,7 +49,7 @@ export default async function PrivacyPolicyPage({ params }: Props) {
         </p>
         <p>
           This app is just a little coding experiment, it doesn't provide any
-          user-data or profiling features.
+          user data or profiling features.
         </p>
       </div>
     </div>
