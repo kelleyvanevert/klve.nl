@@ -263,6 +263,16 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          JiZhu / 記住 - An app for my Chinese learning process (
+          <a
+            className="link"
+            href="https://play.google.com/store/apps/details?id=nl.klve.jizhu"
+          >
+            android app
+          </a>
+          )
+        </li>
+        <li>
           Advent of Code 🎄🦀 (
           <a
             className="link"
