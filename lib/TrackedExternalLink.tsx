@@ -1,7 +1,6 @@
 "use client";
 
 import { ReactNode } from "react";
-import posthog from "posthog-js";
 
 type Props = {
   href: string;
@@ -28,7 +27,7 @@ export function TrackedExternalLink({
       className={className}
       target={target}
       rel={rel}
-      onClick={() => posthog.capture(event, { url: href, ...properties })}
+      // onClick={() => trackEvent(event, { url: href, ...properties })}
     >
       {children}
     </a>
