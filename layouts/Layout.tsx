@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import cx from "classnames";
@@ -24,6 +24,12 @@ export function Layout({ children }: Props) {
 
   const pathname = usePathname();
 
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.src = "https://keepandroidopen.org/banner.js?size=minimal&animation=off";
+    document.body.append(s);
+  }, []);
+
   return (
     <div className="mt-[40px] mb-[100px] px-[24px]">
       <header className="max-w-[800px] mt-[50px] mx-auto">
@@ -40,7 +46,7 @@ export function Layout({ children }: Props) {
                 href={item.path}
                 className={cx(
                   "inline-block relative lowercase font-bold focus:underline text-[1.3rem]",
-                  item.match.test(pathname) && "italic"
+                  item.match.test(pathname) && "italic",
                 )}
               >
                 <span>{item.title}</span>.

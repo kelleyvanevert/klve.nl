@@ -63,9 +63,6 @@ export default function RootLayout({
             `,
           }}
         />
-        {/*<script
-          src={`https://keepandroidopen.org/banner.js?size=minimal&animation=off`}
-        ></script>*/}
         {children}
       </body>
     </html>
