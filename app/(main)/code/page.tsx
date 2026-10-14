@@ -271,9 +271,12 @@ export default function Sandbox() {
             github repo
           </a>
           )
+          <Desc>
+            because my Pixless never showed, so I made it myself
+          </Desc>
         </li>
         <li>
-          JiZhu / 記住 - An app for my Chinese learning process (
+          JiZhu / 記住 (
           <a
             className="link"
             href="https://play.google.com/store/apps/details?id=nl.klve.jizhu"
@@ -281,6 +284,9 @@ export default function Sandbox() {
             android app
           </a>
           )
+          <Desc>
+            an app for my Chinese learning process
+          </Desc>
         </li>
         <li>
           Advent of Code 🎄🦀 (
