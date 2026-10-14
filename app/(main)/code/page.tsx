@@ -263,6 +263,16 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          Tinkering with the Godox C100 firmware (
+          <a
+            className="link"
+            href="https://github.com/kelleyvanevert/godox_c100"
+          >
+            github repo
+          </a>
+          )
+        </li>
+        <li>
           JiZhu / 記住 - An app for my Chinese learning process (
           <a
             className="link"
