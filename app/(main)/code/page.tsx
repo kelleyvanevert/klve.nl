@@ -263,17 +263,18 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
-          Tinkering with the Godox C100 firmware (
+          Patching the C100's firmware to take retro dithered pics (
+          <a className="link" href="https://c100.klve.nl/">
+            website
+          </a>{" "}
+          /{" "}
           <a
             className="link"
             href="https://github.com/kelleyvanevert/godox_c100"
           >
             github repo
           </a>
-          )
-          <Desc>
-            because my Pixless never showed, so I made it myself
-          </Desc>
+          )<Desc>because my Pixless never showed, so I made it myself</Desc>
         </li>
         <li>
           JiZhu / 記住 (
@@ -283,10 +284,7 @@ export default function Sandbox() {
           >
             android app
           </a>
-          )
-          <Desc>
-            an app for my Chinese learning process
-          </Desc>
+          )<Desc>an app for my Chinese learning process</Desc>
         </li>
         <li>
           Advent of Code 🎄🦀 (
