@@ -263,6 +263,13 @@ export default function Sandbox() {
 
       <ul className="list-disc ml-[24px]">
         <li>
+          Diskhog (
+          <a className="link" href="https://github.com/kelleyvanevert/diskhog">
+            github repo
+          </a>
+          )<Desc>free up space quickly pls</Desc>
+        </li>
+        <li>
           Patching the C100's firmware to take retro dithered pics (
           <a className="link" href="https://c100.klve.nl/">
             website
